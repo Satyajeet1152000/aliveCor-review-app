@@ -4,9 +4,12 @@ import { randomUUID } from "node:crypto";
 import AppDataSource from "@database/data-source";
 import {
   registerCompress,
+  registerCors,
   registerErrorHandler,
   registerHelmet,
   registerRateLimit,
+  registerRequestContext,
+  registerSchedule,
   registerSwagger,
 } from "@plugins";
 import { env } from "@task-forge/shared/env";
@@ -18,8 +21,6 @@ import {
 } from "fastify-type-provider-zod";
 
 import { loggerConfig } from "./lib/logger-config";
-import { registerCors } from "./plugins/cors.plugin";
-import { registerRequestContext } from "./plugins/request-context.plugin";
 import { routerConfigs } from "./routers";
 
 async function createServer(app: FastifyInstance): Promise<void> {
@@ -30,6 +31,7 @@ async function createServer(app: FastifyInstance): Promise<void> {
   await registerHelmet(app);
   await registerCors(app);
   await registerRateLimit(app);
+  await registerSchedule(app);
   await registerErrorHandler(app);
 
   await app.register(

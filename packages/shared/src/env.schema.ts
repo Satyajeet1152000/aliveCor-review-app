@@ -15,6 +15,14 @@ const envSchema = z.object({
 
   APIFY_API_TOKEN: z.string().min(1),
   APIFY_AMAZON_REVIEWS_ACTOR: z.string().default("junglee/amazon-reviews-scraper"),
+
+  ENABLE_CRON_JOBS: z
+    .string()
+    .optional()
+    .default("false")
+    .transform((value) => value === "true"),
+
+  REVIEW_SYNC_CRON_INTERVAL_HOURS: z.coerce.number().int().min(1).default(8),
 });
 
 export const env = envSchema.parse(process.env);
