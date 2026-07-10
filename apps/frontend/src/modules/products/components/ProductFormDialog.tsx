@@ -1,5 +1,6 @@
 "use client";
 
+import { createProductBodySchema } from "@task-forge/shared/schemas";
 import type { CreateProductInput, Product } from "@task-forge/shared/types";
 import React, { useEffect, useState } from "react";
 
@@ -27,6 +28,8 @@ const EMPTY_FORM: CreateProductInput = {
   url: "",
 };
 
+const AMAZON_PRODUCT_URL_PLACEHOLDER = "https://www.amazon.in/dp/B07RQW6SD5";
+
 export function ProductFormDialog({
   open,
   product,
@@ -35,6 +38,7 @@ export function ProductFormDialog({
   onSubmit,
 }: ProductFormDialogProps): React.ReactElement {
   const [form, setForm] = useState<CreateProductInput>(EMPTY_FORM);
+  const [urlError, setUrlError] = useState<string | null>(null);
 
   useEffect(() => {
     if (product) {
@@ -46,11 +50,21 @@ export function ProductFormDialog({
     }
 
     setForm(EMPTY_FORM);
+    setUrlError(null);
   }, [product, open]);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
-    onSubmit(form);
+
+    const result = createProductBodySchema.safeParse(form);
+    if (!result.success) {
+      const message = result.error.issues.find((issue) => issue.path[0] === "url")?.message;
+      setUrlError(message ?? "Enter a valid Amazon product URL");
+      return;
+    }
+
+    setUrlError(null);
+    onSubmit(result.data);
   };
 
   return (
@@ -76,10 +90,21 @@ export function ProductFormDialog({
               id="product-url"
               type="url"
               value={form.url}
-              onChange={(event) => setForm({ ...form, url: event.target.value })}
-              placeholder="https://amzn.in/d/..."
+              onChange={(event) => {
+                setForm({ ...form, url: event.target.value });
+                if (urlError) {
+                  setUrlError(null);
+                }
+              }}
+              placeholder={AMAZON_PRODUCT_URL_PLACEHOLDER}
+              aria-invalid={urlError ? true : undefined}
               required
             />
+            {urlError ? <p className="text-sm text-destructive">{urlError}</p> : null}
+            <p className="text-sm text-muted-foreground">
+              Use the full product page URL with <code>/dp/ASIN</code>. Short links like{" "}
+              <code>amzn.in</code> are not supported.
+            </p>
           </div>
           <DialogFooter>
             <Button type="button" variant="outline" onClick={() => onOpenChange(false)}>

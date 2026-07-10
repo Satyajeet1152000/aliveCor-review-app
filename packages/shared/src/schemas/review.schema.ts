@@ -11,6 +11,7 @@ export const reviewSchema = z.object({
   title: z.string().nullable(),
   description: z.string().nullable(),
   reviewedAt: z.string(),
+  reviewId: z.string().min(1),
   reviewUrl: z.string().url(),
   createdAt: z.string(),
   updatedAt: z.string(),

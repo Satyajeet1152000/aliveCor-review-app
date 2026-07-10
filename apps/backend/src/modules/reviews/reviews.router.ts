@@ -8,7 +8,19 @@ const reviewsRouter: FastifyPluginAsync = async (app) => {
   const controller = new ReviewsController();
 
   app.get("/", { schema: getReviewsRouteSchema }, controller.list);
-  app.post("/sync", { schema: postReviewSyncRouteSchema }, controller.sync);
+  app.post(
+    "/sync",
+    {
+      schema: postReviewSyncRouteSchema,
+      config: {
+        rateLimit: {
+          max: 1,
+          timeWindow: "2 minutes",
+        },
+      },
+    },
+    controller.sync,
+  );
 };
 
 export const reviewsRouteConfig: RouterConfig = {

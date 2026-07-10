@@ -13,6 +13,7 @@ export interface Review {
   title: string | null;
   description: string | null;
   reviewedAt: string;
+  reviewId: string;
   reviewUrl: string;
   createdAt: string;
   updatedAt: string;

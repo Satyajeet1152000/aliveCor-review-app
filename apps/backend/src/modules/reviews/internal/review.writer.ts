@@ -7,6 +7,7 @@ export interface ReviewInsertInput {
   title: string | null;
   description: string | null;
   reviewedAt: Date;
+  reviewId: string;
   reviewUrl: string;
 }
 
@@ -23,6 +24,7 @@ export default class ReviewWriter {
       entity.title = review.title;
       entity.description = review.description;
       entity.reviewedAt = review.reviewedAt;
+      entity.reviewId = review.reviewId;
       entity.reviewUrl = review.reviewUrl;
       return entity;
     });

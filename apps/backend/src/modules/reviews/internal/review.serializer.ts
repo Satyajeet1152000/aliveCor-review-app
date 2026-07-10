@@ -10,6 +10,7 @@ export const serializeReview = (review: ReviewEntity): Review => {
     title: review.title,
     description: review.description,
     reviewedAt: review.reviewedAt.toISOString(),
+    reviewId: review.reviewId,
     reviewUrl: review.reviewUrl,
     createdAt: review.createdAt.toISOString(),
     updatedAt: review.updatedAt.toISOString(),

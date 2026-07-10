@@ -304,10 +304,20 @@
       "norm_label": "@task-forge/shared"
     },
     {
-      "label": "fastify",
+      "label": "axios",
       "file_type": "code",
       "source_file": "apps/backend/package.json",
       "source_location": "L31",
+      "_origin": "ast",
+      "id": "backend_package_dependencies_axios",
+      "community": 8,
+      "norm_label": "axios"
+    },
+    {
+      "label": "fastify",
+      "file_type": "code",
+      "source_file": "apps/backend/package.json",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "backend_package_dependencies_fastify",
       "community": 8,
@@ -317,7 +327,7 @@
       "label": "fastify-plugin",
       "file_type": "code",
       "source_file": "apps/backend/package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "backend_package_dependencies_fastify_plugin",
       "community": 8,
@@ -327,7 +337,7 @@
       "label": "fastify-type-provider-zod",
       "file_type": "code",
       "source_file": "apps/backend/package.json",
-      "source_location": "L33",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "backend_package_dependencies_fastify_type_provider_zod",
       "community": 8,
@@ -337,7 +347,7 @@
       "label": "pg",
       "file_type": "code",
       "source_file": "apps/backend/package.json",
-      "source_location": "L34",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "backend_package_dependencies_pg",
       "community": 8,
@@ -347,7 +357,7 @@
       "label": "pino",
       "file_type": "code",
       "source_file": "apps/backend/package.json",
-      "source_location": "L35",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "backend_package_dependencies_pino",
       "community": 8,
@@ -357,7 +367,7 @@
       "label": "reflect-metadata",
       "file_type": "code",
       "source_file": "apps/backend/package.json",
-      "source_location": "L36",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "backend_package_dependencies_reflect_metadata",
       "community": 8,
@@ -367,7 +377,7 @@
       "label": "typeorm",
       "file_type": "code",
       "source_file": "apps/backend/package.json",
-      "source_location": "L37",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "backend_package_dependencies_typeorm",
       "community": 8,
@@ -377,7 +387,7 @@
       "label": "zod",
       "file_type": "code",
       "source_file": "apps/backend/package.json",
-      "source_location": "L38",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "backend_package_dependencies_zod",
       "community": 8,
@@ -387,7 +397,7 @@
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "apps/backend/package.json",
-      "source_location": "L40",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "backend_package_devdependencies",
       "community": 8,
@@ -397,7 +407,7 @@
       "label": "@types/node",
       "file_type": "code",
       "source_file": "apps/backend/package.json",
-      "source_location": "L41",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "backend_package_devdependencies_types_node",
       "community": 8,
@@ -407,7 +417,7 @@
       "label": "@types/pg",
       "file_type": "code",
       "source_file": "apps/backend/package.json",
-      "source_location": "L42",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "backend_package_devdependencies_types_pg",
       "community": 8,
@@ -417,7 +427,7 @@
       "label": "cross-env",
       "file_type": "code",
       "source_file": "apps/backend/package.json",
-      "source_location": "L43",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "backend_package_devdependencies_cross_env",
       "community": 8,
@@ -427,7 +437,7 @@
       "label": "pino-pretty",
       "file_type": "code",
       "source_file": "apps/backend/package.json",
-      "source_location": "L44",
+      "source_location": "L45",
       "_origin": "ast",
       "id": "backend_package_devdependencies_pino_pretty",
       "community": 8,
@@ -437,7 +447,7 @@
       "label": "tsc-alias",
       "file_type": "code",
       "source_file": "apps/backend/package.json",
-      "source_location": "L45",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "backend_package_devdependencies_tsc_alias",
       "community": 8,
@@ -447,7 +457,7 @@
       "label": "tsx",
       "file_type": "code",
       "source_file": "apps/backend/package.json",
-      "source_location": "L46",
+      "source_location": "L47",
       "_origin": "ast",
       "id": "backend_package_devdependencies_tsx",
       "community": 8,
@@ -457,7 +467,7 @@
       "label": "typescript",
       "file_type": "code",
       "source_file": "apps/backend/package.json",
-      "source_location": "L47",
+      "source_location": "L48",
       "_origin": "ast",
       "id": "backend_package_devdependencies_typescript",
       "community": 8,
@@ -564,83 +574,83 @@
       "norm_label": ".createdbpool()"
     },
     {
-      "label": "1783688790126-migration.ts",
+      "label": "1783692962639-migration.ts",
       "file_type": "code",
-      "source_file": "apps/backend/src/database/migrations/1783688790126-migration.ts",
+      "source_file": "apps/backend/src/database/migrations/1783692962639-migration.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "migrations_1783688790126_migration",
-      "community": 22,
-      "norm_label": "1783688790126-migration.ts"
+      "id": "migrations_1783692962639_migration",
+      "community": 38,
+      "norm_label": "1783692962639-migration.ts"
     },
     {
-      "label": "Migration1783688790126",
+      "label": "Migration1783692962639",
       "file_type": "code",
-      "source_file": "apps/backend/src/database/migrations/1783688790126-migration.ts",
+      "source_file": "apps/backend/src/database/migrations/1783692962639-migration.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "migrations_1783688790126_migration_migration1783688790126",
-      "community": 22,
-      "norm_label": "migration1783688790126"
+      "id": "migrations_1783692962639_migration_migration1783692962639",
+      "community": 38,
+      "norm_label": "migration1783692962639"
     },
     {
       "label": ".up()",
       "file_type": "code",
-      "source_file": "apps/backend/src/database/migrations/1783688790126-migration.ts",
+      "source_file": "apps/backend/src/database/migrations/1783692962639-migration.ts",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "migrations_1783688790126_migration_migration1783688790126_up",
-      "community": 22,
+      "id": "migrations_1783692962639_migration_migration1783692962639_up",
+      "community": 38,
       "norm_label": ".up()"
     },
     {
       "label": ".down()",
       "file_type": "code",
-      "source_file": "apps/backend/src/database/migrations/1783688790126-migration.ts",
-      "source_location": "L12",
+      "source_file": "apps/backend/src/database/migrations/1783692962639-migration.ts",
+      "source_location": "L11",
       "_origin": "ast",
-      "id": "migrations_1783688790126_migration_migration1783688790126_down",
-      "community": 22,
+      "id": "migrations_1783692962639_migration_migration1783692962639_down",
+      "community": 38,
       "norm_label": ".down()"
     },
     {
-      "label": "1783688890000-migration.ts",
+      "label": "1783694755466-migration.ts",
       "file_type": "code",
-      "source_file": "apps/backend/src/database/migrations/1783688890000-migration.ts",
+      "source_file": "apps/backend/src/database/migrations/1783694755466-migration.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "migrations_1783688890000_migration",
-      "community": 38,
-      "norm_label": "1783688890000-migration.ts"
+      "id": "migrations_1783694755466_migration",
+      "community": 39,
+      "norm_label": "1783694755466-migration.ts"
     },
     {
-      "label": "Migration1783688890000",
+      "label": "Migration1783694755466",
       "file_type": "code",
-      "source_file": "apps/backend/src/database/migrations/1783688890000-migration.ts",
+      "source_file": "apps/backend/src/database/migrations/1783694755466-migration.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "migrations_1783688890000_migration_migration1783688890000",
-      "community": 38,
-      "norm_label": "migration1783688890000"
+      "id": "migrations_1783694755466_migration_migration1783694755466",
+      "community": 39,
+      "norm_label": "migration1783694755466"
     },
     {
       "label": ".up()",
       "file_type": "code",
-      "source_file": "apps/backend/src/database/migrations/1783688890000-migration.ts",
+      "source_file": "apps/backend/src/database/migrations/1783694755466-migration.ts",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "migrations_1783688890000_migration_migration1783688890000_up",
-      "community": 38,
+      "id": "migrations_1783694755466_migration_migration1783694755466_up",
+      "community": 39,
       "norm_label": ".up()"
     },
     {
       "label": ".down()",
       "file_type": "code",
-      "source_file": "apps/backend/src/database/migrations/1783688890000-migration.ts",
-      "source_location": "L20",
+      "source_file": "apps/backend/src/database/migrations/1783694755466-migration.ts",
+      "source_location": "L12",
       "_origin": "ast",
-      "id": "migrations_1783688890000_migration_migration1783688890000_down",
-      "community": 38,
+      "id": "migrations_1783694755466_migration_migration1783694755466_down",
+      "community": 39,
       "norm_label": ".down()"
     },
     {
@@ -700,7 +710,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_error_handler",
-      "community": 36,
+      "community": 12,
       "norm_label": "error-handler.ts"
     },
     {
@@ -710,7 +720,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "lib_error_handler_serializedexception",
-      "community": 36,
+      "community": 12,
       "norm_label": "serializedexception"
     },
     {
@@ -720,7 +730,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "lib_error_handler_apperrorprops",
-      "community": 36,
+      "community": 12,
       "norm_label": "apperrorprops"
     },
     {
@@ -730,7 +740,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "lib_error_handler_apperror",
-      "community": 36,
+      "community": 12,
       "norm_label": "apperror"
     },
     {
@@ -740,7 +750,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "lib_error_handler_apperror_constructor",
-      "community": 36,
+      "community": 12,
       "norm_label": ".constructor()"
     },
     {
@@ -750,7 +760,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "lib_error_handler_apperror_tojson",
-      "community": 36,
+      "community": 12,
       "norm_label": ".tojson()"
     },
     {
@@ -760,7 +770,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_get_request_id",
-      "community": 36,
+      "community": 12,
       "norm_label": "get-request-id.ts"
     },
     {
@@ -770,7 +780,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "lib_get_request_id_getrequestid",
-      "community": 36,
+      "community": 12,
       "norm_label": "getrequestid()"
     },
     {
@@ -914,10 +924,20 @@
       "norm_label": ".listall()"
     },
     {
+      "label": ".listActive()",
+      "file_type": "code",
+      "source_file": "apps/backend/src/modules/products/internal/product.reader.ts",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "internal_product_reader_productreader_listactive",
+      "community": 12,
+      "norm_label": ".listactive()"
+    },
+    {
       "label": ".listActiveUrls()",
       "file_type": "code",
       "source_file": "apps/backend/src/modules/products/internal/product.reader.ts",
-      "source_location": "L18",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "internal_product_reader_productreader_listactiveurls",
       "community": 12,
@@ -927,7 +947,7 @@
       "label": ".getById()",
       "file_type": "code",
       "source_file": "apps/backend/src/modules/products/internal/product.reader.ts",
-      "source_location": "L27",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "internal_product_reader_productreader_getbyid",
       "community": 12,
@@ -987,7 +1007,7 @@
       "label": "ProductWriter",
       "file_type": "code",
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
-      "source_location": "L9",
+      "source_location": "L10",
       "_origin": "ast",
       "id": "internal_product_writer_productwriter",
       "community": 12,
@@ -997,7 +1017,7 @@
       "label": ".create()",
       "file_type": "code",
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
-      "source_location": "L10",
+      "source_location": "L11",
       "_origin": "ast",
       "id": "internal_product_writer_productwriter_create",
       "community": 12,
@@ -1007,7 +1027,7 @@
       "label": ".update()",
       "file_type": "code",
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
-      "source_location": "L20",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "internal_product_writer_productwriter_update",
       "community": 12,
@@ -1017,7 +1037,7 @@
       "label": ".delete()",
       "file_type": "code",
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
-      "source_location": "L40",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "internal_product_writer_productwriter_delete",
       "community": 12,
@@ -1030,7 +1050,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "products_products_controller",
-      "community": 12,
+      "community": 0,
       "norm_label": "products.controller.ts"
     },
     {
@@ -1050,7 +1070,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "products_products_error",
-      "community": 36,
+      "community": 12,
       "norm_label": "products.error.ts"
     },
     {
@@ -1060,7 +1080,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "products_products_error_productnotfounderror",
-      "community": 36,
+      "community": 12,
       "norm_label": "productnotfounderror"
     },
     {
@@ -1070,7 +1090,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "products_products_error_productnotfounderror_constructor",
-      "community": 36,
+      "community": 12,
       "norm_label": ".constructor()"
     },
     {
@@ -1134,10 +1154,20 @@
       "norm_label": ".listall()"
     },
     {
-      "label": ".listActiveUrls()",
+      "label": ".listActive()",
       "file_type": "code",
       "source_file": "apps/backend/src/modules/products/products.service.ts",
       "source_location": "L11",
+      "_origin": "ast",
+      "id": "products_products_service_productservice_listactive",
+      "community": 12,
+      "norm_label": ".listactive()"
+    },
+    {
+      "label": ".listActiveUrls()",
+      "file_type": "code",
+      "source_file": "apps/backend/src/modules/products/products.service.ts",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "products_products_service_productservice_listactiveurls",
       "community": 12,
@@ -1147,7 +1177,7 @@
       "label": ".create()",
       "file_type": "code",
       "source_file": "apps/backend/src/modules/products/products.service.ts",
-      "source_location": "L15",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "products_products_service_productservice_create",
       "community": 12,
@@ -1157,7 +1187,7 @@
       "label": ".update()",
       "file_type": "code",
       "source_file": "apps/backend/src/modules/products/products.service.ts",
-      "source_location": "L19",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "products_products_service_productservice_update",
       "community": 12,
@@ -1167,7 +1197,7 @@
       "label": ".delete()",
       "file_type": "code",
       "source_file": "apps/backend/src/modules/products/products.service.ts",
-      "source_location": "L24",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "products_products_service_productservice_delete",
       "community": 12,
@@ -1180,7 +1210,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "apps_backend_src_modules_reviews_index_ts_reviews_index",
-      "community": 0,
+      "community": 2,
       "norm_label": "index.ts"
     },
     {
@@ -1197,7 +1227,7 @@
       "label": "ReviewEntity",
       "file_type": "code",
       "source_file": "apps/backend/src/modules/reviews/internal/review.entity.ts",
-      "source_location": "L11",
+      "source_location": "L10",
       "_origin": "ast",
       "id": "internal_review_entity_reviewentity",
       "community": 2,
@@ -1254,14 +1284,24 @@
       "norm_label": ".list()"
     },
     {
-      "label": ".findExternalIds()",
+      "label": ".findReviewIds()",
       "file_type": "code",
       "source_file": "apps/backend/src/modules/reviews/internal/review.reader.ts",
       "source_location": "L49",
       "_origin": "ast",
-      "id": "internal_review_reader_reviewreader_findexternalids",
+      "id": "internal_review_reader_reviewreader_findreviewids",
       "community": 2,
-      "norm_label": ".findexternalids()"
+      "norm_label": ".findreviewids()"
+    },
+    {
+      "label": ".findLatestFetchedAtByProductId()",
+      "file_type": "code",
+      "source_file": "apps/backend/src/modules/reviews/internal/review.reader.ts",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "internal_review_reader_reviewreader_findlatestfetchedatbyproductid",
+      "community": 2,
+      "norm_label": ".findlatestfetchedatbyproductid()"
     },
     {
       "label": "review.repository.ts",
@@ -1320,14 +1360,14 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "internal_review_writer_reviewinsertinput",
-      "community": 2,
+      "community": 36,
       "norm_label": "reviewinsertinput"
     },
     {
       "label": "ReviewWriter",
       "file_type": "code",
       "source_file": "apps/backend/src/modules/reviews/internal/review.writer.ts",
-      "source_location": "L15",
+      "source_location": "L14",
       "_origin": "ast",
       "id": "internal_review_writer_reviewwriter",
       "community": 2,
@@ -1337,11 +1377,161 @@
       "label": ".insertMany()",
       "file_type": "code",
       "source_file": "apps/backend/src/modules/reviews/internal/review.writer.ts",
-      "source_location": "L16",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "internal_review_writer_reviewwriter_insertmany",
       "community": 2,
       "norm_label": ".insertmany()"
+    },
+    {
+      "label": "reviews.apify.ts",
+      "file_type": "code",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "reviews_reviews_apify",
+      "community": 12,
+      "norm_label": "reviews.apify.ts"
+    },
+    {
+      "label": "TERMINAL_RUN_STATUSES",
+      "file_type": "code",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "reviews_reviews_apify_terminal_run_statuses",
+      "community": 12,
+      "norm_label": "terminal_run_statuses"
+    },
+    {
+      "label": "ApifyAmazonReviewItem",
+      "file_type": "code",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "reviews_reviews_apify_apifyamazonreviewitem",
+      "community": 12,
+      "norm_label": "apifyamazonreviewitem"
+    },
+    {
+      "label": "ApifyRun",
+      "file_type": "code",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "reviews_reviews_apify_apifyrun",
+      "community": 12,
+      "norm_label": "apifyrun"
+    },
+    {
+      "label": "Apify",
+      "file_type": "code",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "reviews_reviews_apify_apify",
+      "community": 36,
+      "norm_label": "apify"
+    },
+    {
+      "label": ".fetchAmazonReviews()",
+      "file_type": "code",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "reviews_reviews_apify_apify_fetchamazonreviews",
+      "community": 36,
+      "norm_label": ".fetchamazonreviews()"
+    },
+    {
+      "label": ".fetchReviewsForProduct()",
+      "file_type": "code",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "reviews_reviews_apify_apify_fetchreviewsforproduct",
+      "community": 36,
+      "norm_label": ".fetchreviewsforproduct()"
+    },
+    {
+      "label": ".startActorRun()",
+      "file_type": "code",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "reviews_reviews_apify_apify_startactorrun",
+      "community": 36,
+      "norm_label": ".startactorrun()"
+    },
+    {
+      "label": ".waitForRun()",
+      "file_type": "code",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L96",
+      "_origin": "ast",
+      "id": "reviews_reviews_apify_apify_waitforrun",
+      "community": 36,
+      "norm_label": ".waitforrun()"
+    },
+    {
+      "label": ".getDatasetItems()",
+      "file_type": "code",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L137",
+      "_origin": "ast",
+      "id": "reviews_reviews_apify_apify_getdatasetitems",
+      "community": 36,
+      "norm_label": ".getdatasetitems()"
+    },
+    {
+      "label": ".toReviewSyncError()",
+      "file_type": "code",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L156",
+      "_origin": "ast",
+      "id": "reviews_reviews_apify_apify_toreviewsyncerror",
+      "community": 36,
+      "norm_label": ".toreviewsyncerror()"
+    },
+    {
+      "label": ".getActorId()",
+      "file_type": "code",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L169",
+      "_origin": "ast",
+      "id": "reviews_reviews_apify_apify_getactorid",
+      "community": 36,
+      "norm_label": ".getactorid()"
+    },
+    {
+      "label": ".extractReviewId()",
+      "file_type": "code",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L173",
+      "_origin": "ast",
+      "id": "reviews_reviews_apify_apify_extractreviewid",
+      "community": 36,
+      "norm_label": ".extractreviewid()"
+    },
+    {
+      "label": ".parseReviewedAt()",
+      "file_type": "code",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L187",
+      "_origin": "ast",
+      "id": "reviews_reviews_apify_apify_parsereviewedat",
+      "community": 36,
+      "norm_label": ".parsereviewedat()"
+    },
+    {
+      "label": ".mapReview()",
+      "file_type": "code",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L200",
+      "_origin": "ast",
+      "id": "reviews_reviews_apify_apify_mapreview",
+      "community": 36,
+      "norm_label": ".mapreview()"
     },
     {
       "label": "reviews.controller.ts",
@@ -1350,7 +1540,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "reviews_reviews_controller",
-      "community": 0,
+      "community": 2,
       "norm_label": "reviews.controller.ts"
     },
     {
@@ -1360,7 +1550,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "reviews_reviews_controller_reviewscontroller",
-      "community": 0,
+      "community": 2,
       "norm_label": "reviewscontroller"
     },
     {
@@ -1370,7 +1560,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "reviews_reviews_error",
-      "community": 36,
+      "community": 12,
       "norm_label": "reviews.error.ts"
     },
     {
@@ -1380,7 +1570,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "reviews_reviews_error_reviewsyncerror",
-      "community": 36,
+      "community": 12,
       "norm_label": "reviewsyncerror"
     },
     {
@@ -1390,7 +1580,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "reviews_reviews_error_reviewsyncerror_constructor",
-      "community": 36,
+      "community": 12,
       "norm_label": ".constructor()"
     },
     {
@@ -1400,7 +1590,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "reviews_reviews_router",
-      "community": 0,
+      "community": 2,
       "norm_label": "reviews.router.ts"
     },
     {
@@ -1410,17 +1600,17 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "reviews_reviews_router_reviewsrouter",
-      "community": 0,
+      "community": 2,
       "norm_label": "reviewsrouter()"
     },
     {
       "label": "reviewsRouteConfig",
       "file_type": "code",
       "source_file": "apps/backend/src/modules/reviews/reviews.router.ts",
-      "source_location": "L14",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "reviews_reviews_router_reviewsrouteconfig",
-      "community": 0,
+      "community": 2,
       "norm_label": "reviewsrouteconfig"
     },
     {
@@ -1434,60 +1624,10 @@
       "norm_label": "reviews.service.ts"
     },
     {
-      "label": "MockReviewTemplate",
-      "file_type": "code",
-      "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "reviews_reviews_service_mockreviewtemplate",
-      "community": 2,
-      "norm_label": "mockreviewtemplate"
-    },
-    {
-      "label": "MOCK_REVIEW_TEMPLATES",
-      "file_type": "code",
-      "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
-      "source_location": "L18",
-      "_origin": "ast",
-      "id": "reviews_reviews_service_mock_review_templates",
-      "community": 2,
-      "norm_label": "mock_review_templates"
-    },
-    {
-      "label": "buildExternalId()",
-      "file_type": "code",
-      "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
-      "source_location": "L70",
-      "_origin": "ast",
-      "id": "reviews_reviews_service_buildexternalid",
-      "community": 2,
-      "norm_label": "buildexternalid()"
-    },
-    {
-      "label": "buildMockReviews()",
-      "file_type": "code",
-      "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
-      "source_location": "L79",
-      "_origin": "ast",
-      "id": "reviews_reviews_service_buildmockreviews",
-      "community": 2,
-      "norm_label": "buildmockreviews()"
-    },
-    {
-      "label": "fetchUpstreamReviews()",
-      "file_type": "code",
-      "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
-      "source_location": "L96",
-      "_origin": "ast",
-      "id": "reviews_reviews_service_fetchupstreamreviews",
-      "community": 2,
-      "norm_label": "fetchupstreamreviews()"
-    },
-    {
       "label": "ReviewService",
       "file_type": "code",
       "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
-      "source_location": "L108",
+      "source_location": "L16",
       "_origin": "ast",
       "id": "reviews_reviews_service_reviewservice",
       "community": 2,
@@ -1497,7 +1637,7 @@
       "label": ".list()",
       "file_type": "code",
       "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
-      "source_location": "L109",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "reviews_reviews_service_reviewservice_list",
       "community": 2,
@@ -1507,11 +1647,31 @@
       "label": ".syncReviews()",
       "file_type": "code",
       "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
-      "source_location": "L113",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "reviews_reviews_service_reviewservice_syncreviews",
       "community": 2,
       "norm_label": ".syncreviews()"
+    },
+    {
+      "label": ".syncProductReviews()",
+      "file_type": "code",
+      "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "reviews_reviews_service_reviewservice_syncproductreviews",
+      "community": 2,
+      "norm_label": ".syncproductreviews()"
+    },
+    {
+      "label": ".hasRecentlyFetchedReviews()",
+      "file_type": "code",
+      "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "reviews_reviews_service_reviewservice_hasrecentlyfetchedreviews",
+      "community": 2,
+      "norm_label": ".hasrecentlyfetchedreviews()"
     },
     {
       "label": "compress.plugin.ts",
@@ -1570,7 +1730,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "plugins_error_plugin",
-      "community": 36,
+      "community": 12,
       "norm_label": "error.plugin.ts"
     },
     {
@@ -1580,7 +1740,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "plugins_error_plugin_fastifyerrorcodesmap",
-      "community": 36,
+      "community": 12,
       "norm_label": "fastifyerrorcodesmap"
     },
     {
@@ -2990,7 +3150,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_page",
-      "community": 2,
+      "community": 3,
       "norm_label": "page.tsx"
     },
     {
@@ -3000,7 +3160,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "app_page_homepage",
-      "community": 2,
+      "community": 3,
       "norm_label": "homepage()"
     },
     {
@@ -3140,7 +3300,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "ui_card",
-      "community": 3,
+      "community": 22,
       "norm_label": "card.tsx"
     },
     {
@@ -3150,7 +3310,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "ui_card_card",
-      "community": 3,
+      "community": 22,
       "norm_label": "card"
     },
     {
@@ -3160,7 +3320,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "ui_card_cardheader",
-      "community": 3,
+      "community": 22,
       "norm_label": "cardheader"
     },
     {
@@ -3170,7 +3330,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "ui_card_cardtitle",
-      "community": 3,
+      "community": 22,
       "norm_label": "cardtitle"
     },
     {
@@ -3180,7 +3340,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "ui_card_carddescription",
-      "community": 3,
+      "community": 22,
       "norm_label": "carddescription"
     },
     {
@@ -3190,7 +3350,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "ui_card_cardcontent",
-      "community": 3,
+      "community": 22,
       "norm_label": "cardcontent"
     },
     {
@@ -3200,7 +3360,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "ui_card_cardfooter",
-      "community": 3,
+      "community": 22,
       "norm_label": "cardfooter"
     },
     {
@@ -3460,7 +3620,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lib_axios",
-      "community": 2,
+      "community": 37,
       "norm_label": "axios.ts"
     },
     {
@@ -3470,7 +3630,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "lib_axios_apiclient",
-      "community": 2,
+      "community": 37,
       "norm_label": "apiclient"
     },
     {
@@ -3520,7 +3680,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_productcard",
-      "community": 3,
+      "community": 22,
       "norm_label": "productcard.tsx"
     },
     {
@@ -3530,7 +3690,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "components_productcard_productcardprops",
-      "community": 12,
+      "community": 22,
       "norm_label": "productcardprops"
     },
     {
@@ -3557,7 +3717,7 @@
       "label": "ProductFormDialogProps",
       "file_type": "code",
       "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
-      "source_location": "L21",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "components_productformdialog_productformdialogprops",
       "community": 12,
@@ -3567,7 +3727,7 @@
       "label": "EMPTY_FORM",
       "file_type": "code",
       "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
-      "source_location": "L29",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "components_productformdialog_empty_form",
       "community": 5,
@@ -3577,7 +3737,7 @@
       "label": "ProductFormDialog()",
       "file_type": "code",
       "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
-      "source_location": "L35",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "components_productformdialog_productformdialog",
       "community": 37,
@@ -3740,7 +3900,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_reviewcard",
-      "community": 3,
+      "community": 22,
       "norm_label": "reviewcard.tsx"
     },
     {
@@ -3750,27 +3910,27 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "components_reviewcard_reviewcardprops",
-      "community": 2,
+      "community": 22,
       "norm_label": "reviewcardprops"
     },
     {
       "label": "RatingStars()",
       "file_type": "code",
       "source_file": "apps/frontend/src/modules/reviews/components/ReviewCard.tsx",
-      "source_location": "L11",
+      "source_location": "L12",
       "_origin": "ast",
       "id": "components_reviewcard_ratingstars",
-      "community": 3,
+      "community": 22,
       "norm_label": "ratingstars()"
     },
     {
       "label": "ReviewCard()",
       "file_type": "code",
       "source_file": "apps/frontend/src/modules/reviews/components/ReviewCard.tsx",
-      "source_location": "L24",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "components_reviewcard_reviewcard",
-      "community": 3,
+      "community": 22,
       "norm_label": "reviewcard()"
     },
     {
@@ -3810,7 +3970,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "components_reviewsdashboard_hasactivefilters",
-      "community": 2,
+      "community": 3,
       "norm_label": "hasactivefilters()"
     },
     {
@@ -3820,7 +3980,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "components_reviewsdashboard_reviewsdashboard",
-      "community": 2,
+      "community": 3,
       "norm_label": "reviewsdashboard()"
     },
     {
@@ -3910,7 +4070,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "components_reviewsfilter_reviewsfilterprops",
-      "community": 12,
+      "community": 3,
       "norm_label": "reviewsfilterprops"
     },
     {
@@ -3930,7 +4090,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_reviewslist",
-      "community": 3,
+      "community": 22,
       "norm_label": "reviewslist.tsx"
     },
     {
@@ -3940,14 +4100,14 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "components_reviewslist_reviewslistprops",
-      "community": 2,
+      "community": 22,
       "norm_label": "reviewslistprops"
     },
     {
       "label": "ReviewsList()",
       "file_type": "code",
       "source_file": "apps/frontend/src/modules/reviews/components/ReviewsList.tsx",
-      "source_location": "L10",
+      "source_location": "L11",
       "_origin": "ast",
       "id": "components_reviewslist_reviewslist",
       "community": 3,
@@ -4010,7 +4170,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "apps_frontend_src_modules_reviews_index_ts_reviews_index",
-      "community": 2,
+      "community": 3,
       "norm_label": "index.ts"
     },
     {
@@ -4020,7 +4180,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "reviews_reviews_api",
-      "community": 2,
+      "community": 3,
       "norm_label": "reviews.api.ts"
     },
     {
@@ -4030,7 +4190,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "reviews_reviews_api_getreviews",
-      "community": 2,
+      "community": 3,
       "norm_label": "getreviews()"
     },
     {
@@ -4040,7 +4200,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "reviews_reviews_api_syncreviews",
-      "community": 2,
+      "community": 3,
       "norm_label": "syncreviews()"
     },
     {
@@ -4050,7 +4210,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "reviews_reviews_queries",
-      "community": 2,
+      "community": 3,
       "norm_label": "reviews.queries.ts"
     },
     {
@@ -4060,7 +4220,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "reviews_reviews_queries_reviewsquerykey",
-      "community": 2,
+      "community": 3,
       "norm_label": "reviewsquerykey()"
     },
     {
@@ -4070,7 +4230,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "reviews_reviews_queries_usereviewsquery",
-      "community": 2,
+      "community": 3,
       "norm_label": "usereviewsquery()"
     },
     {
@@ -4080,7 +4240,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "reviews_reviews_queries_usesyncreviewsmutation",
-      "community": 2,
+      "community": 3,
       "norm_label": "usesyncreviewsmutation()"
     },
     {
@@ -5047,7 +5207,7 @@
       "label": "Env",
       "file_type": "code",
       "source_file": "packages/shared/src/env.schema.ts",
-      "source_location": "L30",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "src_env_schema_env",
       "community": 1,
@@ -5124,10 +5284,30 @@
       "norm_label": "product.schema.ts"
     },
     {
-      "label": "productSchema",
+      "label": "AMAZON_SHORT_LINK_HOSTS",
       "file_type": "code",
       "source_file": "packages/shared/src/schemas/product.schema.ts",
       "source_location": "L8",
+      "_origin": "ast",
+      "id": "schemas_product_schema_amazon_short_link_hosts",
+      "community": 0,
+      "norm_label": "amazon_short_link_hosts"
+    },
+    {
+      "label": "amazonProductUrlSchema",
+      "file_type": "code",
+      "source_file": "packages/shared/src/schemas/product.schema.ts",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "schemas_product_schema_amazonproducturlschema",
+      "community": 0,
+      "norm_label": "amazonproducturlschema"
+    },
+    {
+      "label": "productSchema",
+      "file_type": "code",
+      "source_file": "packages/shared/src/schemas/product.schema.ts",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "schemas_product_schema_productschema",
       "community": 0,
@@ -5137,7 +5317,7 @@
       "label": "createProductBodySchema",
       "file_type": "code",
       "source_file": "packages/shared/src/schemas/product.schema.ts",
-      "source_location": "L17",
+      "source_location": "L59",
       "_origin": "ast",
       "id": "schemas_product_schema_createproductbodyschema",
       "community": 0,
@@ -5147,7 +5327,7 @@
       "label": "updateProductBodySchema",
       "file_type": "code",
       "source_file": "packages/shared/src/schemas/product.schema.ts",
-      "source_location": "L23",
+      "source_location": "L64",
       "_origin": "ast",
       "id": "schemas_product_schema_updateproductbodyschema",
       "community": 0,
@@ -5157,7 +5337,7 @@
       "label": "productIdParamsSchema",
       "file_type": "code",
       "source_file": "packages/shared/src/schemas/product.schema.ts",
-      "source_location": "L33",
+      "source_location": "L74",
       "_origin": "ast",
       "id": "schemas_product_schema_productidparamsschema",
       "community": 0,
@@ -5167,7 +5347,7 @@
       "label": "getProductsRouteSchema",
       "file_type": "code",
       "source_file": "packages/shared/src/schemas/product.schema.ts",
-      "source_location": "L37",
+      "source_location": "L78",
       "_origin": "ast",
       "id": "schemas_product_schema_getproductsrouteschema",
       "community": 0,
@@ -5177,7 +5357,7 @@
       "label": "postProductRouteSchema",
       "file_type": "code",
       "source_file": "packages/shared/src/schemas/product.schema.ts",
-      "source_location": "L45",
+      "source_location": "L86",
       "_origin": "ast",
       "id": "schemas_product_schema_postproductrouteschema",
       "community": 0,
@@ -5187,7 +5367,7 @@
       "label": "putProductRouteSchema",
       "file_type": "code",
       "source_file": "packages/shared/src/schemas/product.schema.ts",
-      "source_location": "L54",
+      "source_location": "L95",
       "_origin": "ast",
       "id": "schemas_product_schema_putproductrouteschema",
       "community": 0,
@@ -5197,7 +5377,7 @@
       "label": "deleteProductRouteSchema",
       "file_type": "code",
       "source_file": "packages/shared/src/schemas/product.schema.ts",
-      "source_location": "L64",
+      "source_location": "L105",
       "_origin": "ast",
       "id": "schemas_product_schema_deleteproductrouteschema",
       "community": 0,
@@ -5227,7 +5407,7 @@
       "label": "reviewSyncResultSchema",
       "file_type": "code",
       "source_file": "packages/shared/src/schemas/review.schema.ts",
-      "source_location": "L21",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "schemas_review_schema_reviewsyncresultschema",
       "community": 0,
@@ -5237,7 +5417,7 @@
       "label": "getReviewsQuerySchema",
       "file_type": "code",
       "source_file": "packages/shared/src/schemas/review.schema.ts",
-      "source_location": "L27",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "schemas_review_schema_getreviewsqueryschema",
       "community": 0,
@@ -5247,7 +5427,7 @@
       "label": "getReviewsRouteSchema",
       "file_type": "code",
       "source_file": "packages/shared/src/schemas/review.schema.ts",
-      "source_location": "L35",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "schemas_review_schema_getreviewsrouteschema",
       "community": 0,
@@ -5257,7 +5437,7 @@
       "label": "postReviewSyncRouteSchema",
       "file_type": "code",
       "source_file": "packages/shared/src/schemas/review.schema.ts",
-      "source_location": "L45",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "schemas_review_schema_postreviewsyncrouteschema",
       "community": 0,
@@ -5270,7 +5450,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "types_common_types",
-      "community": 36,
+      "community": 0,
       "norm_label": "common-types.ts"
     },
     {
@@ -5290,7 +5470,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "types_common_types_logtype",
-      "community": 36,
+      "community": 12,
       "norm_label": "logtype"
     },
     {
@@ -5300,7 +5480,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "types_common_types_paginationmeta",
-      "community": 36,
+      "community": 0,
       "norm_label": "paginationmeta"
     },
     {
@@ -5310,7 +5490,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "types_common_types_apiresponse",
-      "community": 36,
+      "community": 0,
       "norm_label": "apiresponse"
     },
     {
@@ -5320,7 +5500,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "types_common_types_apierrorresponse",
-      "community": 36,
+      "community": 0,
       "norm_label": "apierrorresponse"
     },
     {
@@ -5330,7 +5510,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "types_common_types_httpstatuscode",
-      "community": 36,
+      "community": 12,
       "norm_label": "httpstatuscode"
     },
     {
@@ -5387,7 +5567,7 @@
       "label": "UpdateProductInput",
       "file_type": "code",
       "source_file": "packages/shared/src/types/product.types.ts",
-      "source_location": "L21",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "types_product_types_updateproductinput",
       "community": 12,
@@ -5420,14 +5600,14 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "types_review_types_review",
-      "community": 2,
+      "community": 22,
       "norm_label": "review"
     },
     {
       "label": "ReviewSyncResult",
       "file_type": "code",
       "source_file": "packages/shared/src/types/review.types.ts",
-      "source_location": "L23",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "types_review_types_reviewsyncresult",
       "community": 2,
@@ -6471,6 +6651,16 @@
       "source_file": "apps/backend/package.json",
       "source_location": "L31",
       "weight": 1.0,
+      "source": "backend_package_dependencies",
+      "target": "backend_package_dependencies_axios",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/package.json",
+      "source_location": "L31",
+      "weight": 1.0,
       "confidence_score": 1.0,
       "source": "backend_package_dependencies",
       "target": "backend_package_dependencies_fastify"
@@ -7039,9 +7229,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.repository.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_repository",
-      "target": "database_data_source",
-      "confidence_score": 1.0
+      "target": "database_data_source"
     },
     {
       "relation": "imports_from",
@@ -7061,9 +7251,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.repository.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_repository",
-      "target": "database_data_source_appdatasource",
-      "confidence_score": 1.0
+      "target": "database_data_source_appdatasource"
     },
     {
       "relation": "imports",
@@ -7142,61 +7332,61 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "apps/backend/src/database/migrations/1783688790126-migration.ts",
+      "source_file": "apps/backend/src/database/migrations/1783692962639-migration.ts",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "migrations_1783688790126_migration",
-      "target": "migrations_1783688790126_migration_migration1783688790126"
+      "source": "migrations_1783692962639_migration",
+      "target": "migrations_1783692962639_migration_migration1783692962639",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "apps/backend/src/database/migrations/1783688790126-migration.ts",
-      "source_location": "L12",
+      "source_file": "apps/backend/src/database/migrations/1783692962639-migration.ts",
+      "source_location": "L11",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "migrations_1783688790126_migration_migration1783688790126",
-      "target": "migrations_1783688790126_migration_migration1783688790126_down"
+      "source": "migrations_1783692962639_migration_migration1783692962639",
+      "target": "migrations_1783692962639_migration_migration1783692962639_down",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "apps/backend/src/database/migrations/1783688790126-migration.ts",
+      "source_file": "apps/backend/src/database/migrations/1783692962639-migration.ts",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "migrations_1783688790126_migration_migration1783688790126",
-      "target": "migrations_1783688790126_migration_migration1783688790126_up"
+      "source": "migrations_1783692962639_migration_migration1783692962639",
+      "target": "migrations_1783692962639_migration_migration1783692962639_up",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "apps/backend/src/database/migrations/1783688890000-migration.ts",
+      "source_file": "apps/backend/src/database/migrations/1783694755466-migration.ts",
       "source_location": "L3",
       "weight": 1.0,
-      "source": "migrations_1783688890000_migration",
-      "target": "migrations_1783688890000_migration_migration1783688890000",
+      "source": "migrations_1783694755466_migration",
+      "target": "migrations_1783694755466_migration_migration1783694755466",
       "confidence_score": 1.0
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "apps/backend/src/database/migrations/1783688890000-migration.ts",
-      "source_location": "L20",
+      "source_file": "apps/backend/src/database/migrations/1783694755466-migration.ts",
+      "source_location": "L12",
       "weight": 1.0,
-      "source": "migrations_1783688890000_migration_migration1783688890000",
-      "target": "migrations_1783688890000_migration_migration1783688890000_down",
+      "source": "migrations_1783694755466_migration_migration1783694755466",
+      "target": "migrations_1783694755466_migration_migration1783694755466_down",
       "confidence_score": 1.0
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "apps/backend/src/database/migrations/1783688890000-migration.ts",
+      "source_file": "apps/backend/src/database/migrations/1783694755466-migration.ts",
       "source_location": "L6",
       "weight": 1.0,
-      "source": "migrations_1783688890000_migration_migration1783688890000",
-      "target": "migrations_1783688890000_migration_migration1783688890000_up",
+      "source": "migrations_1783694755466_migration_migration1783694755466",
+      "target": "migrations_1783694755466_migration_migration1783694755466_up",
       "confidence_score": 1.0
     },
     {
@@ -7269,9 +7459,9 @@
       "source_file": "apps/backend/src/modules/products/products.controller.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_controller",
-      "target": "lib_api_response",
-      "confidence_score": 1.0
+      "target": "lib_api_response"
     },
     {
       "relation": "imports_from",
@@ -7313,9 +7503,9 @@
       "source_file": "apps/backend/src/modules/products/products.controller.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_controller",
-      "target": "lib_api_response_successresponse",
-      "confidence_score": 1.0
+      "target": "lib_api_response_successresponse"
     },
     {
       "relation": "imports",
@@ -7335,9 +7525,9 @@
       "source_file": "apps/backend/src/modules/products/products.controller.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_controller",
-      "target": "lib_api_response_messageresponse",
-      "confidence_score": 1.0
+      "target": "lib_api_response_messageresponse"
     },
     {
       "relation": "contains",
@@ -7442,9 +7632,9 @@
       "source_file": "apps/backend/src/modules/products/products.error.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_error",
-      "target": "lib_error_handler",
-      "confidence_score": 1.0
+      "target": "lib_error_handler"
     },
     {
       "relation": "imports_from",
@@ -7506,9 +7696,9 @@
       "source_file": "apps/backend/src/modules/products/products.error.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_error",
-      "target": "lib_error_handler_apperror",
-      "confidence_score": 1.0
+      "target": "lib_error_handler_apperror"
     },
     {
       "relation": "inherits",
@@ -7517,9 +7707,9 @@
       "source_file": "apps/backend/src/modules/products/products.error.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_error_productnotfounderror",
-      "target": "lib_error_handler_apperror",
-      "confidence_score": 1.0
+      "target": "lib_error_handler_apperror"
     },
     {
       "relation": "imports",
@@ -7743,9 +7933,9 @@
       "source_file": "apps/backend/src/modules/products/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_backend_src_modules_products_index_ts_products_index",
-      "target": "products_products_router",
-      "confidence_score": 1.0
+      "target": "products_products_router"
     },
     {
       "relation": "re_exports",
@@ -7754,9 +7944,9 @@
       "source_file": "apps/backend/src/modules/products/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_backend_src_modules_products_index_ts_products_index",
-      "target": "products_products_router_productsrouteconfig",
-      "confidence_score": 1.0
+      "target": "products_products_router_productsrouteconfig"
     },
     {
       "relation": "re_exports",
@@ -7765,9 +7955,9 @@
       "source_file": "apps/backend/src/modules/products/index.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_backend_src_modules_products_index_ts_products_index",
-      "target": "products_products_service",
-      "confidence_score": 1.0
+      "target": "products_products_service"
     },
     {
       "relation": "contains",
@@ -7775,9 +7965,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.entity.ts",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_entity",
-      "target": "internal_product_entity_productentity",
-      "confidence_score": 1.0
+      "target": "internal_product_entity_productentity"
     },
     {
       "relation": "imports_from",
@@ -7786,9 +7976,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.entity.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_entity",
-      "target": "types_index",
-      "confidence_score": 1.0
+      "target": "types_index"
     },
     {
       "relation": "imports",
@@ -7797,9 +7987,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.entity.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_entity",
-      "target": "types_product_types_productstatus",
-      "confidence_score": 1.0
+      "target": "types_product_types_productstatus"
     },
     {
       "relation": "imports_from",
@@ -7808,9 +7998,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.repository.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_repository",
-      "target": "internal_product_entity",
-      "confidence_score": 1.0
+      "target": "internal_product_entity"
     },
     {
       "relation": "imports_from",
@@ -7819,9 +8009,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.serializer.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_serializer",
-      "target": "internal_product_entity",
-      "confidence_score": 1.0
+      "target": "internal_product_entity"
     },
     {
       "relation": "imports_from",
@@ -7830,9 +8020,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_writer",
-      "target": "internal_product_entity",
-      "confidence_score": 1.0
+      "target": "internal_product_entity"
     },
     {
       "relation": "references",
@@ -7841,9 +8031,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.entity.ts",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_entity_productentity",
-      "target": "types_product_types_productstatus",
-      "confidence_score": 1.0
+      "target": "types_product_types_productstatus"
     },
     {
       "relation": "imports",
@@ -7852,9 +8042,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.repository.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_repository",
-      "target": "internal_product_entity_productentity",
-      "confidence_score": 1.0
+      "target": "internal_product_entity_productentity"
     },
     {
       "relation": "imports",
@@ -7863,9 +8053,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.serializer.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_serializer",
-      "target": "internal_product_entity_productentity",
-      "confidence_score": 1.0
+      "target": "internal_product_entity_productentity"
     },
     {
       "relation": "imports",
@@ -7874,9 +8064,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_writer",
-      "target": "internal_product_entity_productentity",
-      "confidence_score": 1.0
+      "target": "internal_product_entity_productentity"
     },
     {
       "relation": "contains",
@@ -7884,9 +8074,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.reader.ts",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_reader",
-      "target": "internal_product_reader_productreader",
-      "confidence_score": 1.0
+      "target": "internal_product_reader_productreader"
     },
     {
       "relation": "imports_from",
@@ -7895,9 +8085,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.reader.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_reader",
-      "target": "internal_product_repository",
-      "confidence_score": 1.0
+      "target": "internal_product_repository"
     },
     {
       "relation": "imports",
@@ -7906,9 +8096,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.reader.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_reader",
-      "target": "internal_product_repository_productrepository",
-      "confidence_score": 1.0
+      "target": "internal_product_repository_productrepository"
     },
     {
       "relation": "imports_from",
@@ -7917,9 +8107,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.reader.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_reader",
-      "target": "internal_product_serializer",
-      "confidence_score": 1.0
+      "target": "internal_product_serializer"
     },
     {
       "relation": "imports",
@@ -7928,9 +8118,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.reader.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_reader",
-      "target": "internal_product_serializer_serializeproduct",
-      "confidence_score": 1.0
+      "target": "internal_product_serializer_serializeproduct"
     },
     {
       "relation": "imports_from",
@@ -7939,9 +8129,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.reader.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_reader",
-      "target": "products_products_error",
-      "confidence_score": 1.0
+      "target": "products_products_error"
     },
     {
       "relation": "imports",
@@ -7950,9 +8140,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.reader.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_reader",
-      "target": "products_products_error_productnotfounderror",
-      "confidence_score": 1.0
+      "target": "products_products_error_productnotfounderror"
     },
     {
       "relation": "imports_from",
@@ -7961,9 +8151,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.reader.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_reader",
-      "target": "types_index",
-      "confidence_score": 1.0
+      "target": "types_index"
     },
     {
       "relation": "imports",
@@ -7972,9 +8162,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.reader.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_reader",
-      "target": "types_product_types_product",
-      "confidence_score": 1.0
+      "target": "types_product_types_product"
     },
     {
       "relation": "imports",
@@ -7983,9 +8173,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.reader.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_reader",
-      "target": "types_product_types_productstatus",
-      "confidence_score": 1.0
+      "target": "types_product_types_productstatus"
     },
     {
       "relation": "imports_from",
@@ -7994,9 +8184,9 @@
       "source_file": "apps/backend/src/modules/products/products.service.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_service",
-      "target": "internal_product_reader",
-      "confidence_score": 1.0
+      "target": "internal_product_reader"
     },
     {
       "relation": "method",
@@ -8004,8 +8194,18 @@
       "source_file": "apps/backend/src/modules/products/internal/product.reader.ts",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_reader_productreader",
-      "target": "internal_product_reader_productreader_getbyid",
+      "target": "internal_product_reader_productreader_getbyid"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/products/internal/product.reader.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "internal_product_reader_productreader",
+      "target": "internal_product_reader_productreader_listactive",
       "confidence_score": 1.0
     },
     {
@@ -8014,9 +8214,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.reader.ts",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_reader_productreader",
-      "target": "internal_product_reader_productreader_listactiveurls",
-      "confidence_score": 1.0
+      "target": "internal_product_reader_productreader_listactiveurls"
     },
     {
       "relation": "method",
@@ -8024,9 +8224,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.reader.ts",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_reader_productreader",
-      "target": "internal_product_reader_productreader_listall",
-      "confidence_score": 1.0
+      "target": "internal_product_reader_productreader_listall"
     },
     {
       "relation": "imports",
@@ -8035,9 +8235,9 @@
       "source_file": "apps/backend/src/modules/products/products.service.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_service",
-      "target": "internal_product_reader_productreader",
-      "confidence_score": 1.0
+      "target": "internal_product_reader_productreader"
     },
     {
       "relation": "references",
@@ -8046,7 +8246,18 @@
       "source_file": "apps/backend/src/modules/products/internal/product.reader.ts",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_reader_productreader_listall",
+      "target": "types_product_types_product"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/products/internal/product.reader.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "internal_product_reader_productreader_listactive",
       "target": "types_product_types_product",
       "confidence_score": 1.0
     },
@@ -8068,9 +8279,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.reader.ts",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_reader_productreader_getbyid",
-      "target": "types_product_types_product",
-      "confidence_score": 1.0
+      "target": "types_product_types_product"
     },
     {
       "relation": "contains",
@@ -8078,9 +8289,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.repository.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_repository",
-      "target": "internal_product_repository_productrepository",
-      "confidence_score": 1.0
+      "target": "internal_product_repository_productrepository"
     },
     {
       "relation": "imports_from",
@@ -8089,9 +8300,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_writer",
-      "target": "internal_product_repository",
-      "confidence_score": 1.0
+      "target": "internal_product_repository"
     },
     {
       "relation": "imports",
@@ -8100,9 +8311,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_writer",
-      "target": "internal_product_repository_productrepository",
-      "confidence_score": 1.0
+      "target": "internal_product_repository_productrepository"
     },
     {
       "relation": "contains",
@@ -8110,9 +8321,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.serializer.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_serializer",
-      "target": "internal_product_serializer_serializeproduct",
-      "confidence_score": 1.0
+      "target": "internal_product_serializer_serializeproduct"
     },
     {
       "relation": "imports_from",
@@ -8121,9 +8332,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.serializer.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_serializer",
-      "target": "types_index",
-      "confidence_score": 1.0
+      "target": "types_index"
     },
     {
       "relation": "imports",
@@ -8132,9 +8343,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.serializer.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_serializer",
-      "target": "types_product_types_product",
-      "confidence_score": 1.0
+      "target": "types_product_types_product"
     },
     {
       "relation": "imports_from",
@@ -8143,9 +8354,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_writer",
-      "target": "internal_product_serializer",
-      "confidence_score": 1.0
+      "target": "internal_product_serializer"
     },
     {
       "relation": "imports",
@@ -8154,9 +8365,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_writer",
-      "target": "internal_product_serializer_serializeproduct",
-      "confidence_score": 1.0
+      "target": "internal_product_serializer_serializeproduct"
     },
     {
       "relation": "calls",
@@ -8186,9 +8397,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_writer",
-      "target": "internal_product_writer_productwriter",
-      "confidence_score": 1.0
+      "target": "internal_product_writer_productwriter"
     },
     {
       "relation": "imports_from",
@@ -8197,9 +8408,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_writer",
-      "target": "products_products_error",
-      "confidence_score": 1.0
+      "target": "products_products_error"
     },
     {
       "relation": "imports",
@@ -8208,9 +8419,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_writer",
-      "target": "products_products_error_productnotfounderror",
-      "confidence_score": 1.0
+      "target": "products_products_error_productnotfounderror"
     },
     {
       "relation": "imports_from",
@@ -8219,8 +8430,41 @@
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_writer",
-      "target": "types_index",
+      "target": "types_index"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "internal_product_writer",
+      "target": "types_product_types_createproductinput"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "internal_product_writer",
+      "target": "types_product_types_product"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "internal_product_writer",
+      "target": "types_product_types_productstatus",
       "confidence_score": 1.0
     },
     {
@@ -8230,31 +8474,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_writer",
-      "target": "types_product_types_createproductinput",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "internal_product_writer",
-      "target": "types_product_types_product",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "internal_product_writer",
-      "target": "types_product_types_updateproductinput",
-      "confidence_score": 1.0
+      "target": "types_product_types_updateproductinput"
     },
     {
       "relation": "imports_from",
@@ -8263,9 +8485,9 @@
       "source_file": "apps/backend/src/modules/products/products.service.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_service",
-      "target": "internal_product_writer",
-      "confidence_score": 1.0
+      "target": "internal_product_writer"
     },
     {
       "relation": "method",
@@ -8273,9 +8495,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_writer_productwriter",
-      "target": "internal_product_writer_productwriter_create",
-      "confidence_score": 1.0
+      "target": "internal_product_writer_productwriter_create"
     },
     {
       "relation": "method",
@@ -8283,9 +8505,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_writer_productwriter",
-      "target": "internal_product_writer_productwriter_delete",
-      "confidence_score": 1.0
+      "target": "internal_product_writer_productwriter_delete"
     },
     {
       "relation": "method",
@@ -8293,9 +8515,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_writer_productwriter",
-      "target": "internal_product_writer_productwriter_update",
-      "confidence_score": 1.0
+      "target": "internal_product_writer_productwriter_update"
     },
     {
       "relation": "imports",
@@ -8304,9 +8526,9 @@
       "source_file": "apps/backend/src/modules/products/products.service.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_service",
-      "target": "internal_product_writer_productwriter",
-      "confidence_score": 1.0
+      "target": "internal_product_writer_productwriter"
     },
     {
       "relation": "references",
@@ -8315,9 +8537,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_writer_productwriter_create",
-      "target": "types_product_types_createproductinput",
-      "confidence_score": 1.0
+      "target": "types_product_types_createproductinput"
     },
     {
       "relation": "references",
@@ -8326,9 +8548,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_writer_productwriter_create",
-      "target": "types_product_types_product",
-      "confidence_score": 1.0
+      "target": "types_product_types_product"
     },
     {
       "relation": "references",
@@ -8337,9 +8559,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_writer_productwriter_update",
-      "target": "types_product_types_product",
-      "confidence_score": 1.0
+      "target": "types_product_types_product"
     },
     {
       "relation": "references",
@@ -8348,9 +8570,9 @@
       "source_file": "apps/backend/src/modules/products/internal/product.writer.ts",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "internal_product_writer_productwriter_update",
-      "target": "types_product_types_updateproductinput",
-      "confidence_score": 1.0
+      "target": "types_product_types_updateproductinput"
     },
     {
       "relation": "contains",
@@ -8358,9 +8580,9 @@
       "source_file": "apps/backend/src/modules/products/products.controller.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_controller",
-      "target": "products_products_controller_productscontroller",
-      "confidence_score": 1.0
+      "target": "products_products_controller_productscontroller"
     },
     {
       "relation": "imports_from",
@@ -8369,9 +8591,9 @@
       "source_file": "apps/backend/src/modules/products/products.controller.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_controller",
-      "target": "products_products_service",
-      "confidence_score": 1.0
+      "target": "products_products_service"
     },
     {
       "relation": "imports",
@@ -8380,9 +8602,9 @@
       "source_file": "apps/backend/src/modules/products/products.controller.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_controller",
-      "target": "products_products_service_productservice",
-      "confidence_score": 1.0
+      "target": "products_products_service_productservice"
     },
     {
       "relation": "imports_from",
@@ -8391,9 +8613,9 @@
       "source_file": "apps/backend/src/modules/products/products.controller.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_controller",
-      "target": "types_index",
-      "confidence_score": 1.0
+      "target": "types_index"
     },
     {
       "relation": "imports",
@@ -8402,9 +8624,9 @@
       "source_file": "apps/backend/src/modules/products/products.controller.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_controller",
-      "target": "types_product_types_createproductinput",
-      "confidence_score": 1.0
+      "target": "types_product_types_createproductinput"
     },
     {
       "relation": "imports",
@@ -8413,9 +8635,9 @@
       "source_file": "apps/backend/src/modules/products/products.controller.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_controller",
-      "target": "types_product_types_updateproductinput",
-      "confidence_score": 1.0
+      "target": "types_product_types_updateproductinput"
     },
     {
       "relation": "imports_from",
@@ -8424,9 +8646,9 @@
       "source_file": "apps/backend/src/modules/products/products.router.ts",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_router",
-      "target": "products_products_controller",
-      "confidence_score": 1.0
+      "target": "products_products_controller"
     },
     {
       "relation": "imports",
@@ -8435,9 +8657,9 @@
       "source_file": "apps/backend/src/modules/products/products.router.ts",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_router",
-      "target": "products_products_controller_productscontroller",
-      "confidence_score": 1.0
+      "target": "products_products_controller_productscontroller"
     },
     {
       "relation": "contains",
@@ -8445,9 +8667,9 @@
       "source_file": "apps/backend/src/modules/products/products.error.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_error",
-      "target": "products_products_error_productnotfounderror",
-      "confidence_score": 1.0
+      "target": "products_products_error_productnotfounderror"
     },
     {
       "relation": "imports",
@@ -8456,9 +8678,9 @@
       "source_file": "apps/backend/src/modules/products/products.error.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_error",
-      "target": "types_common_types_httpstatuscode",
-      "confidence_score": 1.0
+      "target": "types_common_types_httpstatuscode"
     },
     {
       "relation": "imports_from",
@@ -8467,9 +8689,9 @@
       "source_file": "apps/backend/src/modules/products/products.error.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_error",
-      "target": "types_index",
-      "confidence_score": 1.0
+      "target": "types_index"
     },
     {
       "relation": "method",
@@ -8477,9 +8699,9 @@
       "source_file": "apps/backend/src/modules/products/products.error.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_error_productnotfounderror",
-      "target": "products_products_error_productnotfounderror_constructor",
-      "confidence_score": 1.0
+      "target": "products_products_error_productnotfounderror_constructor"
     },
     {
       "relation": "contains",
@@ -8487,9 +8709,9 @@
       "source_file": "apps/backend/src/modules/products/products.router.ts",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_router",
-      "target": "products_products_router_productsrouteconfig",
-      "confidence_score": 1.0
+      "target": "products_products_router_productsrouteconfig"
     },
     {
       "relation": "contains",
@@ -8497,9 +8719,9 @@
       "source_file": "apps/backend/src/modules/products/products.router.ts",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_router",
-      "target": "products_products_router_productsrouter",
-      "confidence_score": 1.0
+      "target": "products_products_router_productsrouter"
     },
     {
       "relation": "imports_from",
@@ -8508,9 +8730,9 @@
       "source_file": "apps/backend/src/modules/products/products.router.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_router",
-      "target": "schemas_index",
-      "confidence_score": 1.0
+      "target": "schemas_index"
     },
     {
       "relation": "imports",
@@ -8519,9 +8741,9 @@
       "source_file": "apps/backend/src/modules/products/products.router.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_router",
-      "target": "schemas_product_schema_deleteproductrouteschema",
-      "confidence_score": 1.0
+      "target": "schemas_product_schema_deleteproductrouteschema"
     },
     {
       "relation": "imports",
@@ -8530,9 +8752,9 @@
       "source_file": "apps/backend/src/modules/products/products.router.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_router",
-      "target": "schemas_product_schema_getproductsrouteschema",
-      "confidence_score": 1.0
+      "target": "schemas_product_schema_getproductsrouteschema"
     },
     {
       "relation": "imports",
@@ -8541,9 +8763,9 @@
       "source_file": "apps/backend/src/modules/products/products.router.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_router",
-      "target": "schemas_product_schema_postproductrouteschema",
-      "confidence_score": 1.0
+      "target": "schemas_product_schema_postproductrouteschema"
     },
     {
       "relation": "imports",
@@ -8552,9 +8774,9 @@
       "source_file": "apps/backend/src/modules/products/products.router.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_router",
-      "target": "schemas_product_schema_putproductrouteschema",
-      "confidence_score": 1.0
+      "target": "schemas_product_schema_putproductrouteschema"
     },
     {
       "relation": "imports",
@@ -8563,9 +8785,9 @@
       "source_file": "apps/backend/src/modules/products/products.router.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_router",
-      "target": "types_common_types_routerconfig",
-      "confidence_score": 1.0
+      "target": "types_common_types_routerconfig"
     },
     {
       "relation": "imports_from",
@@ -8574,9 +8796,9 @@
       "source_file": "apps/backend/src/modules/products/products.router.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_router",
-      "target": "types_index",
-      "confidence_score": 1.0
+      "target": "types_index"
     },
     {
       "relation": "imports",
@@ -8585,9 +8807,9 @@
       "source_file": "apps/backend/src/routers.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_routers",
-      "target": "products_products_router_productsrouteconfig",
-      "confidence_score": 1.0
+      "target": "products_products_router_productsrouteconfig"
     },
     {
       "relation": "contains",
@@ -8595,9 +8817,9 @@
       "source_file": "apps/backend/src/modules/products/products.service.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_service",
-      "target": "products_products_service_productservice",
-      "confidence_score": 1.0
+      "target": "products_products_service_productservice"
     },
     {
       "relation": "imports_from",
@@ -8606,9 +8828,9 @@
       "source_file": "apps/backend/src/modules/products/products.service.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_service",
-      "target": "types_index",
-      "confidence_score": 1.0
+      "target": "types_index"
     },
     {
       "relation": "imports",
@@ -8617,9 +8839,9 @@
       "source_file": "apps/backend/src/modules/products/products.service.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_service",
-      "target": "types_product_types_createproductinput",
-      "confidence_score": 1.0
+      "target": "types_product_types_createproductinput"
     },
     {
       "relation": "imports",
@@ -8628,9 +8850,9 @@
       "source_file": "apps/backend/src/modules/products/products.service.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_service",
-      "target": "types_product_types_product",
-      "confidence_score": 1.0
+      "target": "types_product_types_product"
     },
     {
       "relation": "imports",
@@ -8639,9 +8861,9 @@
       "source_file": "apps/backend/src/modules/products/products.service.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_service",
-      "target": "types_product_types_updateproductinput",
-      "confidence_score": 1.0
+      "target": "types_product_types_updateproductinput"
     },
     {
       "relation": "method",
@@ -8649,9 +8871,9 @@
       "source_file": "apps/backend/src/modules/products/products.service.ts",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_service_productservice",
-      "target": "products_products_service_productservice_create",
-      "confidence_score": 1.0
+      "target": "products_products_service_productservice_create"
     },
     {
       "relation": "method",
@@ -8659,9 +8881,9 @@
       "source_file": "apps/backend/src/modules/products/products.service.ts",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_service_productservice",
-      "target": "products_products_service_productservice_delete",
-      "confidence_score": 1.0
+      "target": "products_products_service_productservice_delete"
     },
     {
       "relation": "method",
@@ -8670,8 +8892,18 @@
       "source_location": "L11",
       "weight": 1.0,
       "source": "products_products_service_productservice",
-      "target": "products_products_service_productservice_listactiveurls",
+      "target": "products_products_service_productservice_listactive",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/products/products.service.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "products_products_service_productservice",
+      "target": "products_products_service_productservice_listactiveurls"
     },
     {
       "relation": "method",
@@ -8679,9 +8911,9 @@
       "source_file": "apps/backend/src/modules/products/products.service.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_service_productservice",
-      "target": "products_products_service_productservice_listall",
-      "confidence_score": 1.0
+      "target": "products_products_service_productservice_listall"
     },
     {
       "relation": "method",
@@ -8689,9 +8921,9 @@
       "source_file": "apps/backend/src/modules/products/products.service.ts",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_service_productservice",
-      "target": "products_products_service_productservice_update",
-      "confidence_score": 1.0
+      "target": "products_products_service_productservice_update"
     },
     {
       "relation": "imports",
@@ -8700,9 +8932,9 @@
       "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "reviews_reviews_service",
-      "target": "products_products_service_productservice",
-      "confidence_score": 1.0
+      "target": "products_products_service_productservice"
     },
     {
       "relation": "references",
@@ -8711,7 +8943,18 @@
       "source_file": "apps/backend/src/modules/products/products.service.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_service_productservice_listall",
+      "target": "types_product_types_product"
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/products/products.service.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "products_products_service_productservice_listactive",
       "target": "types_product_types_product",
       "confidence_score": 1.0
     },
@@ -8722,9 +8965,9 @@
       "source_file": "apps/backend/src/modules/products/products.service.ts",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_service_productservice_create",
-      "target": "types_product_types_createproductinput",
-      "confidence_score": 1.0
+      "target": "types_product_types_createproductinput"
     },
     {
       "relation": "references",
@@ -8733,9 +8976,9 @@
       "source_file": "apps/backend/src/modules/products/products.service.ts",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_service_productservice_create",
-      "target": "types_product_types_product",
-      "confidence_score": 1.0
+      "target": "types_product_types_product"
     },
     {
       "relation": "references",
@@ -8744,9 +8987,9 @@
       "source_file": "apps/backend/src/modules/products/products.service.ts",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_service_productservice_update",
-      "target": "types_product_types_product",
-      "confidence_score": 1.0
+      "target": "types_product_types_product"
     },
     {
       "relation": "references",
@@ -8755,9 +8998,9 @@
       "source_file": "apps/backend/src/modules/products/products.service.ts",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_service_productservice_update",
-      "target": "types_product_types_updateproductinput",
-      "confidence_score": 1.0
+      "target": "types_product_types_updateproductinput"
     },
     {
       "relation": "re_exports",
@@ -9034,11 +9277,21 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/backend/src/modules/reviews/internal/review.reader.ts",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "internal_review_reader_reviewreader",
+      "target": "internal_review_reader_reviewreader_findlatestfetchedatbyproductid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/internal/review.reader.ts",
       "source_location": "L49",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "internal_review_reader_reviewreader",
-      "target": "internal_review_reader_reviewreader_findexternalids"
+      "target": "internal_review_reader_reviewreader_findreviewids",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -9171,12 +9424,67 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify",
+      "target": "internal_review_writer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
       "source_location": "L7",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "reviews_reviews_service",
       "target": "internal_review_writer"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify",
+      "target": "internal_review_writer_reviewinsertinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify_fetchamazonreviews",
+      "target": "internal_review_writer_reviewinsertinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify_fetchreviewsforproduct",
+      "target": "internal_review_writer_reviewinsertinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L200",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify_mapreview",
+      "target": "internal_review_writer_reviewinsertinput",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -9209,6 +9517,377 @@
       "confidence_score": 1.0,
       "source": "reviews_reviews_service",
       "target": "internal_review_writer_reviewwriter"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify",
+      "target": "reviews_reviews_apify_apify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify",
+      "target": "reviews_reviews_apify_apifyamazonreviewitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify",
+      "target": "reviews_reviews_apify_apifyrun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify",
+      "target": "reviews_reviews_apify_terminal_run_statuses",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify",
+      "target": "reviews_reviews_error",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify",
+      "target": "reviews_reviews_error_reviewsyncerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify",
+      "target": "src_env_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify",
+      "target": "src_env_schema_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify",
+      "target": "types_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify",
+      "target": "types_product_types_product",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "reviews_reviews_service",
+      "target": "reviews_reviews_apify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L173",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify",
+      "target": "reviews_reviews_apify_apify_extractreviewid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify",
+      "target": "reviews_reviews_apify_apify_fetchamazonreviews",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify",
+      "target": "reviews_reviews_apify_apify_fetchreviewsforproduct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L169",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify",
+      "target": "reviews_reviews_apify_apify_getactorid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify",
+      "target": "reviews_reviews_apify_apify_getdatasetitems",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L200",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify",
+      "target": "reviews_reviews_apify_apify_mapreview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L187",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify",
+      "target": "reviews_reviews_apify_apify_parsereviewedat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify",
+      "target": "reviews_reviews_apify_apify_startactorrun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify",
+      "target": "reviews_reviews_apify_apify_toreviewsyncerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify",
+      "target": "reviews_reviews_apify_apify_waitforrun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "reviews_reviews_service",
+      "target": "reviews_reviews_apify_apify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify_fetchamazonreviews",
+      "target": "reviews_reviews_apify_apify_fetchreviewsforproduct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify_fetchamazonreviews",
+      "target": "types_product_types_product",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify_fetchreviewsforproduct",
+      "target": "reviews_reviews_apify_apify_getactorid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify_fetchreviewsforproduct",
+      "target": "reviews_reviews_apify_apify_getdatasetitems",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify_fetchreviewsforproduct",
+      "target": "reviews_reviews_apify_apify_startactorrun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify_fetchreviewsforproduct",
+      "target": "reviews_reviews_apify_apify_waitforrun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify_fetchreviewsforproduct",
+      "target": "types_product_types_product",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify_startactorrun",
+      "target": "reviews_reviews_apify_apify_toreviewsyncerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L118",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify_waitforrun",
+      "target": "reviews_reviews_apify_apify_toreviewsyncerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L152",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify_getdatasetitems",
+      "target": "reviews_reviews_apify_apify_toreviewsyncerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify_toreviewsyncerror",
+      "target": "reviews_reviews_error_reviewsyncerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L208",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify_mapreview",
+      "target": "reviews_reviews_apify_apify_extractreviewid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.apify.ts",
+      "source_location": "L223",
+      "weight": 1.0,
+      "source": "reviews_reviews_apify_apify_mapreview",
+      "target": "reviews_reviews_apify_apify_parsereviewedat",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -9440,56 +10119,6 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
-      "source_location": "L70",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "reviews_reviews_service",
-      "target": "reviews_reviews_service_buildexternalid"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
-      "source_location": "L79",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "reviews_reviews_service",
-      "target": "reviews_reviews_service_buildmockreviews"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
-      "source_location": "L96",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "reviews_reviews_service",
-      "target": "reviews_reviews_service_fetchupstreamreviews"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "reviews_reviews_service",
-      "target": "reviews_reviews_service_mock_review_templates"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "reviews_reviews_service",
-      "target": "reviews_reviews_service_mockreviewtemplate"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
       "source_location": "L108",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -9534,6 +10163,17 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "reviews_reviews_service",
+      "target": "types_product_types_product",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
       "source_location": "L4",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -9563,26 +10203,14 @@
       "target": "types_review_types_reviewsyncresult"
     },
     {
-      "relation": "calls",
-      "context": "call",
+      "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
-      "source_location": "L105",
+      "source_location": "L78",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "reviews_reviews_service_fetchupstreamreviews",
-      "target": "reviews_reviews_service_buildmockreviews"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
-      "source_location": "L118",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "reviews_reviews_service_reviewservice_syncreviews",
-      "target": "reviews_reviews_service_fetchupstreamreviews"
+      "source": "reviews_reviews_service_reviewservice",
+      "target": "reviews_reviews_service_reviewservice_hasrecentlyfetchedreviews",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -9593,6 +10221,16 @@
       "confidence_score": 1.0,
       "source": "reviews_reviews_service_reviewservice",
       "target": "reviews_reviews_service_reviewservice_list"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "reviews_reviews_service_reviewservice",
+      "target": "reviews_reviews_service_reviewservice_syncproductreviews",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -9627,6 +10265,17 @@
       "target": "types_review_types_reviewlistfilters"
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "reviews_reviews_service_reviewservice_syncreviews",
+      "target": "reviews_reviews_service_reviewservice_syncproductreviews",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "context": "generic_arg",
       "confidence": "EXTRACTED",
@@ -9636,6 +10285,39 @@
       "confidence_score": 1.0,
       "source": "reviews_reviews_service_reviewservice_syncreviews",
       "target": "types_review_types_reviewsyncresult"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "reviews_reviews_service_reviewservice_syncproductreviews",
+      "target": "reviews_reviews_service_reviewservice_hasrecentlyfetchedreviews",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "reviews_reviews_service_reviewservice_syncproductreviews",
+      "target": "types_product_types_product",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/backend/src/modules/reviews/reviews.service.ts",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "reviews_reviews_service_reviewservice_syncproductreviews",
+      "target": "types_review_types_reviewsyncresult",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -11229,9 +11911,9 @@
       "source_file": "apps/frontend/src/app/products/page.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_page",
-      "target": "components_productspagecontent_productspagecontent",
-      "confidence_score": 1.0
+      "target": "components_productspagecontent_productspagecontent"
     },
     {
       "relation": "contains",
@@ -11239,9 +11921,9 @@
       "source_file": "apps/frontend/src/app/products/page.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_page",
-      "target": "products_page_productspage",
-      "confidence_score": 1.0
+      "target": "products_page_productspage"
     },
     {
       "relation": "contains",
@@ -11344,9 +12026,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductCard.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productcard",
-      "target": "ui_button",
-      "confidence_score": 1.0
+      "target": "ui_button"
     },
     {
       "relation": "imports_from",
@@ -11355,9 +12037,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productformdialog",
-      "target": "ui_button",
-      "confidence_score": 1.0
+      "target": "ui_button"
     },
     {
       "relation": "imports_from",
@@ -11366,9 +12048,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductsPageContent.tsx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productspagecontent",
-      "target": "ui_button",
-      "confidence_score": 1.0
+      "target": "ui_button"
     },
     {
       "relation": "imports_from",
@@ -11473,9 +12155,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductCard.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productcard",
-      "target": "ui_button_button",
-      "confidence_score": 1.0
+      "target": "ui_button_button"
     },
     {
       "relation": "imports",
@@ -11484,9 +12166,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productformdialog",
-      "target": "ui_button_button",
-      "confidence_score": 1.0
+      "target": "ui_button_button"
     },
     {
       "relation": "imports",
@@ -11495,9 +12177,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductsPageContent.tsx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productspagecontent",
-      "target": "ui_button_button",
-      "confidence_score": 1.0
+      "target": "ui_button_button"
     },
     {
       "relation": "imports",
@@ -11550,9 +12232,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductCard.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productcard",
-      "target": "ui_card",
-      "confidence_score": 1.0
+      "target": "ui_card"
     },
     {
       "relation": "imports_from",
@@ -11654,9 +12336,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductCard.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productcard",
-      "target": "ui_card_card",
-      "confidence_score": 1.0
+      "target": "ui_card_card"
     },
     {
       "relation": "imports",
@@ -11676,9 +12358,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductCard.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productcard",
-      "target": "ui_card_cardheader",
-      "confidence_score": 1.0
+      "target": "ui_card_cardheader"
     },
     {
       "relation": "imports",
@@ -11698,9 +12380,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductCard.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productcard",
-      "target": "ui_card_cardtitle",
-      "confidence_score": 1.0
+      "target": "ui_card_cardtitle"
     },
     {
       "relation": "imports",
@@ -11720,9 +12402,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductCard.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productcard",
-      "target": "ui_card_cardcontent",
-      "confidence_score": 1.0
+      "target": "ui_card_cardcontent"
     },
     {
       "relation": "imports",
@@ -11742,9 +12424,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productformdialog",
-      "target": "ui_dialog",
-      "confidence_score": 1.0
+      "target": "ui_dialog"
     },
     {
       "relation": "imports_from",
@@ -11835,9 +12517,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productformdialog",
-      "target": "ui_dialog_dialogcontent",
-      "confidence_score": 1.0
+      "target": "ui_dialog_dialogcontent"
     },
     {
       "relation": "imports",
@@ -11846,9 +12528,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productformdialog",
-      "target": "ui_dialog_dialogheader",
-      "confidence_score": 1.0
+      "target": "ui_dialog_dialogheader"
     },
     {
       "relation": "calls",
@@ -11868,9 +12550,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productformdialog",
-      "target": "ui_dialog_dialogfooter",
-      "confidence_score": 1.0
+      "target": "ui_dialog_dialogfooter"
     },
     {
       "relation": "calls",
@@ -11890,9 +12572,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productformdialog",
-      "target": "ui_dialog_dialogtitle",
-      "confidence_score": 1.0
+      "target": "ui_dialog_dialogtitle"
     },
     {
       "relation": "imports_from",
@@ -12045,9 +12727,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productformdialog",
-      "target": "ui_input",
-      "confidence_score": 1.0
+      "target": "ui_input"
     },
     {
       "relation": "imports_from",
@@ -12099,9 +12781,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productformdialog",
-      "target": "ui_input_input",
-      "confidence_score": 1.0
+      "target": "ui_input_input"
     },
     {
       "relation": "imports",
@@ -12121,9 +12803,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productformdialog",
-      "target": "ui_label",
-      "confidence_score": 1.0
+      "target": "ui_label"
     },
     {
       "relation": "imports_from",
@@ -12185,9 +12867,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productformdialog",
-      "target": "ui_label_label",
-      "confidence_score": 1.0
+      "target": "ui_label_label"
     },
     {
       "relation": "imports",
@@ -12249,9 +12931,9 @@
       "source_file": "apps/frontend/src/modules/products/products.api.ts",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_api",
-      "target": "lib_axios",
-      "confidence_score": 1.0
+      "target": "lib_axios"
     },
     {
       "relation": "imports_from",
@@ -12271,9 +12953,9 @@
       "source_file": "apps/frontend/src/modules/products/products.api.ts",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_api",
-      "target": "lib_axios_apiclient",
-      "confidence_score": 1.0
+      "target": "lib_axios_apiclient"
     },
     {
       "relation": "imports",
@@ -12313,9 +12995,9 @@
       "source_file": "apps/frontend/src/modules/products/components/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_products_components_index_ts_components_index",
-      "target": "components_productcard",
-      "confidence_score": 1.0
+      "target": "components_productcard"
     },
     {
       "relation": "contains",
@@ -12323,9 +13005,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductCard.tsx",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productcard",
-      "target": "components_productcard_productcard",
-      "confidence_score": 1.0
+      "target": "components_productcard_productcard"
     },
     {
       "relation": "contains",
@@ -12333,9 +13015,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductCard.tsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productcard",
-      "target": "components_productcard_productcardprops",
-      "confidence_score": 1.0
+      "target": "components_productcard_productcardprops"
     },
     {
       "relation": "imports_from",
@@ -12344,9 +13026,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductCard.tsx",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productcard",
-      "target": "types_index",
-      "confidence_score": 1.0
+      "target": "types_index"
     },
     {
       "relation": "imports",
@@ -12355,9 +13037,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductCard.tsx",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productcard",
-      "target": "types_product_types_product",
-      "confidence_score": 1.0
+      "target": "types_product_types_product"
     },
     {
       "relation": "imports_from",
@@ -12366,9 +13048,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductsPageContent.tsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productspagecontent",
-      "target": "components_productcard",
-      "confidence_score": 1.0
+      "target": "components_productcard"
     },
     {
       "relation": "references",
@@ -12377,9 +13059,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductCard.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productcard_productcardprops",
-      "target": "types_product_types_product",
-      "confidence_score": 1.0
+      "target": "types_product_types_product"
     },
     {
       "relation": "re_exports",
@@ -12388,9 +13070,9 @@
       "source_file": "apps/frontend/src/modules/products/components/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_products_components_index_ts_components_index",
-      "target": "components_productcard_productcard",
-      "confidence_score": 1.0
+      "target": "components_productcard_productcard"
     },
     {
       "relation": "imports",
@@ -12399,9 +13081,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductsPageContent.tsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productspagecontent",
-      "target": "components_productcard_productcard",
-      "confidence_score": 1.0
+      "target": "components_productcard_productcard"
     },
     {
       "relation": "re_exports",
@@ -12410,9 +13092,9 @@
       "source_file": "apps/frontend/src/modules/products/components/index.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_products_components_index_ts_components_index",
-      "target": "components_productformdialog",
-      "confidence_score": 1.0
+      "target": "components_productformdialog"
     },
     {
       "relation": "contains",
@@ -12420,9 +13102,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productformdialog",
-      "target": "components_productformdialog_empty_form",
-      "confidence_score": 1.0
+      "target": "components_productformdialog_empty_form"
     },
     {
       "relation": "contains",
@@ -12430,9 +13112,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productformdialog",
-      "target": "components_productformdialog_productformdialog",
-      "confidence_score": 1.0
+      "target": "components_productformdialog_productformdialog"
     },
     {
       "relation": "contains",
@@ -12440,41 +13122,19 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productformdialog",
-      "target": "components_productformdialog_productformdialogprops",
-      "confidence_score": 1.0
+      "target": "components_productformdialog_productformdialogprops"
     },
     {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
-      "source_location": "L4",
+      "source_location": "L3",
       "weight": 1.0,
       "source": "components_productformdialog",
-      "target": "types_index",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "components_productformdialog",
-      "target": "types_product_types_createproductinput",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "components_productformdialog",
-      "target": "types_product_types_product",
+      "target": "schemas_index",
       "confidence_score": 1.0
     },
     {
@@ -12485,8 +13145,52 @@
       "source_location": "L3",
       "weight": 1.0,
       "source": "components_productformdialog",
-      "target": "types_product_types_productstatus",
+      "target": "schemas_product_schema_createproductbodyschema",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_productformdialog",
+      "target": "types_index"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_productformdialog",
+      "target": "types_product_types_createproductinput"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_productformdialog",
+      "target": "types_product_types_product"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_productformdialog",
+      "target": "types_product_types_productstatus"
     },
     {
       "relation": "imports_from",
@@ -12495,9 +13199,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductsPageContent.tsx",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productspagecontent",
-      "target": "components_productformdialog",
-      "confidence_score": 1.0
+      "target": "components_productformdialog"
     },
     {
       "relation": "references",
@@ -12506,9 +13210,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productformdialog_productformdialogprops",
-      "target": "types_product_types_createproductinput",
-      "confidence_score": 1.0
+      "target": "types_product_types_createproductinput"
     },
     {
       "relation": "references",
@@ -12517,9 +13221,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductFormDialog.tsx",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productformdialog_productformdialogprops",
-      "target": "types_product_types_product",
-      "confidence_score": 1.0
+      "target": "types_product_types_product"
     },
     {
       "relation": "re_exports",
@@ -12528,9 +13232,9 @@
       "source_file": "apps/frontend/src/modules/products/components/index.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_products_components_index_ts_components_index",
-      "target": "components_productformdialog_productformdialog",
-      "confidence_score": 1.0
+      "target": "components_productformdialog_productformdialog"
     },
     {
       "relation": "imports",
@@ -12539,9 +13243,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductsPageContent.tsx",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productspagecontent",
-      "target": "components_productformdialog_productformdialog",
-      "confidence_score": 1.0
+      "target": "components_productformdialog_productformdialog"
     },
     {
       "relation": "re_exports",
@@ -12550,9 +13254,9 @@
       "source_file": "apps/frontend/src/modules/products/components/index.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_products_components_index_ts_components_index",
-      "target": "components_productspagecontent",
-      "confidence_score": 1.0
+      "target": "components_productspagecontent"
     },
     {
       "relation": "contains",
@@ -12560,9 +13264,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductsPageContent.tsx",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productspagecontent",
-      "target": "components_productspagecontent_productspagecontent",
-      "confidence_score": 1.0
+      "target": "components_productspagecontent_productspagecontent"
     },
     {
       "relation": "imports_from",
@@ -12571,9 +13275,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductsPageContent.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productspagecontent",
-      "target": "constant_index",
-      "confidence_score": 1.0
+      "target": "constant_index"
     },
     {
       "relation": "imports",
@@ -12582,9 +13286,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductsPageContent.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productspagecontent",
-      "target": "constant_routes_constants_routes",
-      "confidence_score": 1.0
+      "target": "constant_routes_constants_routes"
     },
     {
       "relation": "imports_from",
@@ -12593,9 +13297,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductsPageContent.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productspagecontent",
-      "target": "products_products_queries",
-      "confidence_score": 1.0
+      "target": "products_products_queries"
     },
     {
       "relation": "imports",
@@ -12604,9 +13308,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductsPageContent.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productspagecontent",
-      "target": "products_products_queries_usecreateproductmutation",
-      "confidence_score": 1.0
+      "target": "products_products_queries_usecreateproductmutation"
     },
     {
       "relation": "imports",
@@ -12615,9 +13319,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductsPageContent.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productspagecontent",
-      "target": "products_products_queries_usedeleteproductmutation",
-      "confidence_score": 1.0
+      "target": "products_products_queries_usedeleteproductmutation"
     },
     {
       "relation": "imports",
@@ -12626,9 +13330,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductsPageContent.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productspagecontent",
-      "target": "products_products_queries_useproductsquery",
-      "confidence_score": 1.0
+      "target": "products_products_queries_useproductsquery"
     },
     {
       "relation": "imports",
@@ -12637,9 +13341,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductsPageContent.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productspagecontent",
-      "target": "products_products_queries_useupdateproductmutation",
-      "confidence_score": 1.0
+      "target": "products_products_queries_useupdateproductmutation"
     },
     {
       "relation": "imports_from",
@@ -12648,9 +13352,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductsPageContent.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productspagecontent",
-      "target": "types_index",
-      "confidence_score": 1.0
+      "target": "types_index"
     },
     {
       "relation": "imports",
@@ -12659,9 +13363,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductsPageContent.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productspagecontent",
-      "target": "types_product_types_createproductinput",
-      "confidence_score": 1.0
+      "target": "types_product_types_createproductinput"
     },
     {
       "relation": "imports",
@@ -12670,9 +13374,9 @@
       "source_file": "apps/frontend/src/modules/products/components/ProductsPageContent.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_productspagecontent",
-      "target": "types_product_types_product",
-      "confidence_score": 1.0
+      "target": "types_product_types_product"
     },
     {
       "relation": "re_exports",
@@ -12681,9 +13385,9 @@
       "source_file": "apps/frontend/src/modules/products/components/index.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_products_components_index_ts_components_index",
-      "target": "components_productspagecontent_productspagecontent",
-      "confidence_score": 1.0
+      "target": "components_productspagecontent_productspagecontent"
     },
     {
       "relation": "calls",
@@ -12736,9 +13440,9 @@
       "source_file": "apps/frontend/src/modules/products/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_products_index_ts_products_index",
-      "target": "products_products_api",
-      "confidence_score": 1.0
+      "target": "products_products_api"
     },
     {
       "relation": "re_exports",
@@ -12747,9 +13451,9 @@
       "source_file": "apps/frontend/src/modules/products/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_products_index_ts_products_index",
-      "target": "products_products_api_createproduct",
-      "confidence_score": 1.0
+      "target": "products_products_api_createproduct"
     },
     {
       "relation": "re_exports",
@@ -12758,9 +13462,9 @@
       "source_file": "apps/frontend/src/modules/products/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_products_index_ts_products_index",
-      "target": "products_products_api_deleteproduct",
-      "confidence_score": 1.0
+      "target": "products_products_api_deleteproduct"
     },
     {
       "relation": "re_exports",
@@ -12769,9 +13473,9 @@
       "source_file": "apps/frontend/src/modules/products/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_products_index_ts_products_index",
-      "target": "products_products_api_getproducts",
-      "confidence_score": 1.0
+      "target": "products_products_api_getproducts"
     },
     {
       "relation": "re_exports",
@@ -12780,9 +13484,9 @@
       "source_file": "apps/frontend/src/modules/products/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_products_index_ts_products_index",
-      "target": "products_products_api_updateproduct",
-      "confidence_score": 1.0
+      "target": "products_products_api_updateproduct"
     },
     {
       "relation": "re_exports",
@@ -12791,9 +13495,9 @@
       "source_file": "apps/frontend/src/modules/products/index.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_products_index_ts_products_index",
-      "target": "products_products_queries",
-      "confidence_score": 1.0
+      "target": "products_products_queries"
     },
     {
       "relation": "re_exports",
@@ -12802,9 +13506,9 @@
       "source_file": "apps/frontend/src/modules/products/index.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_products_index_ts_products_index",
-      "target": "products_products_queries_productsquerykey",
-      "confidence_score": 1.0
+      "target": "products_products_queries_productsquerykey"
     },
     {
       "relation": "re_exports",
@@ -12813,9 +13517,9 @@
       "source_file": "apps/frontend/src/modules/products/index.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_products_index_ts_products_index",
-      "target": "products_products_queries_usecreateproductmutation",
-      "confidence_score": 1.0
+      "target": "products_products_queries_usecreateproductmutation"
     },
     {
       "relation": "re_exports",
@@ -12824,9 +13528,9 @@
       "source_file": "apps/frontend/src/modules/products/index.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_products_index_ts_products_index",
-      "target": "products_products_queries_usedeleteproductmutation",
-      "confidence_score": 1.0
+      "target": "products_products_queries_usedeleteproductmutation"
     },
     {
       "relation": "re_exports",
@@ -12835,9 +13539,9 @@
       "source_file": "apps/frontend/src/modules/products/index.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_products_index_ts_products_index",
-      "target": "products_products_queries_useproductsquery",
-      "confidence_score": 1.0
+      "target": "products_products_queries_useproductsquery"
     },
     {
       "relation": "re_exports",
@@ -12846,9 +13550,9 @@
       "source_file": "apps/frontend/src/modules/products/index.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_products_index_ts_products_index",
-      "target": "products_products_queries_useupdateproductmutation",
-      "confidence_score": 1.0
+      "target": "products_products_queries_useupdateproductmutation"
     },
     {
       "relation": "contains",
@@ -12856,9 +13560,9 @@
       "source_file": "apps/frontend/src/modules/products/products.api.ts",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_api",
-      "target": "products_products_api_createproduct",
-      "confidence_score": 1.0
+      "target": "products_products_api_createproduct"
     },
     {
       "relation": "contains",
@@ -12866,9 +13570,9 @@
       "source_file": "apps/frontend/src/modules/products/products.api.ts",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_api",
-      "target": "products_products_api_deleteproduct",
-      "confidence_score": 1.0
+      "target": "products_products_api_deleteproduct"
     },
     {
       "relation": "contains",
@@ -12876,9 +13580,9 @@
       "source_file": "apps/frontend/src/modules/products/products.api.ts",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_api",
-      "target": "products_products_api_getproducts",
-      "confidence_score": 1.0
+      "target": "products_products_api_getproducts"
     },
     {
       "relation": "contains",
@@ -12886,9 +13590,9 @@
       "source_file": "apps/frontend/src/modules/products/products.api.ts",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_api",
-      "target": "products_products_api_updateproduct",
-      "confidence_score": 1.0
+      "target": "products_products_api_updateproduct"
     },
     {
       "relation": "imports",
@@ -12897,9 +13601,9 @@
       "source_file": "apps/frontend/src/modules/products/products.api.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_api",
-      "target": "types_common_types_apiresponse",
-      "confidence_score": 1.0
+      "target": "types_common_types_apiresponse"
     },
     {
       "relation": "imports_from",
@@ -12908,9 +13612,9 @@
       "source_file": "apps/frontend/src/modules/products/products.api.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_api",
-      "target": "types_index",
-      "confidence_score": 1.0
+      "target": "types_index"
     },
     {
       "relation": "imports",
@@ -12919,9 +13623,9 @@
       "source_file": "apps/frontend/src/modules/products/products.api.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_api",
-      "target": "types_product_types_createproductinput",
-      "confidence_score": 1.0
+      "target": "types_product_types_createproductinput"
     },
     {
       "relation": "imports",
@@ -12930,9 +13634,9 @@
       "source_file": "apps/frontend/src/modules/products/products.api.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_api",
-      "target": "types_product_types_product",
-      "confidence_score": 1.0
+      "target": "types_product_types_product"
     },
     {
       "relation": "imports",
@@ -12941,9 +13645,9 @@
       "source_file": "apps/frontend/src/modules/products/products.api.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_api",
-      "target": "types_product_types_updateproductinput",
-      "confidence_score": 1.0
+      "target": "types_product_types_updateproductinput"
     },
     {
       "relation": "imports_from",
@@ -12952,9 +13656,9 @@
       "source_file": "apps/frontend/src/modules/products/products.queries.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_queries",
-      "target": "products_products_api",
-      "confidence_score": 1.0
+      "target": "products_products_api"
     },
     {
       "relation": "imports",
@@ -12963,9 +13667,9 @@
       "source_file": "apps/frontend/src/modules/products/products.queries.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_queries",
-      "target": "products_products_api_getproducts",
-      "confidence_score": 1.0
+      "target": "products_products_api_getproducts"
     },
     {
       "relation": "imports",
@@ -12974,9 +13678,9 @@
       "source_file": "apps/frontend/src/modules/products/products.queries.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_queries",
-      "target": "products_products_api_createproduct",
-      "confidence_score": 1.0
+      "target": "products_products_api_createproduct"
     },
     {
       "relation": "imports",
@@ -12985,9 +13689,9 @@
       "source_file": "apps/frontend/src/modules/products/products.queries.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_queries",
-      "target": "products_products_api_updateproduct",
-      "confidence_score": 1.0
+      "target": "products_products_api_updateproduct"
     },
     {
       "relation": "imports",
@@ -12996,9 +13700,9 @@
       "source_file": "apps/frontend/src/modules/products/products.queries.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_queries",
-      "target": "products_products_api_deleteproduct",
-      "confidence_score": 1.0
+      "target": "products_products_api_deleteproduct"
     },
     {
       "relation": "contains",
@@ -13006,9 +13710,9 @@
       "source_file": "apps/frontend/src/modules/products/products.queries.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_queries",
-      "target": "products_products_queries_productsquerykey",
-      "confidence_score": 1.0
+      "target": "products_products_queries_productsquerykey"
     },
     {
       "relation": "contains",
@@ -13016,9 +13720,9 @@
       "source_file": "apps/frontend/src/modules/products/products.queries.ts",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_queries",
-      "target": "products_products_queries_usecreateproductmutation",
-      "confidence_score": 1.0
+      "target": "products_products_queries_usecreateproductmutation"
     },
     {
       "relation": "contains",
@@ -13026,9 +13730,9 @@
       "source_file": "apps/frontend/src/modules/products/products.queries.ts",
       "source_location": "L47",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_queries",
-      "target": "products_products_queries_usedeleteproductmutation",
-      "confidence_score": 1.0
+      "target": "products_products_queries_usedeleteproductmutation"
     },
     {
       "relation": "contains",
@@ -13036,9 +13740,9 @@
       "source_file": "apps/frontend/src/modules/products/products.queries.ts",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_queries",
-      "target": "products_products_queries_useproductsquery",
-      "confidence_score": 1.0
+      "target": "products_products_queries_useproductsquery"
     },
     {
       "relation": "contains",
@@ -13046,9 +13750,9 @@
       "source_file": "apps/frontend/src/modules/products/products.queries.ts",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_queries",
-      "target": "products_products_queries_useupdateproductmutation",
-      "confidence_score": 1.0
+      "target": "products_products_queries_useupdateproductmutation"
     },
     {
       "relation": "imports_from",
@@ -13057,9 +13761,9 @@
       "source_file": "apps/frontend/src/modules/products/products.queries.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_queries",
-      "target": "types_index",
-      "confidence_score": 1.0
+      "target": "types_index"
     },
     {
       "relation": "imports",
@@ -13068,9 +13772,9 @@
       "source_file": "apps/frontend/src/modules/products/products.queries.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "products_products_queries",
-      "target": "types_product_types_updateproductinput",
-      "confidence_score": 1.0
+      "target": "types_product_types_updateproductinput"
     },
     {
       "relation": "imports",
@@ -13079,9 +13783,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/ReviewsDashboard.tsx",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_reviewsdashboard",
-      "target": "products_products_queries_useproductsquery",
-      "confidence_score": 1.0
+      "target": "products_products_queries_useproductsquery"
     },
     {
       "relation": "calls",
@@ -13101,9 +13805,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_reviews_components_index_ts_components_index",
-      "target": "components_reviewcard",
-      "confidence_score": 1.0
+      "target": "components_reviewcard"
     },
     {
       "relation": "contains",
@@ -13186,9 +13890,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_reviews_components_index_ts_components_index",
-      "target": "components_reviewcard_reviewcard",
-      "confidence_score": 1.0
+      "target": "components_reviewcard_reviewcard"
     },
     {
       "relation": "imports",
@@ -13208,9 +13912,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/index.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_reviews_components_index_ts_components_index",
-      "target": "components_reviewsdashboard",
-      "confidence_score": 1.0
+      "target": "components_reviewsdashboard"
     },
     {
       "relation": "contains",
@@ -13402,9 +14106,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/ReviewsDashboard.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_reviewsdashboard",
-      "target": "constant_index",
-      "confidence_score": 1.0
+      "target": "constant_index"
     },
     {
       "relation": "imports",
@@ -13413,9 +14117,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/ReviewsDashboard.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_reviewsdashboard",
-      "target": "constant_routes_constants_routes",
-      "confidence_score": 1.0
+      "target": "constant_routes_constants_routes"
     },
     {
       "relation": "imports_from",
@@ -13490,9 +14194,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/index.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_reviews_components_index_ts_components_index",
-      "target": "components_reviewsdashboard_reviewsdashboard",
-      "confidence_score": 1.0
+      "target": "components_reviewsdashboard_reviewsdashboard"
     },
     {
       "relation": "calls",
@@ -13523,9 +14227,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/index.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_reviews_components_index_ts_components_index",
-      "target": "components_reviewsemptystate",
-      "confidence_score": 1.0
+      "target": "components_reviewsemptystate"
     },
     {
       "relation": "contains",
@@ -13554,9 +14258,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/index.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_reviews_components_index_ts_components_index",
-      "target": "components_reviewsemptystate_reviewsemptystate",
-      "confidence_score": 1.0
+      "target": "components_reviewsemptystate_reviewsemptystate"
     },
     {
       "relation": "re_exports",
@@ -13565,9 +14269,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/index.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_reviews_components_index_ts_components_index",
-      "target": "components_reviewserrorstate",
-      "confidence_score": 1.0
+      "target": "components_reviewserrorstate"
     },
     {
       "relation": "contains",
@@ -13596,9 +14300,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/index.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_reviews_components_index_ts_components_index",
-      "target": "components_reviewserrorstate_reviewserrorstate",
-      "confidence_score": 1.0
+      "target": "components_reviewserrorstate_reviewserrorstate"
     },
     {
       "relation": "re_exports",
@@ -13607,9 +14311,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/index.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_reviews_components_index_ts_components_index",
-      "target": "components_reviewsfilter",
-      "confidence_score": 1.0
+      "target": "components_reviewsfilter"
     },
     {
       "relation": "contains",
@@ -13681,9 +14385,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/ReviewsFilter.tsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_reviewsfilter",
-      "target": "types_index",
-      "confidence_score": 1.0
+      "target": "types_index"
     },
     {
       "relation": "imports",
@@ -13692,9 +14396,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/ReviewsFilter.tsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_reviewsfilter",
-      "target": "types_product_types_product",
-      "confidence_score": 1.0
+      "target": "types_product_types_product"
     },
     {
       "relation": "references",
@@ -13703,9 +14407,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/ReviewsFilter.tsx",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_reviewsfilter_reviewsfilterprops",
-      "target": "types_product_types_product",
-      "confidence_score": 1.0
+      "target": "types_product_types_product"
     },
     {
       "relation": "re_exports",
@@ -13714,9 +14418,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/index.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_reviews_components_index_ts_components_index",
-      "target": "components_reviewsfilter_reviewsfilter",
-      "confidence_score": 1.0
+      "target": "components_reviewsfilter_reviewsfilter"
     },
     {
       "relation": "re_exports",
@@ -13725,9 +14429,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/index.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_reviews_components_index_ts_components_index",
-      "target": "components_reviewslist",
-      "confidence_score": 1.0
+      "target": "components_reviewslist"
     },
     {
       "relation": "contains",
@@ -13767,9 +14471,31 @@
       "source_file": "apps/frontend/src/modules/reviews/components/ReviewsList.tsx",
       "source_location": "L1",
       "weight": 1.0,
+      "source": "components_reviewslist",
+      "target": "types_product_types_product",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/frontend/src/modules/reviews/components/ReviewsList.tsx",
+      "source_location": "L1",
+      "weight": 1.0,
       "confidence_score": 1.0,
       "source": "components_reviewslist",
       "target": "types_review_types_review"
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/frontend/src/modules/reviews/components/ReviewsList.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "components_reviewslist_reviewslistprops",
+      "target": "types_product_types_product",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -13789,9 +14515,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/index.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_reviews_components_index_ts_components_index",
-      "target": "components_reviewslist_reviewslist",
-      "confidence_score": 1.0
+      "target": "components_reviewslist_reviewslist"
     },
     {
       "relation": "re_exports",
@@ -13800,9 +14526,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/index.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_reviews_components_index_ts_components_index",
-      "target": "components_reviewsloadingstate",
-      "confidence_score": 1.0
+      "target": "components_reviewsloadingstate"
     },
     {
       "relation": "contains",
@@ -13821,9 +14547,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/index.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_reviews_components_index_ts_components_index",
-      "target": "components_reviewsloadingstate_reviewsloadingstate",
-      "confidence_score": 1.0
+      "target": "components_reviewsloadingstate_reviewsloadingstate"
     },
     {
       "relation": "re_exports",
@@ -13832,9 +14558,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/index.ts",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_reviews_components_index_ts_components_index",
-      "target": "components_reviewsnoresultsstate",
-      "confidence_score": 1.0
+      "target": "components_reviewsnoresultsstate"
     },
     {
       "relation": "contains",
@@ -13853,9 +14579,9 @@
       "source_file": "apps/frontend/src/modules/reviews/components/index.ts",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "apps_frontend_src_modules_reviews_components_index_ts_components_index",
-      "target": "components_reviewsnoresultsstate_reviewsnoresultsstate",
-      "confidence_score": 1.0
+      "target": "components_reviewsnoresultsstate_reviewsnoresultsstate"
     },
     {
       "relation": "re_exports",
@@ -15080,9 +15806,9 @@
       "source_file": "packages/shared/src/schemas/product.schema.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "schemas_product_schema",
-      "target": "schemas_common_schemas",
-      "confidence_score": 1.0
+      "target": "schemas_common_schemas"
     },
     {
       "relation": "imports_from",
@@ -15113,9 +15839,9 @@
       "source_file": "packages/shared/src/schemas/product.schema.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "schemas_product_schema",
-      "target": "schemas_common_schemas_successresponseschema",
-      "confidence_score": 1.0
+      "target": "schemas_common_schemas_successresponseschema"
     },
     {
       "relation": "imports",
@@ -15188,9 +15914,9 @@
       "source_file": "packages/shared/src/schemas/index.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "schemas_index",
-      "target": "schemas_product_schema",
-      "confidence_score": 1.0
+      "target": "schemas_product_schema"
     },
     {
       "relation": "re_exports",
@@ -15207,11 +15933,31 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "packages/shared/src/schemas/product.schema.ts",
-      "source_location": "L17",
+      "source_location": "L8",
       "weight": 1.0,
       "source": "schemas_product_schema",
-      "target": "schemas_product_schema_createproductbodyschema",
+      "target": "schemas_product_schema_amazon_short_link_hosts",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/shared/src/schemas/product.schema.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "schemas_product_schema",
+      "target": "schemas_product_schema_amazonproducturlschema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/shared/src/schemas/product.schema.ts",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "schemas_product_schema",
+      "target": "schemas_product_schema_createproductbodyschema"
     },
     {
       "relation": "contains",
@@ -15219,9 +15965,9 @@
       "source_file": "packages/shared/src/schemas/product.schema.ts",
       "source_location": "L64",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "schemas_product_schema",
-      "target": "schemas_product_schema_deleteproductrouteschema",
-      "confidence_score": 1.0
+      "target": "schemas_product_schema_deleteproductrouteschema"
     },
     {
       "relation": "contains",
@@ -15229,9 +15975,9 @@
       "source_file": "packages/shared/src/schemas/product.schema.ts",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "schemas_product_schema",
-      "target": "schemas_product_schema_getproductsrouteschema",
-      "confidence_score": 1.0
+      "target": "schemas_product_schema_getproductsrouteschema"
     },
     {
       "relation": "contains",
@@ -15239,9 +15985,9 @@
       "source_file": "packages/shared/src/schemas/product.schema.ts",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "schemas_product_schema",
-      "target": "schemas_product_schema_postproductrouteschema",
-      "confidence_score": 1.0
+      "target": "schemas_product_schema_postproductrouteschema"
     },
     {
       "relation": "contains",
@@ -15249,9 +15995,9 @@
       "source_file": "packages/shared/src/schemas/product.schema.ts",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "schemas_product_schema",
-      "target": "schemas_product_schema_productidparamsschema",
-      "confidence_score": 1.0
+      "target": "schemas_product_schema_productidparamsschema"
     },
     {
       "relation": "contains",
@@ -15259,9 +16005,9 @@
       "source_file": "packages/shared/src/schemas/product.schema.ts",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "schemas_product_schema",
-      "target": "schemas_product_schema_productschema",
-      "confidence_score": 1.0
+      "target": "schemas_product_schema_productschema"
     },
     {
       "relation": "contains",
@@ -15269,9 +16015,9 @@
       "source_file": "packages/shared/src/schemas/product.schema.ts",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "schemas_product_schema",
-      "target": "schemas_product_schema_putproductrouteschema",
-      "confidence_score": 1.0
+      "target": "schemas_product_schema_putproductrouteschema"
     },
     {
       "relation": "contains",
@@ -15279,9 +16025,9 @@
       "source_file": "packages/shared/src/schemas/product.schema.ts",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "schemas_product_schema",
-      "target": "schemas_product_schema_updateproductbodyschema",
-      "confidence_score": 1.0
+      "target": "schemas_product_schema_updateproductbodyschema"
     },
     {
       "relation": "imports_from",
@@ -15290,9 +16036,9 @@
       "source_file": "packages/shared/src/schemas/product.schema.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "schemas_product_schema",
-      "target": "types_product_types",
-      "confidence_score": 1.0
+      "target": "types_product_types"
     },
     {
       "relation": "imports",
@@ -15301,9 +16047,9 @@
       "source_file": "packages/shared/src/schemas/product.schema.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "schemas_product_schema",
-      "target": "types_product_types_productstatus",
-      "confidence_score": 1.0
+      "target": "types_product_types_productstatus"
     },
     {
       "relation": "imports_from",
@@ -15312,9 +16058,9 @@
       "source_file": "packages/shared/src/schemas/product.schema.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "schemas_product_schema",
-      "target": "types_swagger_types",
-      "confidence_score": 1.0
+      "target": "types_swagger_types"
     },
     {
       "relation": "imports",
@@ -15323,9 +16069,9 @@
       "source_file": "packages/shared/src/schemas/product.schema.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "schemas_product_schema",
-      "target": "types_swagger_types_routetags",
-      "confidence_score": 1.0
+      "target": "types_swagger_types_routetags"
     },
     {
       "relation": "contains",
@@ -15477,9 +16223,9 @@
       "source_file": "packages/shared/src/types/index.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "types_index",
-      "target": "types_product_types",
-      "confidence_score": 1.0
+      "target": "types_product_types"
     },
     {
       "relation": "re_exports",
@@ -15509,9 +16255,9 @@
       "source_file": "packages/shared/src/types/product.types.ts",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "types_product_types",
-      "target": "types_product_types_createproductinput",
-      "confidence_score": 1.0
+      "target": "types_product_types_createproductinput"
     },
     {
       "relation": "contains",
@@ -15519,9 +16265,9 @@
       "source_file": "packages/shared/src/types/product.types.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "types_product_types",
-      "target": "types_product_types_product",
-      "confidence_score": 1.0
+      "target": "types_product_types_product"
     },
     {
       "relation": "contains",
@@ -15529,9 +16275,9 @@
       "source_file": "packages/shared/src/types/product.types.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "types_product_types",
-      "target": "types_product_types_productstatus",
-      "confidence_score": 1.0
+      "target": "types_product_types_productstatus"
     },
     {
       "relation": "contains",
@@ -15539,9 +16285,9 @@
       "source_file": "packages/shared/src/types/product.types.ts",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "types_product_types",
-      "target": "types_product_types_updateproductinput",
-      "confidence_score": 1.0
+      "target": "types_product_types_updateproductinput"
     },
     {
       "relation": "contains",
@@ -16255,5 +17001,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e50935858a41be08adb7770b327d31b29f04f100"
+  "built_at_commit": "3f3522c40658fccbbe8d49d5fc470f398bade0aa"
 }

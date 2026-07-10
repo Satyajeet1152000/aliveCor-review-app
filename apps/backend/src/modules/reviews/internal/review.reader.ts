@@ -46,16 +46,26 @@ export default class ReviewReader {
     return reviews.map(serializeReview);
   }
 
-  public static async findReviewUrls(reviewUrls: string[]): Promise<Set<string>> {
-    if (reviewUrls.length === 0) {
+  public static async findReviewIds(reviewIds: string[]): Promise<Set<string>> {
+    if (reviewIds.length === 0) {
       return new Set();
     }
 
     const existing = await ReviewRepository.find({
-      where: { reviewUrl: In(reviewUrls) },
-      select: { reviewUrl: true },
+      where: { reviewId: In(reviewIds) },
+      select: { reviewId: true },
     });
 
-    return new Set(existing.map((review) => review.reviewUrl));
+    return new Set(existing.map((review) => review.reviewId));
+  }
+
+  public static async findLatestFetchedAtByProductId(productId: number): Promise<Date | null> {
+    const latestReview = await ReviewRepository.findOne({
+      where: { productId },
+      order: { createdAt: "DESC" },
+      select: { createdAt: true },
+    });
+
+    return latestReview?.createdAt ?? null;
   }
 }

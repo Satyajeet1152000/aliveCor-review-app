@@ -26,7 +26,10 @@ export class ReviewEntity {
   @Column({ type: "timestamp", name: "reviewed_at" })
   reviewedAt: Date;
 
-  @Column({ type: "text", name: "review_url", unique: true })
+  @Column({ type: "character varying", name: "review_id", unique: true })
+  reviewId: string;
+
+  @Column({ type: "text", name: "review_url" })
   reviewUrl: string;
 
   @CreateDateColumn({

@@ -13,17 +13,8 @@ const envSchema = z.object({
   DATABASE_NAME: z.string(),
   DATABASE_CA_CERT: z.string().optional(),
 
-  REVIEW_PRODUCT_URLS: z
-    .string()
-    .default(
-      "https://amzn.in/d/07vKnqI2,https://amzn.in/d/01qnlA6F,https://amzn.in/d/03eooMZA",
-    )
-    .transform((value) =>
-      value
-        .split(",")
-        .map((url) => url.trim())
-        .filter(Boolean),
-    ),
+  APIFY_API_TOKEN: z.string().min(1),
+  APIFY_AMAZON_REVIEWS_ACTOR: z.string().default("junglee/amazon-reviews-scraper"),
 });
 
 export const env = envSchema.parse(process.env);
