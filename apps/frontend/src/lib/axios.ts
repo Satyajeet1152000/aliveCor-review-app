@@ -1,9 +1,10 @@
-import { env } from "process";
-
 import axios from "axios";
 
+// Next.js only inlines NEXT_PUBLIC_* when accessed as process.env.NEXT_PUBLIC_…
+const apiOrigin = process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "");
+
 export const apiClient = axios.create({
-  baseURL: `${env.NEXT_PUBLIC_API_URL}/api`,
+  baseURL: apiOrigin ? `${apiOrigin}/api` : "/api",
   withCredentials: true,
   headers: {
     "Content-Type": "application/json",
