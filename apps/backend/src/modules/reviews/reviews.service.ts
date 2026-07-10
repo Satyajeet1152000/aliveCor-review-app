@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 
 import { env } from "@task-forge/shared/env";
-import type { Review, ReviewSyncResult } from "@task-forge/shared/types";
+import type { Review, ReviewListFilters, ReviewSyncResult } from "@task-forge/shared/types";
 
 import ReviewReader from "./internal/review.reader";
 import ReviewWriter, { type ReviewInsertInput } from "./internal/review.writer";
@@ -106,8 +106,8 @@ async function fetchUpstreamReviews(productUrls: string[]): Promise<ReviewInsert
 }
 
 export default class ReviewService {
-  public static async listLatest(limit: number): Promise<Review[]> {
-    return ReviewReader.listLatest(limit);
+  public static async list(filters: ReviewListFilters): Promise<Review[]> {
+    return ReviewReader.list(filters);
   }
 
   public static async syncReviews(): Promise<ReviewSyncResult> {

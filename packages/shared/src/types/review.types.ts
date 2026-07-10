@@ -1,3 +1,11 @@
+export interface ReviewListFilters {
+  limit?: number;
+  productUrl?: string;
+  rating?: number;
+  fromDate?: string;
+  toDate?: string;
+}
+
 export interface Review {
   id: number;
   externalId: string;

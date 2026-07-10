@@ -1,14 +1,17 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import type { ReviewListFilters } from "@task-forge/shared/types";
 import { toast } from "sonner";
 
 import { getReviews, syncReviews } from "./reviews.api";
 
-export const reviewsQueryKey = ["reviews", 20] as const;
+export function reviewsQueryKey(filters: ReviewListFilters) {
+  return ["reviews", filters] as const;
+}
 
-export function useReviewsQuery(limit = 20) {
+export function useReviewsQuery(filters: ReviewListFilters) {
   return useQuery({
-    queryKey: ["reviews", limit],
-    queryFn: () => getReviews(limit),
+    queryKey: reviewsQueryKey(filters),
+    queryFn: () => getReviews(filters),
   });
 }
 

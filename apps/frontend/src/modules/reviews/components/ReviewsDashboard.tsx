@@ -1,17 +1,53 @@
 "use client";
 
-import { Icon } from "@iconify/react";
-import React from "react";
+import type { ReviewListFilters } from "@task-forge/shared/types";
+import React, { useMemo, useState } from "react";
 
 import { useReviewsQuery, useSyncReviewsMutation } from "../reviews.queries";
 
-import { ReviewCard } from "./ReviewCard";
+import { ReviewsEmptyState } from "./ReviewsEmptyState";
+import { ReviewsErrorState } from "./ReviewsErrorState";
+import { ReviewFilterValues, ReviewsFilter } from "./ReviewsFilter";
+import { ReviewsList } from "./ReviewsList";
+import { ReviewsLoadingState } from "./ReviewsLoadingState";
+import { ReviewsNoResultsState } from "./ReviewsNoResultsState";
 
 import { Button } from "@/components/ui/button";
 
+const DEFAULT_FILTER_VALUES: ReviewFilterValues = {
+  productUrl: "",
+  rating: "",
+  fromDate: "",
+  toDate: "",
+};
+
+function toReviewListFilters(values: ReviewFilterValues): ReviewListFilters {
+  return {
+    limit: 20,
+    ...(values.productUrl ? { productUrl: values.productUrl } : {}),
+    ...(values.rating ? { rating: Number(values.rating) } : {}),
+    ...(values.fromDate ? { fromDate: values.fromDate } : {}),
+    ...(values.toDate ? { toDate: values.toDate } : {}),
+  };
+}
+
+function hasActiveFilters(values: ReviewFilterValues): boolean {
+  return Boolean(values.productUrl || values.rating || values.fromDate || values.toDate);
+}
+
 export function ReviewsDashboard(): React.ReactElement {
-  const { data: reviews = [], isLoading, isError, error, refetch } = useReviewsQuery(20);
+  const [filterValues, setFilterValues] = useState<ReviewFilterValues>(DEFAULT_FILTER_VALUES);
+
+  const filters = useMemo(() => toReviewListFilters(filterValues), [filterValues]);
+
+  const { data: reviews = [], isLoading, isError, error, refetch } = useReviewsQuery(filters);
   const syncMutation = useSyncReviewsMutation();
+
+  const baseReady = !isLoading && !isError;
+  const showEmptyState = baseReady && reviews.length === 0 && !hasActiveFilters(filterValues);
+  const showFilters = baseReady && !showEmptyState;
+  const showNoResultsState = showFilters && reviews.length === 0 && hasActiveFilters(filterValues);
+  const showReviewsList = showFilters && reviews.length > 0;
 
   return (
     <main className="mx-auto flex min-h-screen max-w-5xl flex-col gap-8 px-6 py-12">
@@ -27,47 +63,27 @@ export function ReviewsDashboard(): React.ReactElement {
         </Button>
       </div>
 
-      {isLoading ? (
-        <div className="flex items-center justify-center py-24">
-          <Icon icon="mdi:loading" className="h-8 w-8 animate-spin text-muted-foreground" />
-        </div>
-      ) : null}
+      {isLoading && <ReviewsLoadingState />}
 
-      {isError ? (
-        <div className="rounded-lg border border-destructive/30 bg-destructive/5 p-4 text-sm">
-          <p className="font-medium text-destructive">Could not load reviews</p>
-          <p className="mt-1 text-muted-foreground">
-            {error instanceof Error ? error.message : "Something went wrong"}
-          </p>
-          <Button variant="outline" size="sm" className="mt-4" onClick={() => void refetch()}>
-            Retry
-          </Button>
-        </div>
-      ) : null}
+      {isError && (
+        <ReviewsErrorState
+          message={error instanceof Error ? error.message : "Something went wrong"}
+          onRetry={() => void refetch()}
+        />
+      )}
 
-      {!isLoading && !isError && reviews.length === 0 ? (
-        <div className="rounded-lg border border-dashed p-10 text-center">
-          <p className="text-lg font-medium">No reviews yet</p>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Sync mock Amazon reviews into PostgreSQL to populate the dashboard.
-          </p>
-          <Button
-            className="mt-4"
-            onClick={() => syncMutation.mutate()}
-            disabled={syncMutation.isPending}
-          >
-            Sync reviews
-          </Button>
-        </div>
-      ) : null}
+      {showEmptyState && (
+        <ReviewsEmptyState
+          onSync={() => syncMutation.mutate()}
+          isSyncing={syncMutation.isPending}
+        />
+      )}
 
-      {!isLoading && !isError && reviews.length > 0 ? (
-        <section className="grid gap-4">
-          {reviews.map((review) => (
-            <ReviewCard key={review.id} review={review} />
-          ))}
-        </section>
-      ) : null}
+      {showFilters && <ReviewsFilter values={filterValues} onChange={setFilterValues} />}
+
+      {showNoResultsState && <ReviewsNoResultsState />}
+
+      {showReviewsList && <ReviewsList reviews={reviews} />}
     </main>
   );
 }

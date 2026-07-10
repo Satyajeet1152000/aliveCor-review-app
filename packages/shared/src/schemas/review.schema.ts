@@ -26,6 +26,10 @@ export const reviewSyncResultSchema = z.object({
 
 export const getReviewsQuerySchema = z.object({
   limit: z.coerce.number().int().min(1).max(100).default(20),
+  productUrl: z.string().url().optional(),
+  rating: z.coerce.number().int().min(1).max(5).optional(),
+  fromDate: z.string().date().optional(),
+  toDate: z.string().date().optional(),
 });
 
 export const getReviewsRouteSchema = {

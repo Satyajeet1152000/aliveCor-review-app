@@ -1,10 +1,16 @@
-import type { ApiResponse, Review, ReviewSyncResult } from "@task-forge/shared/types";
+import type { ApiResponse, Review, ReviewListFilters, ReviewSyncResult } from "@task-forge/shared/types";
 
 import { apiClient } from "@/lib/axios";
 
-export async function getReviews(limit = 20): Promise<Review[]> {
+export async function getReviews(filters: ReviewListFilters = {}): Promise<Review[]> {
   const response = await apiClient.get<ApiResponse<Review[]>>("/reviews", {
-    params: { limit },
+    params: {
+      limit: filters.limit ?? 20,
+      ...(filters.productUrl ? { productUrl: filters.productUrl } : {}),
+      ...(filters.rating ? { rating: filters.rating } : {}),
+      ...(filters.fromDate ? { fromDate: filters.fromDate } : {}),
+      ...(filters.toDate ? { toDate: filters.toDate } : {}),
+    },
   });
   return response.data.data ?? [];
 }
