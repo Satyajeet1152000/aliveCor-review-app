@@ -34,16 +34,18 @@ function buildWhereClause(filters: ReviewListFilters): FindOptionsWhere<ReviewEn
 }
 
 export default class ReviewReader {
-  public static async list(filters: ReviewListFilters): Promise<Review[]> {
-    const limit = filters.limit ?? 20;
+  public static async list(filters: ReviewListFilters): Promise<[Review[], number]> {
+    const limit = filters.limit ?? 10;
+    const page = filters.page ?? 1;
 
-    const reviews = await ReviewRepository.find({
+    const [reviews, total] = await ReviewRepository.findAndCount({
       where: buildWhereClause(filters),
       order: { reviewedAt: "DESC" },
+      skip: (page - 1) * limit,
       take: limit,
     });
 
-    return reviews.map(serializeReview);
+    return [reviews.map(serializeReview), total];
   }
 
   public static async findReviewIds(reviewIds: string[]): Promise<Set<string>> {

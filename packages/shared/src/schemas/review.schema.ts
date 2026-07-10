@@ -2,7 +2,7 @@ import { z } from "zod";
 
 import { RouteTags } from "../types/swagger.types";
 
-import { successResponseSchema } from "./common-schemas";
+import { paginatedSuccessResponseSchema, successResponseSchema } from "./common-schemas";
 
 export const reviewSchema = z.object({
   id: z.number(),
@@ -24,7 +24,8 @@ export const reviewSyncResultSchema = z.object({
 });
 
 export const getReviewsQuerySchema = z.object({
-  limit: z.coerce.number().int().min(1).max(100).default(20),
+  limit: z.coerce.number().int().min(1).max(100).default(10),
+  page: z.coerce.number().int().min(1).default(1),
   productId: z.coerce.number().int().positive().optional(),
   rating: z.coerce.number().int().min(1).max(5).optional(),
   fromDate: z.string().date().optional(),
@@ -34,10 +35,10 @@ export const getReviewsQuerySchema = z.object({
 export const getReviewsRouteSchema = {
   tags: [RouteTags.REVIEWS],
   summary: "List latest reviews",
-  description: "Returns the newest reviews from the database.",
+  description: "Returns a paginated list of the newest reviews from the database.",
   querystring: getReviewsQuerySchema,
   response: {
-    200: successResponseSchema(z.array(reviewSchema)),
+    200: paginatedSuccessResponseSchema(reviewSchema),
   },
 };
 

@@ -5,7 +5,7 @@ import type { ReviewListFilters } from "@task-forge/shared/types";
 import Link from "next/link";
 import React, { useMemo, useState } from "react";
 
-import { useReviewsQuery, useSyncReviewsMutation } from "../reviews.queries";
+import { useReviewsInfiniteQuery, useSyncReviewsMutation } from "../reviews.queries";
 
 import { ReviewsEmptyState } from "./ReviewsEmptyState";
 import { ReviewsErrorState } from "./ReviewsErrorState";
@@ -26,7 +26,6 @@ const DEFAULT_FILTER_VALUES: ReviewFilterValues = {
 
 function toReviewListFilters(values: ReviewFilterValues): ReviewListFilters {
   return {
-    limit: 20,
     ...(values.productId ? { productId: Number(values.productId) } : {}),
     ...(values.rating ? { rating: Number(values.rating) } : {}),
     ...(values.fromDate ? { fromDate: values.fromDate } : {}),
@@ -46,8 +45,22 @@ export function ReviewsDashboard(): React.ReactElement {
   );
 
   const { data: products = [] } = useProductsQuery();
-  const { data: reviews = [], isLoading, isError, error, refetch } = useReviewsQuery(filters);
+  const {
+    data,
+    isLoading,
+    isError,
+    error,
+    refetch,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+  } = useReviewsInfiniteQuery(filters);
   const syncMutation = useSyncReviewsMutation();
+
+  const reviews = useMemo(
+    () => data?.pages.flatMap((page) => page.reviews) ?? [],
+    [data],
+  );
 
   const baseReady = !isLoading && !isError;
   const showEmptyState = baseReady && reviews.length === 0 && !hasActiveFilters(filterValues);
@@ -96,7 +109,15 @@ export function ReviewsDashboard(): React.ReactElement {
 
       {showNoResultsState && <ReviewsNoResultsState />}
 
-      {showReviewsList && <ReviewsList reviews={reviews} products={products} />}
+      {showReviewsList && (
+        <ReviewsList
+          reviews={reviews}
+          products={products}
+          hasNextPage={hasNextPage}
+          isFetchingNextPage={isFetchingNextPage}
+          onLoadMore={() => void fetchNextPage()}
+        />
+      )}
     </main>
   );
 }

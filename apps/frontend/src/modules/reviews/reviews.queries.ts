@@ -1,17 +1,25 @@
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useInfiniteQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import type { ReviewListFilters } from "@task-forge/shared/types";
 import { toast } from "sonner";
 
 import { getReviews, syncReviews } from "./reviews.api";
 
+export const REVIEWS_PAGE_SIZE = 10;
+
 export function reviewsQueryKey(filters: ReviewListFilters) {
   return ["reviews", filters] as const;
 }
 
-export function useReviewsQuery(filters: ReviewListFilters) {
-  return useQuery({
+export function useReviewsInfiniteQuery(filters: ReviewListFilters) {
+  return useInfiniteQuery({
     queryKey: reviewsQueryKey(filters),
-    queryFn: () => getReviews(filters),
+    queryFn: ({ pageParam }) =>
+      getReviews({ ...filters, page: pageParam, limit: REVIEWS_PAGE_SIZE }),
+    initialPageParam: 1,
+    getNextPageParam: (lastPage) => {
+      const { page, totalPages } = lastPage.meta;
+      return page < totalPages ? page + 1 : undefined;
+    },
   });
 }
 

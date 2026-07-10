@@ -1,5 +1,6 @@
 export interface ReviewListFilters {
   limit?: number;
+  page?: number;
   productId?: number;
   rating?: number;
   fromDate?: string;

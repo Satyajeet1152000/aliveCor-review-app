@@ -20,6 +20,11 @@ export interface PaginationMeta {
   totalPages: number;
 }
 
+export interface PaginatedResult<T> {
+  items: T[];
+  meta: PaginationMeta;
+}
+
 export interface ApiResponse<T = null> {
   success: boolean;
   message?: string;

@@ -1,18 +1,42 @@
-import type { ApiResponse, Review, ReviewListFilters, ReviewSyncResult } from "@task-forge/shared/types";
+import type {
+  ApiResponse,
+  PaginationMeta,
+  Review,
+  ReviewListFilters,
+  ReviewSyncResult,
+} from "@task-forge/shared/types";
 
 import { apiClient } from "@/lib/axios";
 
-export async function getReviews(filters: ReviewListFilters = {}): Promise<Review[]> {
+export interface PaginatedReviews {
+  reviews: Review[];
+  meta: PaginationMeta;
+}
+
+export async function getReviews(filters: ReviewListFilters = {}): Promise<PaginatedReviews> {
+  const limit = filters.limit ?? 10;
+  const page = filters.page ?? 1;
+
   const response = await apiClient.get<ApiResponse<Review[]>>("/reviews", {
     params: {
-      limit: filters.limit ?? 20,
+      limit,
+      page,
       ...(filters.productId ? { productId: filters.productId } : {}),
       ...(filters.rating ? { rating: filters.rating } : {}),
       ...(filters.fromDate ? { fromDate: filters.fromDate } : {}),
       ...(filters.toDate ? { toDate: filters.toDate } : {}),
     },
   });
-  return response.data.data ?? [];
+
+  const reviews = response.data.data ?? [];
+  const meta = response.data.meta ?? {
+    total: reviews.length,
+    page,
+    limit,
+    totalPages: 1,
+  };
+
+  return { reviews, meta };
 }
 
 export async function syncReviews(): Promise<ReviewSyncResult> {

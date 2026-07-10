@@ -14,8 +14,13 @@ import { ReviewSyncError } from "./reviews.error";
 const PRODUCT_REVIEW_SYNC_COOLDOWN_MS = 2 * 60 * 60 * 1000;
 
 export default class ReviewService {
-  public static async list(filters: ReviewListFilters): Promise<Review[]> {
-    return ReviewReader.list(filters);
+  public static async list(filters: ReviewListFilters): Promise<[Review[], number]> {
+    const limit = filters.limit ?? 10;
+    const page = filters.page ?? 1;
+
+    const [reviews, total] = await ReviewReader.list({ ...filters, limit, page });
+
+    return [reviews, total];
   }
 
   public static async syncReviews(): Promise<ReviewSyncResult> {
