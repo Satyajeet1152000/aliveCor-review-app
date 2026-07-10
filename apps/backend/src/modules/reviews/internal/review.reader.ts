@@ -1,4 +1,4 @@
-import type { Review, ReviewListFilters } from "@task-forge/shared/types";
+import type { Review, ReviewListFilters } from "@review-dash/shared/types";
 import { Between, FindOptionsWhere, In, LessThanOrEqual, MoreThanOrEqual } from "typeorm";
 
 import { ReviewEntity } from "./review.entity";

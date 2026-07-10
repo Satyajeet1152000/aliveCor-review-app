@@ -28,7 +28,7 @@ cp apps/backend/.env.example apps/backend/.env.development
 cp apps/frontend/.env.example apps/frontend/.env.development
 
 # 4. Run migrations (from repo root)
-pnpm --filter @task-forge/backend run mig:run
+pnpm --filter @review-dash/backend run mig:run
 
 # 5. Start dev servers
 pnpm dev
@@ -89,9 +89,9 @@ packages/
 ```bash
 pnpm dev                              # start backend + frontend
 pnpm build                            # build all packages
-pnpm --filter @task-forge/backend run mig:gen   # generate migration
-pnpm --filter @task-forge/backend run mig:run   # run migrations
-pnpm --filter @task-forge/backend run mig:revert
+pnpm --filter @review-dash/backend run mig:gen   # generate migration
+pnpm --filter @review-dash/backend run mig:run   # run migrations
+pnpm --filter @review-dash/backend run mig:revert
 ```
 
 ## Notes

@@ -1,8 +1,8 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import { Routes } from "@task-forge/shared/constant";
-import type { CreateProductInput, Product } from "@task-forge/shared/types";
+import { Routes } from "@review-dash/shared/constant";
+import type { CreateProductInput, Product } from "@review-dash/shared/types";
 import Link from "next/link";
 import React, { useState } from "react";
 

@@ -1,4 +1,4 @@
-# @task-forge/frontend
+# @review-dash/frontend
 
 Next.js web application for Review Dash. Displays the latest product reviews from the REST API.
 
@@ -12,7 +12,7 @@ Next.js web application for Review Dash. Displays the latest product reviews fro
 
 ```bash
 cp .env.example .env.development
-pnpm --filter @task-forge/frontend dev
+pnpm --filter @review-dash/frontend dev
 ```
 
 ## Module layout
@@ -26,4 +26,4 @@ src/modules/reviews/
     ReviewsDashboard.tsx
 ```
 
-Import shared types from `@task-forge/shared/types`.
+Import shared types from `@review-dash/shared/types`.

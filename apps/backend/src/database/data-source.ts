@@ -1,4 +1,4 @@
-import { env } from "@task-forge/shared/env";
+import { env } from "@review-dash/shared/env";
 import { DataSource, DataSourceOptions } from "typeorm";
 
 const baseConfig: DataSourceOptions = {

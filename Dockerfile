@@ -1,5 +1,5 @@
 # Build from the repository root:
-#   docker build -f apps/backend/Dockerfile -t task-forge-backend .
+#   docker build -f Dockerfile -t review-dash-backend .
 
 FROM node:22-alpine AS base
 
@@ -27,10 +27,10 @@ COPY apps/backend/src ./apps/backend/src
 
 RUN pnpm install --frozen-lockfile --prod=false
 
-RUN pnpm --filter @task-forge/shared build
-RUN pnpm --filter @task-forge/backend build
+RUN pnpm --filter @review-dash/shared build
+RUN pnpm --filter @review-dash/backend build
 
-RUN pnpm --filter @task-forge/backend --prod deploy /prod
+RUN pnpm --filter @review-dash/backend --prod deploy /prod
 
 FROM base AS runner
 

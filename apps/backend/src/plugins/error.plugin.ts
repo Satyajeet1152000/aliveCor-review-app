@@ -1,6 +1,6 @@
 import { AppError } from "@lib/error-handler";
 import { getRequestId } from "@lib/get-request-id";
-import { LogType, ApiErrorResponse, HttpStatusCode } from "@task-forge/shared/types";
+import { LogType, ApiErrorResponse, HttpStatusCode } from "@review-dash/shared/types";
 import type { FastifyInstance, FastifyError } from "fastify";
 
 const fastifyErrorCodesMap: Record<

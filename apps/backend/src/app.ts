@@ -12,7 +12,7 @@ import {
   registerSchedule,
   registerSwagger,
 } from "@plugins";
-import { env } from "@task-forge/shared/env";
+import { env } from "@review-dash/shared/env";
 import Fastify, { type FastifyInstance } from "fastify";
 import {
   serializerCompiler,

@@ -1,5 +1,5 @@
-import { getReviewsRouteSchema, postReviewSyncRouteSchema } from "@task-forge/shared/schemas";
-import { RouterConfig } from "@task-forge/shared/types";
+import { getReviewsRouteSchema, postReviewSyncRouteSchema } from "@review-dash/shared/schemas";
+import { RouterConfig } from "@review-dash/shared/types";
 import type { FastifyPluginAsync } from "fastify";
 
 import { ReviewsController } from "./reviews.controller";

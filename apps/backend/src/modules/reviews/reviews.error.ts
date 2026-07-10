@@ -1,5 +1,5 @@
 import { AppError } from "@lib/error-handler";
-import { HttpStatusCode } from "@task-forge/shared/types";
+import { HttpStatusCode } from "@review-dash/shared/types";
 
 export class ReviewSyncError extends AppError {
   constructor(message: string) {

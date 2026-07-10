@@ -4,7 +4,7 @@ import type {
   Review,
   ReviewListFilters,
   ReviewSyncResult,
-} from "@task-forge/shared/types";
+} from "@review-dash/shared/types";
 
 import { apiClient } from "@/lib/axios";
 

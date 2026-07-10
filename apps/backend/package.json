@@ -1,12 +1,12 @@
 {
-  "name": "@task-forge/backend",
+  "name": "@review-dash/backend",
   "version": "2.0.0",
   "private": true,
   "engines": {
     "node": "22.x"
   },
   "scripts": {
-    "build": "pnpm --filter @task-forge/shared build && tsc -p tsconfig.json --outDir dist && tsc-alias -p tsconfig.json",
+    "build": "pnpm --filter @review-dash/shared build && tsc -p tsconfig.json --outDir dist && tsc-alias -p tsconfig.json",
     "dev": "npm run dev:migration && cross-env NODE_ENV=development npm run dev:backend",
     "dev:migration": "cross-env NODE_ENV=development DOTENV_CONFIG_PATH=.env.development npm run typeorm migration:run -- -d dist/database/data-source.js",
     "dev:backend": "cross-env NODE_ENV=development tsx watch --env-file=.env.development src/app.ts",
@@ -28,7 +28,7 @@
     "@fastify/schedule": "^6.0.0",
     "@fastify/swagger": "^9.7.0",
     "@fastify/swagger-ui": "^5.2.6",
-    "@task-forge/shared": "workspace:*",
+    "@review-dash/shared": "workspace:*",
     "axios": "^1.18.1",
     "fastify": "^5.8.5",
     "fastify-plugin": "^5.1.0",

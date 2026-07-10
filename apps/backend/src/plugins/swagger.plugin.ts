@@ -1,8 +1,8 @@
 import swagger from "@fastify/swagger";
 import swaggerUi from "@fastify/swagger-ui";
-import { SWAGGER_TAG_DISPLAY_ORDER } from "@task-forge/shared/constant";
-import { env } from "@task-forge/shared/env";
-import { RouteTags } from "@task-forge/shared/types";
+import { SWAGGER_TAG_DISPLAY_ORDER } from "@review-dash/shared/constant";
+import { env } from "@review-dash/shared/env";
+import { RouteTags } from "@review-dash/shared/types";
 import type { FastifyInstance } from "fastify";
 import fp from "fastify-plugin";
 import { jsonSchemaTransform } from "fastify-type-provider-zod";

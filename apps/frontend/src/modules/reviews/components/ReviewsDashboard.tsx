@@ -1,7 +1,7 @@
 "use client";
 
-import { Routes } from "@task-forge/shared/constant";
-import type { ReviewListFilters } from "@task-forge/shared/types";
+import { Routes } from "@review-dash/shared/constant";
+import type { ReviewListFilters } from "@review-dash/shared/types";
 import Link from "next/link";
 import React, { useMemo, useState } from "react";
 

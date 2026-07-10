@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  transpilePackages: ["@task-forge/shared"],
+  transpilePackages: ["@review-dash/shared"],
   crossOrigin: "anonymous",
 };
 

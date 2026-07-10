@@ -27,7 +27,7 @@ modules/
 
 Notes:
 - Do **not** create `<feature>.types.ts` when starting a new module. Add it only when a UI-only type is shared across **more than one** component or file (see §10.4).
-- Import domain/API types from `@task-forge/shared/types` **directly** in the file that needs them — never re-export shared types through `<feature>.types.ts`.
+- Import domain/API types from `@review-dash/shared/types` **directly** in the file that needs them — never re-export shared types through `<feature>.types.ts`.
 
 ### 1.2 Global component folders (`src/components/`)
 
@@ -467,18 +467,18 @@ export default function PropertiesPage() {
 ## 10. Types Rules
 
 ### 10.1 Always import types from shared sub-path
-  import type { Task } from '@task-forge/shared/types'      ✓
-  import type { Task } from '@task-forge/shared'            ✗ — no main path
+  import type { Task } from '@review-dash/shared/types'      ✓
+  import type { Task } from '@review-dash/shared'            ✗ — no main path
   interface Task { ... }                                     ✗ — never redefine shared-domain types locally
 
 ### 10.2 Always import schemas from shared sub-path for form validation
-  import { createTaskSchema } from '@task-forge/shared/schemas'   ✓
-  import { createTaskSchema } from '@task-forge/shared'            ✗ — no main path
+  import { createTaskSchema } from '@review-dash/shared/schemas'   ✓
+  import { createTaskSchema } from '@review-dash/shared'            ✗ — no main path
 
 ### 10.3 Default: types next to usage; no shared re-exports in `.types.ts`
 - Prefer `interface` / `type` in the **same file** as the component or hook that needs it when only that file uses the shape.
 - Do **not** create `<feature>.types.ts` up front for a new feature — add it only when reuse forces it (§10.4).
-- **Never** use `<feature>.types.ts` to re-export or re-wrap types from `@task-forge/shared/types`. Import shared types directly: `import type { … } from '@task-forge/shared/types'`.
+- **Never** use `<feature>.types.ts` to re-export or re-wrap types from `@review-dash/shared/types`. Import shared types directly: `import type { … } from '@review-dash/shared/types'`.
 - Do **not** redefine API/domain entities in the frontend. Those belong in `packages/shared`; compose or narrow them locally only as needed for the UI.
 
 ### 10.4 When to add `<feature>.types.ts`
@@ -487,5 +487,5 @@ export default function PropertiesPage() {
 - If a type is used in a single file only, it stays in that file — do not move it to `.types.ts` “for consistency.”
 
 ### 10.5 Cross-app contracts stay in `packages/shared`
-- New API contracts, entities, and shared DTOs belong in `packages/shared` per the shared package rules, then are imported via `@task-forge/shared/types` or `@task-forge/shared/schemas`.
+- New API contracts, entities, and shared DTOs belong in `packages/shared` per the shared package rules, then are imported via `@review-dash/shared/types` or `@review-dash/shared/schemas`.
 - Module `.types.ts` is not a shortcut for duplicating those shapes in the app.

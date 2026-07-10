@@ -149,7 +149,7 @@ Primary Column Should be always of type 'bigInt' number, no uuid.
 ### 2.1a Migrations when entities change (TypeORM)
 
 - Whenever a TypeORM entity under `modules/**/internal/*.entity.ts` is changed in a way that affects the **database schema** (new/removed columns, types, indexes, table renames, etc.), you MUST produce a migration by running TypeORM’s generator — **do not** create a new migration file manually from scratch and **do not** copy-paste migration stubs.
-- **Command (from `apps/backend`):** `pnpm run mig:gen` (equivalent: `npm run mig:gen`). The script `mig:gen` in `apps/backend/package.json` runs `build`, loads `.env.development`, and runs `typeorm mig:gen` with `-d dist/database/data-source.js`, writing new files under `src/database/migrations/`. From the repo root you may use `pnpm --filter @task-forge/backend run mig:gen` when using workspace filters.
+- **Command (from `apps/backend`):** `pnpm run mig:gen` (equivalent: `npm run mig:gen`). The script `mig:gen` in `apps/backend/package.json` runs `build`, loads `.env.development`, and runs `typeorm mig:gen` with `-d dist/database/data-source.js`, writing new files under `src/database/migrations/`. From the repo root you may use `pnpm --filter @review-dash/backend run mig:gen` when using workspace filters.
 - **After generation:** open the new migration file and **review `up` and `down` by hand**. TypeORM sometimes emits overly destructive SQL (e.g. `DROP TABLE` / `DROP COLUMN`) for small entity tweaks or when the DB and entities are out of sync. Adjust the generated migration to use safe, incremental steps when needed (e.g. add nullable column → backfill → `SET NOT NULL`) and keep `down` consistent with your edits.
 - **Agents / AI:** after editing any `*.entity.ts`, instruct the developer to run `mig:gen` (or run it in a terminal when appropriate); never invent a hand-written migration file as the primary workflow.
 
@@ -250,7 +250,7 @@ Always use serializer in DB reader and writer to return serialized value.
 
 ```ts
 // user.serializer.ts
-import { User } from "@task-forge/shared/types";
+import { User } from "@review-dash/shared/types";
 import { User as UserEntity } from "./user.entity";
 
 export const serializeUser = (user: UserEntity): User => {
@@ -449,29 +449,29 @@ Reuse private and public static methods internally if required.
 
 ### 6.1 Schemas and types — all in `packages/shared`
 
-- **Every** Zod schema and **every** data/DTO/param/enum type for backend features belongs in **`packages/shared`** (`src/schemas/<feature>.schema.ts`, `src/types/<feature>.types.ts`). Backend modules **must not** own `*.types.ts` or `*.schema.ts` for those shapes — import with `@task-forge/shared/schemas` and `@task-forge/shared/types`.
+- **Every** Zod schema and **every** data/DTO/param/enum type for backend features belongs in **`packages/shared`** (`src/schemas/<feature>.schema.ts`, `src/types/<feature>.types.ts`). Backend modules **must not** own `*.types.ts` or `*.schema.ts` for those shapes — import with `@review-dash/shared/schemas` and `@review-dash/shared/types`.
 - **Exceptions (backend-only, not “shared types”):** TypeORM **entities** and **repositories** stay under `internal/`; **error classes** extending `AppError` stay in `<feature>.error.ts`; **Fastify**-specific handler typing stays in controllers/routers. Nothing in those exceptions replaces declaring the **payload shape** in shared when that shape is passed between layers or validated.
 
 ### 6.2 Import schemas using sub-path — always
 
-import { createTaskSchema } from '@task-forge/shared/schemas' ✓
-import { createTaskSchema } from '@task-forge/shared/types' ✗ — no main path
+import { createTaskSchema } from '@review-dash/shared/schemas' ✓
+import { createTaskSchema } from '@review-dash/shared/types' ✗ — no main path
 import { createTaskSchema } from '../../packages/shared/...' ✗ — never direct
 
 ### 6.3 Import types using sub-path — always
 
-import { Task } from '@task-forge/shared/types' ✓
-import { Task } from '@task-forge/shared/types' ✗ — no main path
+import { Task } from '@review-dash/shared/types' ✓
+import { Task } from '@review-dash/shared/types' ✗ — no main path
 
 ### 6.4 Import env using env sub-path — backend only
 
-import { env } from '@task-forge/shared/env' ✓
-import { env } from '@task-forge/shared/types' ✗
+import { env } from '@review-dash/shared/env' ✓
+import { env } from '@review-dash/shared/types' ✗
 
 ### 6.4a Import shared constants using constant sub-path — when needed
 
-import { SWAGGER_TAG_DISPLAY_ORDER } from '@task-forge/shared/constant' ✓
-import { SWAGGER_TAG_DISPLAY_ORDER } from '@task-forge/shared/types' ✗ — no main path
+import { SWAGGER_TAG_DISPLAY_ORDER } from '@review-dash/shared/constant' ✓
+import { SWAGGER_TAG_DISPLAY_ORDER } from '@review-dash/shared/types' ✗ — no main path
 
 ### 6.5 All validation schemas in shared must be Zod
 
@@ -509,7 +509,7 @@ z.string().min(2) ✗
 - **Swagger tag order:** do **not** set root `openapi.tags` on `@fastify/swagger` (it overrides
   operation tags poorly). Order is applied in the Swagger UI `transformSpecification` step
   (`orderOpenApiTags` in `swagger.plugin.ts`) using **`SWAGGER_TAG_DISPLAY_ORDER`** from
-  `@task-forge/shared/constant`, which must stay in sync with **`RouteTags`** on each route
+  `@review-dash/shared/constant`, which must stay in sync with **`RouteTags`** on each route
   schema (`packages/shared/src/types/openapi-route.types.ts`).
 
 Example (from `packages/shared/src/schemas/health.schema.ts`):
@@ -550,7 +550,7 @@ Routers MUST import and use these route schemas instead of defining inline
 
 ```ts
 // apps/backend/src/modules/health/health.router.ts
-import { getHealthRouteSchema } from "@task-forge/shared/schemas";
+import { getHealthRouteSchema } from "@review-dash/shared/schemas";
 
 app.get(
   "/",
@@ -611,7 +611,7 @@ export class TaskNotFoundError extends ApplicationError {
 
 ```ts
 // ✓ correct
-import { env } from "@task-forge/shared/env";
+import { env } from "@review-dash/shared/env";
 const port = env.PORT;
 
 // ✗ wrong
@@ -662,8 +662,8 @@ Same-folder imports stay relative — do not use aliases within the same module:
 // ✓ correct — same folder stays relative for service/router/controller
 import { AuthService } from "./auth.service";
 // ✓ schemas and data types come from packages/shared, not ./auth.schema or ./auth.types
-import { signinSchema } from "@task-forge/shared/schemas";
-import type { SigninInput } from "@task-forge/shared/types";
+import { signinSchema } from "@review-dash/shared/schemas";
+import type { SigninInput } from "@review-dash/shared/types";
 
 // ✗ wrong — alias for same folder
 import { AuthService } from "@modules/auth/auth.service";
@@ -733,12 +733,12 @@ validateUserEmail = async (request, reply) => {
 ### 12.4 ApiResponse and PaginationMeta types live in packages/shared
 
 Never redefine ApiResponse or PaginationMeta locally in the backend.
-Always import from @task-forge/shared and NEVER use the `type` import modifier.
+Always import from @review-dash/shared and NEVER use the `type` import modifier.
 
 ```ts
-import { ApiResponse, PaginationMeta } from '@task-forge/shared/types'   ✓
+import { ApiResponse, PaginationMeta } from '@review-dash/shared/types'   ✓
 interface ApiResponse { ... }                                      ✗
-import type { ApiResponse } from '@task-forge/shared/types'             ✗ — do not use `type`
+import type { ApiResponse } from '@review-dash/shared/types'             ✗ — do not use `type`
 ```
 
 ---

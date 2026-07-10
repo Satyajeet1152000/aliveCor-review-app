@@ -1,6 +1,6 @@
 import { successResponse } from "@lib/api-response";
-import { getHealthRouteSchema } from "@task-forge/shared/schemas";
-import { RouterConfig } from "@task-forge/shared/types";
+import { getHealthRouteSchema } from "@review-dash/shared/schemas";
+import { RouterConfig } from "@review-dash/shared/types";
 import type { FastifyInstance, FastifyPluginAsync } from "fastify";
 
 const healthRouter: FastifyPluginAsync = async (app: FastifyInstance) => {

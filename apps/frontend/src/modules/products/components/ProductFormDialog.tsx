@@ -1,7 +1,7 @@
 "use client";
 
-import { createProductBodySchema } from "@task-forge/shared/schemas";
-import type { CreateProductInput, Product } from "@task-forge/shared/types";
+import { createProductBodySchema } from "@review-dash/shared/schemas";
+import type { CreateProductInput, Product } from "@review-dash/shared/types";
 import React, { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";

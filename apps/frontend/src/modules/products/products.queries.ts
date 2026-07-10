@@ -1,5 +1,5 @@
+import type { UpdateProductInput } from "@review-dash/shared/types";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import type { UpdateProductInput } from "@task-forge/shared/types";
 import { toast } from "sonner";
 
 import { createProduct, deleteProduct, getProducts, updateProduct } from "./products.api";

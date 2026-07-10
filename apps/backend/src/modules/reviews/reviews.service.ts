@@ -4,7 +4,7 @@ import type {
   ReviewListFilters,
   ReviewSyncResult,
   Product,
-} from "@task-forge/shared/types";
+} from "@review-dash/shared/types";
 
 import ReviewReader from "./internal/review.reader";
 import ReviewWriter from "./internal/review.writer";

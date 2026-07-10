@@ -1,5 +1,5 @@
-import type { Product } from "@task-forge/shared/types";
-import { ProductStatus } from "@task-forge/shared/types";
+import type { Product } from "@review-dash/shared/types";
+import { ProductStatus } from "@review-dash/shared/types";
 
 import { ProductNotFoundError } from "../products.error";
 

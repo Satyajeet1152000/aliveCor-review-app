@@ -1,5 +1,5 @@
+import type { ReviewListFilters } from "@review-dash/shared/types";
 import { useInfiniteQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import type { ReviewListFilters } from "@task-forge/shared/types";
 import { toast } from "sonner";
 
 import { getReviews, syncReviews } from "./reviews.api";

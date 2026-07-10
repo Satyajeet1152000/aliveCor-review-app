@@ -16,9 +16,9 @@
     "plugins": [{ "name": "next" }],
     "paths": {
       "@/*": ["./src/*"],
-      "@task-forge/shared/schemas": ["../../packages/shared/src/schemas/index.ts"],
-      "@task-forge/shared/types": ["../../packages/shared/src/types/index.ts"],
-      "@task-forge/shared/constant": ["../../packages/shared/src/constant/index.ts"]
+      "@review-dash/shared/schemas": ["../../packages/shared/src/schemas/index.ts"],
+      "@review-dash/shared/types": ["../../packages/shared/src/types/index.ts"],
+      "@review-dash/shared/constant": ["../../packages/shared/src/constant/index.ts"]
     },
     "isolatedModules": true,
     "noEmit": true

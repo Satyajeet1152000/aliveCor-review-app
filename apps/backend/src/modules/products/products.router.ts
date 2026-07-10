@@ -3,8 +3,8 @@ import {
   getProductsRouteSchema,
   postProductRouteSchema,
   putProductRouteSchema,
-} from "@task-forge/shared/schemas";
-import { RouterConfig } from "@task-forge/shared/types";
+} from "@review-dash/shared/schemas";
+import { RouterConfig } from "@review-dash/shared/types";
 import type { FastifyPluginAsync } from "fastify";
 
 import { ProductsController } from "./products.controller";

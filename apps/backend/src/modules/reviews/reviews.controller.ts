@@ -1,5 +1,5 @@
 import { paginatedResponse, successResponse } from "@lib/api-response";
-import type { ReviewListFilters } from "@task-forge/shared/types";
+import type { ReviewListFilters } from "@review-dash/shared/types";
 import type { FastifyReply, FastifyRequest } from "fastify";
 
 import ReviewService from "./reviews.service";

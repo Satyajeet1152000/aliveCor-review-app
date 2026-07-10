@@ -1,10 +1,10 @@
 services:
-  task-forge-backend:
+  review-dash-backend:
     build:
       context: .
       dockerfile: Dockerfile
 
-    container_name: task-forge-backend
+    container_name: review-dash-backend
 
     restart: no
 
@@ -17,15 +17,15 @@ services:
       - traefik.enable=true
 
       # Route
-      - traefik.http.routers.taskforge.rule=PathPrefix(`/taskforge`)
-      - traefik.http.routers.taskforge.entrypoints=web
+      - traefik.http.routers.reviewdash.rule=PathPrefix(`/review-dash`)
+      - traefik.http.routers.reviewdash.entrypoints=web
 
       # Strip prefix
-      - traefik.http.middlewares.taskforge-strip.stripprefix.prefixes=/taskforge
-      - traefik.http.routers.taskforge.middlewares=taskforge-strip
+      - traefik.http.middlewares.reviewdash-strip.stripprefix.prefixes=/review-dash
+      - traefik.http.routers.reviewdash.middlewares=reviewdash-strip
 
       # Internal app port
-      - traefik.http.services.taskforge.loadbalancer.server.port=3000
+      - traefik.http.services.reviewdash.loadbalancer.server.port=3000
 
     networks:
       - satyalabs_network

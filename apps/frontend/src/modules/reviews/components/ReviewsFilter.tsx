@@ -1,5 +1,5 @@
-import { REVIEW_RATING_OPTIONS } from "@task-forge/shared/constant";
-import type { Product } from "@task-forge/shared/types";
+import { REVIEW_RATING_OPTIONS } from "@review-dash/shared/constant";
+import type { Product } from "@review-dash/shared/types";
 import { X } from "lucide-react";
 import React from "react";
 

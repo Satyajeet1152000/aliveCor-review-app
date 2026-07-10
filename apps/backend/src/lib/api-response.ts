@@ -1,4 +1,4 @@
-import type { ApiResponse, PaginationMeta } from "@task-forge/shared/types";
+import type { ApiResponse, PaginationMeta } from "@review-dash/shared/types";
 
 export function successResponse<T>(data: T, message?: string): ApiResponse<T> {
   return { success: true, data, ...(message ? { message } : {}) };

@@ -3,7 +3,7 @@ import type {
   CreateProductInput,
   Product,
   UpdateProductInput,
-} from "@task-forge/shared/types";
+} from "@review-dash/shared/types";
 
 import { apiClient } from "@/lib/axios";
 

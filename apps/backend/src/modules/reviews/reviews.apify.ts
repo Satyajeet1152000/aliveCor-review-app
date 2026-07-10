@@ -1,5 +1,5 @@
-import { env } from "@task-forge/shared/env";
-import type { Product } from "@task-forge/shared/types";
+import { env } from "@review-dash/shared/env";
+import type { Product } from "@review-dash/shared/types";
 import axios, { isAxiosError } from "axios";
 
 import type { ReviewInsertInput } from "./internal/review.writer";

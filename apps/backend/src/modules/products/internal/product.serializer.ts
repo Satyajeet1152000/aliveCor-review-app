@@ -1,4 +1,4 @@
-import type { Product } from "@task-forge/shared/types";
+import type { Product } from "@review-dash/shared/types";
 
 import { ProductEntity } from "./product.entity";
 

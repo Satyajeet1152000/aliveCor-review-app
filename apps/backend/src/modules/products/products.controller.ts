@@ -1,5 +1,5 @@
 import { messageResponse, successResponse } from "@lib/api-response";
-import type { CreateProductInput, UpdateProductInput } from "@task-forge/shared/types";
+import type { CreateProductInput, UpdateProductInput } from "@review-dash/shared/types";
 import type { FastifyReply, FastifyRequest } from "fastify";
 
 import ProductService from "./products.service";

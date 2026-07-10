@@ -1,6 +1,6 @@
 "use client";
 
-import type { Product, Review } from "@task-forge/shared/types";
+import type { Product, Review } from "@review-dash/shared/types";
 import React, { useEffect, useRef } from "react";
 
 import { ReviewCard } from "./ReviewCard";

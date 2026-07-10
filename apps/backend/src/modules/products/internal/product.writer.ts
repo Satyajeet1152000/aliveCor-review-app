@@ -1,5 +1,5 @@
-import type { CreateProductInput, Product, UpdateProductInput } from "@task-forge/shared/types";
-import { ProductStatus } from "@task-forge/shared/types";
+import type { CreateProductInput, Product, UpdateProductInput } from "@review-dash/shared/types";
+import { ProductStatus } from "@review-dash/shared/types";
 
 import { ProductNotFoundError } from "../products.error";
 

@@ -9,9 +9,9 @@ Review Dash is an internal AliveCor tool for collecting and displaying product r
 | Layer | Package / path | Stack |
 | --- | --- | --- |
 | Root | `package.json` | pnpm workspaces, Turborepo, shared ESLint/Prettier/TypeScript |
-| Shared | `packages/shared` (`@task-forge/shared`) | Zod env validation, API schemas, shared types |
-| API | `apps/backend` (`@task-forge/backend`) | Fastify 5, `fastify-type-provider-zod`, TypeORM, PostgreSQL |
-| Web | `apps/frontend` (`@task-forge/frontend`) | Next.js 15 App Router, Tailwind CSS, shadcn/ui, TanStack Query |
+| Shared | `packages/shared` (`@review-dash/shared`) | Zod env validation, API schemas, shared types |
+| API | `apps/backend` (`@review-dash/backend`) | Fastify 5, `fastify-type-provider-zod`, TypeORM, PostgreSQL |
+| Web | `apps/frontend` (`@review-dash/frontend`) | Next.js 15 App Router, Tailwind CSS, shadcn/ui, TanStack Query |
 
 ---
 
@@ -36,7 +36,7 @@ aliveCor-review-app/
 
 - **Fastify** bootstraps in `apps/backend/src/app.ts` with routes under `/api`.
 - **Feature modules** follow `modules/<feature>/` with router, controller, service, and `internal/` for TypeORM entities.
-- **Shared contracts** live in `packages/shared` and are imported via `@task-forge/shared/*`.
+- **Shared contracts** live in `packages/shared` and are imported via `@review-dash/shared/*`.
 - **Frontend** reads data only through the REST API (`/api/reviews`), never directly from upstream sources on page load.
 - **Review sync** is separated from display: `POST /api/reviews/sync` fetches and stores; `GET /api/reviews` serves the dashboard.
 
@@ -60,7 +60,7 @@ Key backend variables: `DATABASE_*`, `FRONTEND_URL`, `REVIEW_PRODUCT_URLS`.
 ```bash
 docker compose up -d
 pnpm install
-pnpm --filter @task-forge/backend run mig:run
+pnpm --filter @review-dash/backend run mig:run
 pnpm dev
 ```
 

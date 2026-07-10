@@ -1,6 +1,6 @@
 import { ReviewSyncError } from "@modules/reviews/reviews.error";
 import ReviewService from "@modules/reviews/reviews.service";
-import { env } from "@task-forge/shared/env";
+import { env } from "@review-dash/shared/env";
 import type { FastifyInstance } from "fastify";
 import { AsyncTask, SimpleIntervalJob } from "toad-scheduler";
 

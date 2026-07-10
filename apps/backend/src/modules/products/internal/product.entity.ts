@@ -1,4 +1,4 @@
-import { ProductStatus } from "@task-forge/shared/types";
+import { ProductStatus } from "@review-dash/shared/types";
 import {
   Column,
   CreateDateColumn,

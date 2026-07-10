@@ -1,4 +1,4 @@
-import type { CreateProductInput, Product, UpdateProductInput } from "@task-forge/shared/types";
+import type { CreateProductInput, Product, UpdateProductInput } from "@review-dash/shared/types";
 
 import ProductReader from "./internal/product.reader";
 import ProductWriter from "./internal/product.writer";
