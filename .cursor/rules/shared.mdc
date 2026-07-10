@@ -1,5 +1,5 @@
 ---
-description: Shared package rules for Task Forge — Zod schemas, TypeScript types, and env validation in packages/shared. Apply when working with shared types, schemas, env vars, or deciding whether code belongs in shared vs backend/frontend.
+description: Shared package rules for Review Dash — Zod schemas, TypeScript types, and env validation in packages/shared. Apply when working with shared types, schemas, env vars, or deciding whether code belongs in shared vs backend/frontend.
 alwaysApply: false
 ---
 # Shared Package Rules

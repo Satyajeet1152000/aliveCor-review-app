@@ -134,8 +134,8 @@ async function swaggerPlugin(app: FastifyInstance): Promise<void> {
     openapi: {
       openapi: "3.0.0",
       info: {
-        title: "Task Forge API",
-        description: "Task Forge backend API documentation",
+        title: "Review Dash API",
+        description: "Review Dash backend API documentation",
         version: "0.1.0",
       },
       servers: [

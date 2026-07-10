@@ -1,5 +1,5 @@
 ---
-description: Frontend rules for Task Forge — Next.js + Zustand + TanStack Query + shadcn/ui + sonner toasts on mutations
+description: Frontend rules for Review Dash — Next.js + TanStack Query + shadcn/ui + sonner toasts on mutations
 alwaysApply: false
 ---
 # Frontend Rules

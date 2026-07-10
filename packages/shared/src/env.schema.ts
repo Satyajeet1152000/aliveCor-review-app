@@ -12,6 +12,18 @@ const envSchema = z.object({
   DATABASE_PASSWORD: z.string(),
   DATABASE_NAME: z.string(),
   DATABASE_CA_CERT: z.string().optional(),
+
+  REVIEW_PRODUCT_URLS: z
+    .string()
+    .default(
+      "https://amzn.in/d/07vKnqI2,https://amzn.in/d/01qnlA6F,https://amzn.in/d/03eooMZA",
+    )
+    .transform((value) =>
+      value
+        .split(",")
+        .map((url) => url.trim())
+        .filter(Boolean),
+    ),
 });
 
 export const env = envSchema.parse(process.env);

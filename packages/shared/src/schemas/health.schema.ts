@@ -19,7 +19,7 @@ export const healthDataSchema = z.object({
 export const getHealthRouteSchema = {
   tags: [RouteTags.HEALTH],
   summary: "Health Check",
-  description: "Returns process health metadata (no database in task forge).",
+  description: "Returns process health metadata.",
   response: {
     200: successResponseSchema(healthDataSchema),
   },

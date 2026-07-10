@@ -19,7 +19,6 @@ import {
 
 import { loggerConfig } from "./lib/logger-config";
 import { registerCors } from "./plugins/cors.plugin";
-import { registerJwt } from "./plugins/jwt.plugin";
 import { registerRequestContext } from "./plugins/request-context.plugin";
 import { routerConfigs } from "./routers";
 
@@ -30,7 +29,6 @@ async function createServer(app: FastifyInstance): Promise<void> {
   await registerRequestContext(app);
   await registerHelmet(app);
   await registerCors(app);
-  await registerJwt(app);
   await registerRateLimit(app);
   await registerErrorHandler(app);
 

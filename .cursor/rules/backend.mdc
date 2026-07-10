@@ -1,5 +1,5 @@
 ---
-description: Backend rules for Task Forge — Fastify + TypeORM + TypeScript
+description: Backend rules for Review Dash — Fastify + TypeORM + TypeScript
 alwaysApply: false
 ---
 

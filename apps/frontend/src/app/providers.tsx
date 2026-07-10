@@ -1,8 +1,6 @@
 "use client";
 
-import { GoogleOAuthProvider } from "@react-oauth/google";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { SessionProvider } from "next-auth/react";
 import React from "react";
 import { Toaster } from "sonner";
 
@@ -13,14 +11,10 @@ interface ProvidersProps {
 }
 
 const Providers: React.FC<ProvidersProps> = ({ children }) => {
-  const googleClientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID ?? "";
-
   return (
     <QueryClientProvider client={queryClient}>
-      <SessionProvider>
-        <GoogleOAuthProvider clientId={googleClientId}>{children}</GoogleOAuthProvider>
-        <Toaster richColors position="top-right" />
-      </SessionProvider>
+      {children}
+      <Toaster richColors position="top-right" />
     </QueryClientProvider>
   );
 };
