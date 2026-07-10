@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 
-import { env } from "@task-forge/shared/env";
+import { ProductService } from "@modules/products";
 import type { Review, ReviewListFilters, ReviewSyncResult } from "@task-forge/shared/types";
 
 import ReviewReader from "./internal/review.reader";
@@ -99,7 +99,7 @@ async function fetchUpstreamReviews(productUrls: string[]): Promise<ReviewInsert
   });
 
   if (productUrls.length === 0) {
-    throw new ReviewSyncError("No product URLs configured for review sync");
+    throw new ReviewSyncError("No active products configured for review sync");
   }
 
   return buildMockReviews(productUrls);
@@ -111,7 +111,7 @@ export default class ReviewService {
   }
 
   public static async syncReviews(): Promise<ReviewSyncResult> {
-    const productUrls = env.REVIEW_PRODUCT_URLS;
+    const productUrls = await ProductService.listActiveUrls();
 
     let fetchedReviews: ReviewInsertInput[];
     try {

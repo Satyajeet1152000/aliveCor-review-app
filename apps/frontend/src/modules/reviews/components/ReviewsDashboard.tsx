@@ -1,6 +1,8 @@
 "use client";
 
+import { Routes } from "@task-forge/shared/constant";
 import type { ReviewListFilters } from "@task-forge/shared/types";
+import Link from "next/link";
 import React, { useMemo, useState } from "react";
 
 import { useReviewsQuery, useSyncReviewsMutation } from "../reviews.queries";
@@ -13,6 +15,7 @@ import { ReviewsLoadingState } from "./ReviewsLoadingState";
 import { ReviewsNoResultsState } from "./ReviewsNoResultsState";
 
 import { Button } from "@/components/ui/button";
+import { useProductsQuery } from "@/modules/products";
 
 const DEFAULT_FILTER_VALUES: ReviewFilterValues = {
   productUrl: "",
@@ -37,9 +40,12 @@ function hasActiveFilters(values: ReviewFilterValues): boolean {
 
 export function ReviewsDashboard(): React.ReactElement {
   const [filterValues, setFilterValues] = useState<ReviewFilterValues>(DEFAULT_FILTER_VALUES);
+  const filters = useMemo<ReviewListFilters>(
+    () => toReviewListFilters(filterValues),
+    [filterValues],
+  );
 
-  const filters = useMemo(() => toReviewListFilters(filterValues), [filterValues]);
-
+  const { data: products = [] } = useProductsQuery();
   const { data: reviews = [], isLoading, isError, error, refetch } = useReviewsQuery(filters);
   const syncMutation = useSyncReviewsMutation();
 
@@ -58,9 +64,14 @@ export function ReviewsDashboard(): React.ReactElement {
             Latest KardiaMobile reviews from your database via the REST API.
           </p>
         </div>
-        <Button onClick={() => syncMutation.mutate()} disabled={syncMutation.isPending}>
-          {syncMutation.isPending ? "Syncing..." : "Refresh reviews"}
-        </Button>
+        <div className="flex flex-wrap gap-2">
+          <Button variant="outline" asChild>
+            <Link href={Routes.PRODUCTS}>Manage products</Link>
+          </Button>
+          <Button onClick={() => syncMutation.mutate()} disabled={syncMutation.isPending}>
+            {syncMutation.isPending ? "Syncing..." : "Refresh reviews"}
+          </Button>
+        </div>
       </div>
 
       {isLoading && <ReviewsLoadingState />}
@@ -79,7 +90,9 @@ export function ReviewsDashboard(): React.ReactElement {
         />
       )}
 
-      {showFilters && <ReviewsFilter values={filterValues} onChange={setFilterValues} />}
+      {showFilters && (
+        <ReviewsFilter products={products} values={filterValues} onChange={setFilterValues} />
+      )}
 
       {showNoResultsState && <ReviewsNoResultsState />}
 

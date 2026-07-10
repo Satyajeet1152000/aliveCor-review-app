@@ -1,4 +1,5 @@
-import { REVIEW_PRODUCT_OPTIONS, REVIEW_RATING_OPTIONS } from "@task-forge/shared/constant";
+import { REVIEW_RATING_OPTIONS } from "@task-forge/shared/constant";
+import type { Product } from "@task-forge/shared/types";
 import { X } from "lucide-react";
 import React from "react";
 
@@ -14,6 +15,7 @@ export interface ReviewFilterValues {
 }
 
 interface ReviewsFilterProps {
+  products: Product[];
   values: ReviewFilterValues;
   onChange: (values: ReviewFilterValues) => void;
 }
@@ -21,7 +23,11 @@ interface ReviewsFilterProps {
 const selectClassName =
   "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2";
 
-export function ReviewsFilter({ values, onChange }: ReviewsFilterProps): React.ReactElement {
+export function ReviewsFilter({
+  products,
+  values,
+  onChange,
+}: ReviewsFilterProps): React.ReactElement {
   const hasDateRange = Boolean(values.fromDate || values.toDate);
 
   const update = (patch: Partial<ReviewFilterValues>): void => {
@@ -44,9 +50,9 @@ export function ReviewsFilter({ values, onChange }: ReviewsFilterProps): React.R
             onChange={(event) => update({ productUrl: event.target.value })}
           >
             <option value="">All products</option>
-            {REVIEW_PRODUCT_OPTIONS.map((product) => (
-              <option key={product.value} value={product.value}>
-                {product.label}
+            {products.map((product) => (
+              <option key={product.id} value={product.url}>
+                {product.name}
               </option>
             ))}
           </select>

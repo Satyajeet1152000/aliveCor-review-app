@@ -1,16 +1,16 @@
 # Graph Report - aliveCor-review-app  (2026-07-10)
 
 ## Corpus Check
-- 93 files · ~34,972 words
+- 114 files · ~37,163 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 551 nodes · 728 edges · 36 communities (26 shown, 10 thin omitted)
+- 625 nodes · 955 edges · 39 communities (28 shown, 11 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c8f456db`
+- Built from commit: `e5093585`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -48,59 +48,62 @@
 - [[_COMMUNITY_Community 33|Community 33]]
 - [[_COMMUNITY_Community 34|Community 34]]
 - [[_COMMUNITY_Community 35|Community 35]]
+- [[_COMMUNITY_Community 36|Community 36]]
+- [[_COMMUNITY_Community 37|Community 37]]
+- [[_COMMUNITY_Community 38|Community 38]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `compilerOptions` - 25 edges
-2. `compilerOptions` - 18 edges
-3. `scripts` - 13 edges
-4. `compilerOptions` - 13 edges
-5. `paths` - 11 edges
-6. `cn()` - 11 edges
-7. `Review` - 11 edges
-8. `The Review Dash` - 10 edges
-9. `createServer()` - 9 edges
-10. `scripts` - 9 edges
+2. `Product` - 20 edges
+3. `compilerOptions` - 18 edges
+4. `scripts` - 13 edges
+5. `compilerOptions` - 13 edges
+6. `paths` - 11 edges
+7. `cn()` - 11 edges
+8. `Review` - 11 edges
+9. `CreateProductInput` - 10 edges
+10. `The Review Dash` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `ProductCardProps` --references--> `Product`  [EXTRACTED]
+  apps/frontend/src/modules/products/components/ProductCard.tsx → packages/shared/src/types/product.types.ts
 - `ReviewCardProps` --references--> `Review`  [EXTRACTED]
   apps/frontend/src/modules/reviews/components/ReviewCard.tsx → packages/shared/src/types/review.types.ts
+- `ReviewsFilterProps` --references--> `Product`  [EXTRACTED]
+  apps/frontend/src/modules/reviews/components/ReviewsFilter.tsx → packages/shared/src/types/product.types.ts
 - `ReviewsListProps` --references--> `Review`  [EXTRACTED]
   apps/frontend/src/modules/reviews/components/ReviewsList.tsx → packages/shared/src/types/review.types.ts
 - `AppError` --references--> `LogType`  [EXTRACTED]
   apps/backend/src/lib/error-handler.ts → packages/shared/src/types/common-types.ts
-- `DialogHeader()` --calls--> `cn()`  [EXTRACTED]
-  apps/frontend/src/components/ui/dialog.tsx → apps/frontend/src/lib/utils.ts
-- `DialogFooter()` --calls--> `cn()`  [EXTRACTED]
-  apps/frontend/src/components/ui/dialog.tsx → apps/frontend/src/lib/utils.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (36 total, 10 thin omitted)
+## Communities (39 total, 11 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.07
-Nodes (28): SWAGGER_TAG_DISPLAY_ORDER, healthRouteConfig, healthRouter(), successResponse(), AppError, AppErrorProps, SerializedException, getRequestId() (+20 more)
+Cohesion: 0.08
+Nodes (28): SWAGGER_TAG_DISPLAY_ORDER, healthRouteConfig, healthRouter(), messageResponse(), successResponse(), ProductsController, productsRouteConfig, ReviewsController (+20 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.08
 Nodes (22): AppDataSource, baseConfig, DatabaseConfig, RequestContextModule, RequestContextStore, registerCompress, registerCors(), registerErrorHandler() (+14 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.10
-Nodes (23): ReviewCardProps, ReviewsListProps, ReviewEntity, buildWhereClause(), endOfDay(), ReviewReader, ReviewRepository, serializeReview() (+15 more)
+Cohesion: 0.09
+Nodes (26): ReviewCardProps, hasActiveFilters(), ReviewsDashboard(), ReviewsListProps, ReviewEntity, buildWhereClause(), endOfDay(), ReviewReader (+18 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.10
-Nodes (23): ReviewCard(), DEFAULT_FILTER_VALUES, hasActiveFilters(), ReviewsDashboard(), ReviewsEmptyState(), ReviewsEmptyStateProps, ReviewsErrorState(), ReviewsErrorStateProps (+15 more)
+Nodes (24): ReviewCard(), DEFAULT_FILTER_VALUES, ReviewsEmptyState(), ReviewsEmptyStateProps, ReviewsErrorState(), ReviewsErrorStateProps, ReviewFilterValues, ReviewsFilter() (+16 more)
 
 ### Community 4 - "Community 4"
 Cohesion: 0.05
 Nodes (38): compilerOptions, allowSyntheticDefaultImports, baseUrl, declaration, emitDecoratorMetadata, esModuleInterop, experimentalDecorators, forceConsistentCasingInFileNames (+30 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.07
-Nodes (27): cn(), Avatar, AvatarFallback, AvatarImage, Card, CardContent, CardDescription, CardFooter (+19 more)
+Cohesion: 0.09
+Nodes (23): EMPTY_FORM, cn(), Avatar, AvatarFallback, AvatarImage, DialogContent, DialogDescription, DialogFooter() (+15 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.05
@@ -111,8 +114,8 @@ Cohesion: 0.07
 Nodes (29): default, types, dependencies, fastify, zod, devDependencies, tsx, @types/node (+21 more)
 
 ### Community 8 - "Community 8"
-Cohesion: 0.07
-Nodes (26): devDependencies, cross-env, pino-pretty, tsc-alias, tsx, @types/node, @types/pg, typescript (+18 more)
+Cohesion: 0.05
+Nodes (43): dependencies, fastify, @fastify/compress, @fastify/cors, @fastify/helmet, fastify-plugin, @fastify/rate-limit, @fastify/request-context (+35 more)
 
 ### Community 9 - "Community 9"
 Cohesion: 0.07
@@ -127,8 +130,8 @@ Cohesion: 0.08
 Nodes (24): compilerOptions, allowJs, baseUrl, esModuleInterop, forceConsistentCasingInFileNames, incremental, isolatedModules, jsx (+16 more)
 
 ### Community 12 - "Community 12"
-Cohesion: 0.12
-Nodes (17): dependencies, fastify, @fastify/compress, @fastify/cors, @fastify/helmet, fastify-plugin, @fastify/rate-limit, @fastify/request-context (+9 more)
+Cohesion: 0.15
+Nodes (13): ProductCardProps, ProductFormDialogProps, ReviewsFilterProps, ProductEntity, ProductReader, ProductRepository, serializeProduct(), ProductWriter (+5 more)
 
 ### Community 13 - "Community 13"
 Cohesion: 0.12
@@ -170,25 +173,33 @@ Nodes (4): Ground Rules, Rules & Evaluation, Submitting, What "Done" Looks Like
 Cohesion: 0.67
 Nodes (3): handle(), proxyRequest(), RouteContext
 
+### Community 36 - "Community 36"
+Cohesion: 0.16
+Nodes (12): AppError, AppErrorProps, SerializedException, getRequestId(), fastifyErrorCodesMap, ProductNotFoundError, ReviewSyncError, ApiErrorResponse (+4 more)
+
+### Community 37 - "Community 37"
+Cohesion: 0.25
+Nodes (12): ProductCard(), ProductFormDialog(), ProductsPageContent(), createProduct(), deleteProduct(), getProducts(), updateProduct(), productsQueryKey (+4 more)
+
 ## Knowledge Gaps
-- **310 isolated node(s):** `extends`, `name`, `version`, `private`, `node` (+305 more)
+- **311 isolated node(s):** `extends`, `name`, `version`, `private`, `node` (+306 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `Product` connect `Community 12` to `Community 37`, `Community 3`, `Community 5`?**
+  _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **Why does `cn()` connect `Community 5` to `Community 3`?**
-  _High betweenness centrality (0.013) - this node is a cross-community bridge._
-- **Why does `ReviewListFilters` connect `Community 2` to `Community 0`, `Community 3`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Why does `dependencies` connect `Community 10` to `Community 9`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **Why does `Label` connect `Community 5` to `Community 3`?**
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **What connects `extends`, `name`, `version` to the rest of the system?**
-  _310 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _311 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.07239819004524888 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07536231884057971 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.07781649245063879 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.10128205128205128 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08686868686868687 - nodes in this community are weakly interconnected._
