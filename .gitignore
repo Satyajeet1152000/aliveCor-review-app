@@ -30,6 +30,7 @@ tmp/*
 # local config files
 config/local*
 .cursor/mcp.json
+.pnpm-store/
 
 # distribution
 dist

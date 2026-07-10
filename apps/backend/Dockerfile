@@ -1,5 +1,6 @@
+# syntax=docker/dockerfile:1
 # Build from the repository root:
-#   docker build -f apps/backend/Dockerfile -t task-forge-backend .
+#   docker build -f apps/backend/Dockerfile -t review-dash-backend .
 
 FROM node:22-alpine AS base
 
@@ -12,27 +13,28 @@ WORKDIR /app
 
 FROM base AS builder
 
-# bcrypt and other native modules need build tooling on Alpine
-RUN apk add --no-cache python3 make g++
-
+# Copy workspace manifests first so dependency install is cached separately
+# from source changes. All workspace manifests are required for a frozen
+# install to validate against the lockfile.
 COPY pnpm-lock.yaml pnpm-workspace.yaml package.json ./
+COPY packages/shared/package.json ./packages/shared/
+COPY apps/backend/package.json ./apps/backend/
+COPY apps/frontend/package.json ./apps/frontend/
 
-COPY packages/shared/package.json packages/shared/tsconfig.json ./packages/shared/
-COPY packages/shared/src ./packages/shared/src
+# Install only the backend and its workspace dependency (@task-forge/shared).
+RUN pnpm install --frozen-lockfile --filter @task-forge/backend...
 
-COPY apps/backend/package.json apps/backend/tsconfig.json ./apps/backend/
-COPY apps/backend/src ./apps/backend/src
+# Copy the sources needed to build the backend.
+COPY packages/shared ./packages/shared
+COPY apps/backend ./apps/backend
 
-RUN pnpm install --frozen-lockfile
-
-RUN pnpm --filter @task-forge/shared build
+# Builds @task-forge/shared then compiles the backend (tsc + tsc-alias).
 RUN pnpm --filter @task-forge/backend build
 
+# Produce a pruned, production-only bundle with @task-forge/shared inlined.
 RUN pnpm --filter @task-forge/backend --prod deploy /prod
 
 FROM base AS runner
-
-RUN apk add --no-cache libc6-compat
 
 ENV NODE_ENV=production
 
@@ -44,4 +46,5 @@ USER node
 
 EXPOSE 3000
 
-CMD ["sh", "-c", "node node_modules/typeorm/cli.js migration:run -d dist/database/data-source.js && node dist/app.js"]
+# reflect-metadata must be loaded before TypeORM reads entity decorators.
+CMD ["sh", "-c", "node -r reflect-metadata node_modules/typeorm/cli.js migration:run -d dist/database/data-source.js && node -r reflect-metadata dist/app.js"]
