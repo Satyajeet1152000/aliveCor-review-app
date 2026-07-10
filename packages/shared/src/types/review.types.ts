@@ -1,6 +1,6 @@
 export interface ReviewListFilters {
   limit?: number;
-  productUrl?: string;
+  productId?: number;
   rating?: number;
   fromDate?: string;
   toDate?: string;
@@ -8,14 +8,12 @@ export interface ReviewListFilters {
 
 export interface Review {
   id: number;
-  externalId: string;
+  productId: number;
   rating: number;
   title: string | null;
-  body: string;
-  author: string;
+  description: string | null;
   reviewedAt: string;
-  source: string;
-  productUrl: string;
+  reviewUrl: string;
   createdAt: string;
   updatedAt: string;
 }

@@ -16,6 +16,15 @@ export default class ProductReader {
     return products.map(serializeProduct);
   }
 
+  public static async listActive(): Promise<Product[]> {
+    const products = await ProductRepository.find({
+      where: { status: ProductStatus.ACTIVE },
+      order: { createdAt: "ASC" },
+    });
+
+    return products.map(serializeProduct);
+  }
+
   public static async listActiveUrls(): Promise<string[]> {
     const products = await ProductRepository.find({
       where: { status: ProductStatus.ACTIVE },

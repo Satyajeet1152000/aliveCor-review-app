@@ -1,108 +1,13 @@
-import { createHash } from "node:crypto";
-
 import { ProductService } from "@modules/products";
-import type { Review, ReviewListFilters, ReviewSyncResult } from "@task-forge/shared/types";
+import type { Product, Review, ReviewListFilters, ReviewSyncResult } from "@task-forge/shared/types";
 
 import ReviewReader from "./internal/review.reader";
 import ReviewWriter, { type ReviewInsertInput } from "./internal/review.writer";
 import { ReviewSyncError } from "./reviews.error";
 
-interface MockReviewTemplate {
-  rating: number;
-  title: string;
-  body: string;
-  author: string;
-  daysAgo: number;
-}
-
-const MOCK_REVIEW_TEMPLATES: MockReviewTemplate[] = [
-  {
-    rating: 5,
-    title: "Accurate and easy to use",
-    body: "KardiaMobile picks up AFib quickly. Setup took under five minutes and the app is intuitive.",
-    author: "Sarah M.",
-    daysAgo: 1,
-  },
-  {
-    rating: 4,
-    title: "Great device, battery could be better",
-    body: "Readings match my clinic ECG. Wish the battery lasted a bit longer between charges.",
-    author: "James T.",
-    daysAgo: 2,
-  },
-  {
-    rating: 3,
-    title: "Mixed results on first week",
-    body: "Sometimes struggled to get a clean trace until I adjusted finger placement. Support was helpful.",
-    author: "Priya K.",
-    daysAgo: 3,
-  },
-  {
-    rating: 5,
-    title: "Peace of mind at home",
-    body: "My cardiologist recommended this and it has already caught an irregular rhythm I did not notice.",
-    author: "Michael R.",
-    daysAgo: 4,
-  },
-  {
-    rating: 2,
-    title: "Connectivity issues",
-    body: "App disconnects occasionally on Android. Readings are good when it works.",
-    author: "Alex P.",
-    daysAgo: 5,
-  },
-  {
-    rating: 4,
-    title: "Solid for daily monitoring",
-    body: "Compact, travels well, and exports PDFs my doctor accepts without extra formatting.",
-    author: "Emily L.",
-    daysAgo: 6,
-  },
-  {
-    rating: 5,
-    title: "Worth every penny",
-    body: "Detected palpitations during workouts. Much faster than waiting for clinic appointments.",
-    author: "Daniel W.",
-    daysAgo: 7,
-  },
-];
-
-function buildExternalId(
-  source: string,
-  productUrl: string,
-  author: string,
-  title: string,
-): string {
-  return createHash("sha256").update(`${source}:${productUrl}:${author}:${title}`).digest("hex");
-}
-
-function buildMockReviews(productUrls: string[]): ReviewInsertInput[] {
-  const now = Date.now();
-
-  return productUrls.flatMap((productUrl) =>
-    MOCK_REVIEW_TEMPLATES.map((template) => ({
-      externalId: buildExternalId("amazon", productUrl, template.author, template.title),
-      rating: template.rating,
-      title: template.title,
-      body: template.body,
-      author: template.author,
-      reviewedAt: new Date(now - template.daysAgo * 24 * 60 * 60 * 1000),
-      source: "amazon",
-      productUrl,
-    })),
-  );
-}
-
-async function fetchUpstreamReviews(productUrls: string[]): Promise<ReviewInsertInput[]> {
-  await new Promise((resolve) => {
-    setTimeout(resolve, 250);
-  });
-
-  if (productUrls.length === 0) {
-    throw new ReviewSyncError("No active products configured for review sync");
-  }
-
-  return buildMockReviews(productUrls);
+async function fetchUpstreamReviews(_products: Product[]): Promise<ReviewInsertInput[]> {
+  // Upstream Amazon review integration goes here.
+  return [];
 }
 
 export default class ReviewService {
@@ -111,11 +16,15 @@ export default class ReviewService {
   }
 
   public static async syncReviews(): Promise<ReviewSyncResult> {
-    const productUrls = await ProductService.listActiveUrls();
+    const products = await ProductService.listActive();
+
+    if (products.length === 0) {
+      throw new ReviewSyncError("No active products configured for review sync");
+    }
 
     let fetchedReviews: ReviewInsertInput[];
     try {
-      fetchedReviews = await fetchUpstreamReviews(productUrls);
+      fetchedReviews = await fetchUpstreamReviews(products);
     } catch (error) {
       if (error instanceof ReviewSyncError) {
         throw error;
@@ -123,11 +32,11 @@ export default class ReviewService {
       throw new ReviewSyncError("Upstream review source is unavailable right now");
     }
 
-    const existingIds = await ReviewReader.findExternalIds(
-      fetchedReviews.map((review) => review.externalId),
+    const existingUrls = await ReviewReader.findReviewUrls(
+      fetchedReviews.map((review) => review.reviewUrl),
     );
 
-    const newReviews = fetchedReviews.filter((review) => !existingIds.has(review.externalId));
+    const newReviews = fetchedReviews.filter((review) => !existingUrls.has(review.reviewUrl));
     const inserted = await ReviewWriter.insertMany(newReviews);
 
     return {

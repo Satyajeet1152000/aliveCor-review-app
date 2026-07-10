@@ -5,14 +5,12 @@ import { ReviewEntity } from "./review.entity";
 export const serializeReview = (review: ReviewEntity): Review => {
   return {
     id: Number(review.id),
-    externalId: review.externalId,
+    productId: Number(review.productId),
     rating: review.rating,
     title: review.title,
-    body: review.body,
-    author: review.author,
+    description: review.description,
     reviewedAt: review.reviewedAt.toISOString(),
-    source: review.source,
-    productUrl: review.productUrl,
+    reviewUrl: review.reviewUrl,
     createdAt: review.createdAt.toISOString(),
     updatedAt: review.updatedAt.toISOString(),
   };

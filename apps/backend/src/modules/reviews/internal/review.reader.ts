@@ -14,8 +14,8 @@ function endOfDay(date: Date): Date {
 function buildWhereClause(filters: ReviewListFilters): FindOptionsWhere<ReviewEntity> {
   const where: FindOptionsWhere<ReviewEntity> = {};
 
-  if (filters.productUrl) {
-    where.productUrl = filters.productUrl;
+  if (filters.productId) {
+    where.productId = filters.productId;
   }
 
   if (filters.rating) {
@@ -46,16 +46,16 @@ export default class ReviewReader {
     return reviews.map(serializeReview);
   }
 
-  public static async findExternalIds(externalIds: string[]): Promise<Set<string>> {
-    if (externalIds.length === 0) {
+  public static async findReviewUrls(reviewUrls: string[]): Promise<Set<string>> {
+    if (reviewUrls.length === 0) {
       return new Set();
     }
 
     const existing = await ReviewRepository.find({
-      where: { externalId: In(externalIds) },
-      select: { externalId: true },
+      where: { reviewUrl: In(reviewUrls) },
+      select: { reviewUrl: true },
     });
 
-    return new Set(existing.map((review) => review.externalId));
+    return new Set(existing.map((review) => review.reviewUrl));
   }
 }

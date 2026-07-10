@@ -8,6 +8,10 @@ export default class ProductService {
     return ProductReader.listAll();
   }
 
+  public static async listActive(): Promise<Product[]> {
+    return ProductReader.listActive();
+  }
+
   public static async listActiveUrls(): Promise<string[]> {
     return ProductReader.listActiveUrls();
   }

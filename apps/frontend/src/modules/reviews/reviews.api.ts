@@ -6,7 +6,7 @@ export async function getReviews(filters: ReviewListFilters = {}): Promise<Revie
   const response = await apiClient.get<ApiResponse<Review[]>>("/reviews", {
     params: {
       limit: filters.limit ?? 20,
-      ...(filters.productUrl ? { productUrl: filters.productUrl } : {}),
+      ...(filters.productId ? { productId: filters.productId } : {}),
       ...(filters.rating ? { rating: filters.rating } : {}),
       ...(filters.fromDate ? { fromDate: filters.fromDate } : {}),
       ...(filters.toDate ? { toDate: filters.toDate } : {}),

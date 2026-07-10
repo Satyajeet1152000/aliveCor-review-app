@@ -18,7 +18,7 @@ import { Button } from "@/components/ui/button";
 import { useProductsQuery } from "@/modules/products";
 
 const DEFAULT_FILTER_VALUES: ReviewFilterValues = {
-  productUrl: "",
+  productId: "",
   rating: "",
   fromDate: "",
   toDate: "",
@@ -27,7 +27,7 @@ const DEFAULT_FILTER_VALUES: ReviewFilterValues = {
 function toReviewListFilters(values: ReviewFilterValues): ReviewListFilters {
   return {
     limit: 20,
-    ...(values.productUrl ? { productUrl: values.productUrl } : {}),
+    ...(values.productId ? { productId: Number(values.productId) } : {}),
     ...(values.rating ? { rating: Number(values.rating) } : {}),
     ...(values.fromDate ? { fromDate: values.fromDate } : {}),
     ...(values.toDate ? { toDate: values.toDate } : {}),
@@ -35,7 +35,7 @@ function toReviewListFilters(values: ReviewFilterValues): ReviewListFilters {
 }
 
 function hasActiveFilters(values: ReviewFilterValues): boolean {
-  return Boolean(values.productUrl || values.rating || values.fromDate || values.toDate);
+  return Boolean(values.productId || values.rating || values.fromDate || values.toDate);
 }
 
 export function ReviewsDashboard(): React.ReactElement {
@@ -96,7 +96,7 @@ export function ReviewsDashboard(): React.ReactElement {
 
       {showNoResultsState && <ReviewsNoResultsState />}
 
-      {showReviewsList && <ReviewsList reviews={reviews} />}
+      {showReviewsList && <ReviewsList reviews={reviews} products={products} />}
     </main>
   );
 }

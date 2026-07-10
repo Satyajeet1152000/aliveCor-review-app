@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface ReviewCardProps {
   review: Review;
+  productName?: string;
 }
 
 function RatingStars({ rating }: { rating: number }): React.ReactElement {
@@ -21,7 +22,7 @@ function RatingStars({ rating }: { rating: number }): React.ReactElement {
   );
 }
 
-export function ReviewCard({ review }: ReviewCardProps): React.ReactElement {
+export function ReviewCard({ review, productName }: ReviewCardProps): React.ReactElement {
   const reviewedDate = new Date(review.reviewedAt).toLocaleDateString(undefined, {
     year: "numeric",
     month: "short",
@@ -35,21 +36,23 @@ export function ReviewCard({ review }: ReviewCardProps): React.ReactElement {
           <div className="space-y-1">
             <CardTitle className="text-base">{review.title ?? "Untitled review"}</CardTitle>
             <p className="text-sm text-muted-foreground">
-              {review.author} · {reviewedDate} · {review.source}
+              {productName ?? `Product #${review.productId}`} · {reviewedDate}
             </p>
           </div>
           <RatingStars rating={review.rating} />
         </div>
       </CardHeader>
       <CardContent className="space-y-3">
-        <p className="text-sm leading-6 text-foreground">{review.body}</p>
+        {review.description ? (
+          <p className="text-sm leading-6 text-foreground">{review.description}</p>
+        ) : null}
         <a
-          href={review.productUrl}
+          href={review.reviewUrl}
           target="_blank"
           rel="noreferrer"
           className="text-xs text-primary hover:underline"
         >
-          View product
+          View review
         </a>
       </CardContent>
     </Card>

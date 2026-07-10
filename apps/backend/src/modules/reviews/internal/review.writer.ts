@@ -2,14 +2,12 @@ import { ReviewEntity } from "./review.entity";
 import ReviewRepository from "./review.repository";
 
 export interface ReviewInsertInput {
-  externalId: string;
+  productId: number;
   rating: number;
   title: string | null;
-  body: string;
-  author: string;
+  description: string | null;
   reviewedAt: Date;
-  source: string;
-  productUrl: string;
+  reviewUrl: string;
 }
 
 export default class ReviewWriter {
@@ -20,14 +18,12 @@ export default class ReviewWriter {
 
     const entities = reviews.map((review) => {
       const entity = new ReviewEntity();
-      entity.externalId = review.externalId;
+      entity.productId = review.productId;
       entity.rating = review.rating;
       entity.title = review.title;
-      entity.body = review.body;
-      entity.author = review.author;
+      entity.description = review.description;
       entity.reviewedAt = review.reviewedAt;
-      entity.source = review.source;
-      entity.productUrl = review.productUrl;
+      entity.reviewUrl = review.reviewUrl;
       return entity;
     });
 

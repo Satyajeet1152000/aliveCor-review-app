@@ -6,14 +6,12 @@ import { successResponseSchema } from "./common-schemas";
 
 export const reviewSchema = z.object({
   id: z.number(),
-  externalId: z.string(),
+  productId: z.number().int().positive(),
   rating: z.number().int().min(1).max(5),
   title: z.string().nullable(),
-  body: z.string(),
-  author: z.string(),
+  description: z.string().nullable(),
   reviewedAt: z.string(),
-  source: z.string(),
-  productUrl: z.string().url(),
+  reviewUrl: z.string().url(),
   createdAt: z.string(),
   updatedAt: z.string(),
 });
@@ -26,7 +24,7 @@ export const reviewSyncResultSchema = z.object({
 
 export const getReviewsQuerySchema = z.object({
   limit: z.coerce.number().int().min(1).max(100).default(20),
-  productUrl: z.string().url().optional(),
+  productId: z.coerce.number().int().positive().optional(),
   rating: z.coerce.number().int().min(1).max(5).optional(),
   fromDate: z.string().date().optional(),
   toDate: z.string().date().optional(),
@@ -45,7 +43,7 @@ export const getReviewsRouteSchema = {
 export const postReviewSyncRouteSchema = {
   tags: [RouteTags.REVIEWS],
   summary: "Sync reviews from upstream sources",
-  description: "Fetches reviews from configured product URLs and upserts them into the database.",
+  description: "Fetches reviews for active products and upserts them into the database.",
   response: {
     200: successResponseSchema(reviewSyncResultSchema),
   },

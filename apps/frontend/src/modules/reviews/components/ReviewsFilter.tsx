@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 export interface ReviewFilterValues {
-  productUrl: string;
+  productId: string;
   rating: string;
   fromDate: string;
   toDate: string;
@@ -46,12 +46,12 @@ export function ReviewsFilter({
           <select
             id="review-product-filter"
             className={selectClassName}
-            value={values.productUrl}
-            onChange={(event) => update({ productUrl: event.target.value })}
+            value={values.productId}
+            onChange={(event) => update({ productId: event.target.value })}
           >
             <option value="">All products</option>
             {products.map((product) => (
-              <option key={product.id} value={product.url}>
+              <option key={product.id} value={String(product.id)}>
                 {product.name}
               </option>
             ))}

@@ -11,7 +11,7 @@ export class ReviewsController {
   ): Promise<void> => {
     const reviews = await ReviewService.list({
       limit: request.query.limit ?? 20,
-      productUrl: request.query.productUrl,
+      productId: request.query.productId,
       rating: request.query.rating,
       fromDate: request.query.fromDate,
       toDate: request.query.toDate,

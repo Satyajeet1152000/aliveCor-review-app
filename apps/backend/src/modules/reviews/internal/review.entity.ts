@@ -2,7 +2,6 @@ import {
   Column,
   CreateDateColumn,
   Entity,
-  Index,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from "typeorm";
@@ -12,31 +11,23 @@ export class ReviewEntity {
   @PrimaryGeneratedColumn({ type: "bigint" })
   id: number;
 
-  @Index("idx_reviews_external_id", { unique: true })
-  @Column({ type: "character varying", length: 255, name: "external_id", unique: true })
-  externalId: string;
+  @Column({ type: "bigint", name: "product_id" })
+  productId: number;
 
-  @Column({ type: "smallint" })
+  @Column({ type: "integer" })
   rating: number;
 
-  @Column({ type: "character varying", length: 500, nullable: true })
+  @Column({ type: "character varying", nullable: true })
   title: string | null;
 
-  @Column({ type: "text" })
-  body: string;
+  @Column({ type: "text", nullable: true })
+  description: string | null;
 
-  @Column({ type: "character varying", length: 150 })
-  author: string;
-
-  @Index("idx_reviews_reviewed_at")
   @Column({ type: "timestamp", name: "reviewed_at" })
   reviewedAt: Date;
 
-  @Column({ type: "character varying", length: 50 })
-  source: string;
-
-  @Column({ type: "text", name: "product_url" })
-  productUrl: string;
+  @Column({ type: "text", name: "review_url", unique: true })
+  reviewUrl: string;
 
   @CreateDateColumn({
     type: "timestamp",
