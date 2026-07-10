@@ -51,11 +51,12 @@ The current sync implementation uses a **mock upstream fetcher** (no Amazon API 
 
 ## API endpoints
 
-| Method | Path | Description |
-| --- | --- | --- |
-| `GET` | `/api/health` | Service health check |
-| `GET` | `/api/reviews?limit=20` | Latest reviews, newest first |
-| `POST` | `/api/reviews/sync` | Fetch upstream reviews and upsert into DB |
+| Method | Path                    | Description                               |
+| ------ | ----------------------- | ----------------------------------------- |
+| `GET`  | `/api/docs`             | Swagger documentation                     |
+| `GET`  | `/api/health`           | Service health check                      |
+| `GET`  | `/api/reviews?limit=20` | Latest reviews, newest first              |
+| `POST` | `/api/reviews/sync`     | Fetch upstream reviews and upsert into DB |
 
 ## Project layout
 
@@ -71,16 +72,16 @@ packages/
 
 ### Backend (`apps/backend/.env.development`)
 
-| Variable | Purpose |
-| --- | --- |
-| `DATABASE_*` | PostgreSQL connection |
-| `FRONTEND_URL` | CORS allowlist |
+| Variable              | Purpose                                     |
+| --------------------- | ------------------------------------------- |
+| `DATABASE_*`          | PostgreSQL connection                       |
+| `FRONTEND_URL`        | CORS allowlist                              |
 | `REVIEW_PRODUCT_URLS` | Comma-separated Amazon product URLs to sync |
 
 ### Frontend (`apps/frontend/.env.development`)
 
-| Variable | Purpose |
-| --- | --- |
+| Variable              | Purpose                                    |
+| --------------------- | ------------------------------------------ |
 | `NEXT_PUBLIC_API_URL` | Backend base URL for the Next.js API proxy |
 
 ## Useful commands
